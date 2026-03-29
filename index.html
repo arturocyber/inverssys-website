@@ -49,6 +49,8 @@
 }
 </script>
 
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -69,6 +71,7 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="nav-links">
+    <button class="mobile-close" onclick="closeMobileNav()" aria-label="Close">✕</button>
     <li><a href="#services" id="nav-svc" onclick="closeMobileNav();showMain()">Services</a></li>
     <li><a href="#" id="nav-more" onclick="closeMobileNav();showMore(event)">More</a></li>
     <li><a href="#soc-csirt" onclick="closeMobileNav();showMain('#soc-csirt')">SOC-CSIRT</a></li>
@@ -76,6 +79,7 @@
     <li><a href="#grc" onclick="closeMobileNav();showMain()">GRC</a></li>
     <li><a href="#about" id="nav-about" onclick="closeMobileNav();showMain()">About</a></li>
     <li><a href="#pricing" id="nav-pricing" onclick="closeMobileNav();showMain()">Pricing</a></li>
+    <li><a href="#contact" onclick="closeMobileNav();showMain()" style="color:var(--cyan)">Contact Us</a></li>
   </ul>
   <div class="nav-right">
     <button class="lang-toggle" onclick="toggleLang()">
