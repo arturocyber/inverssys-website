@@ -21,7 +21,7 @@
 }
 
 
-const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.1});
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
 
 const T={
@@ -164,7 +164,7 @@ const T={
     'contact-btn':'Send Message →',
     'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 DR  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN',
     'cost-label':'The Real Cost of In-House Security',
-    'cost-h2':'Why pay for one analyst when you can have an entire 24/7 team?',
+    'cost-h2':'Why pay for one analyst<br>when you can have<br>an entire 24/7 team?',
     'cost-sub':"Building an internal SOC sounds smart — until you see the numbers. Cybersecurity doesn't need to be in-house. Here's what it actually costs to run a bare minimum operation.",
     'cost-t1':'The Salary Floor','cost-d1':'Junior analysts command $70k–$90k. Seniors cross $150k. For 24/7 coverage you need at least 5 people to cover shifts, PTO, and burnout.',
     'cost-t2':'The Manager Premium','cost-d2':"You can't leave junior analysts unsupervised. A SOC Manager adds $140k+ to your burn rate before benefits or recruiting fees.",
@@ -210,7 +210,7 @@ const T={
     'dnav6':'Arquitectura Zero Trust','dnav6d':'Nunca confiar, siempre verificar — diseño ZTA completo',
     'dnav7':'Formación en Seguridad','dnav7d':'Phishing, ingeniería social y formación contra amenazas internas',
     'hero-label':'Ciberseguridad como Servicio',
-    'hero-h1':'Protege tu Empresa<br><em>en 24 Horas —</em><em>Sin Contratar</em>Equipo de Seguridad',
+    'hero-h1':'Protege tu Empresa<br><em>en 24 Horas —</em><em>Sin Equipos</em>Internos',
     'hero-sub':'Seguridad empresarial sin contratar equipos. SOC 24/7 con IA, Pentesting, IR y GRC.',
     'hero-btn1':'Protección en 24h','hero-btn2':'Hablar con un Experto',
     'svc-label':'Nuestros Servicios',
@@ -295,7 +295,7 @@ const T={
     'pt-li4':'<strong>Informe Completo</strong> — Clasificación de severidad, prueba de concepto, lista de remediación',
     'pt-li5':'<strong>Reprueba Incluida</strong> — Verificamos tus correcciones después de la remediación',
     'pt-btn':'Solicitar Cotización de Pentest','pt-visual-label':'Metodología de Fases',
-    'ir-label':'CSIRT','ir-h2':'Cuando una alerta se convierte en ataque, nuestro CSIRT activa de inmediato.',
+    'ir-label':'CSIRT','ir-h2':'Cuando ocurre un ataque,<br>actuamos de inmediato.',
     'ir-body':'Unidad de Operaciones de Seguridad y Respuesta a Incidentes — el mismo equipo que detecta la amenaza es el que la contiene. Sin traspasos. Sin demoras. Acción rápida y especializada protegiendo tu negocio las 24 horas.',
     'ir-li1':'<strong>Detección y Triaje</strong> — Identificación rápida del alcance de la amenaza y sistemas afectados',
     'ir-li2':'<strong>Contención</strong> — Aislamiento inmediato para detener la propagación del ataque',
@@ -303,7 +303,7 @@ const T={
     'ir-li4':'<strong>Erradicación</strong> — Eliminación completa de malware, backdoors y persistencia',
     'ir-li5':'<strong>Recuperación y Refuerzo</strong> — Restauración completa con mejoras de seguridad para evitar recurrencia',
     'ir-btn':'Hablar sobre IR','ir-visual-label':'Fases de Respuesta',
-    'grc-label':'GRC — Gobernanza, Riesgo y Cumplimiento','grc-h2':'Seguridad que satisface reguladores, clientes y socios.',
+    'grc-label':'GRC — Gobernanza, Riesgo y Cumplimiento','grc-h2':'Cumplimiento sin complicaciones.<br>Auditorías siempre listas.',
     'grc-body':'Cumplimiento sin complicaciones. Construimos y mantenemos tu marco GRC.',
     'grc-li1':'<strong>Evaluaciones de Riesgo</strong> — Identificar, cuantificar y priorizar los riesgos de seguridad de tu organización',
     'grc-li2':'<strong>Desarrollo de Políticas</strong> — Políticas de seguridad adaptadas a tu negocio e industria',
@@ -339,7 +339,7 @@ const T={
     'contact-btn':'Solicitar Evaluación →',
     'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 RD  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN',
     'cost-label':'El Costo Real de la Seguridad Interna',
-    'cost-h2':'¿Por qué pagar por un analista cuando puedes tener un equipo completo 24/7?',
+    'cost-h2':'¿Por qué pagar por<br>un analista cuando puedes<br>tener un equipo 24/7?',
     'cost-sub':'Construir un SOC interno parece buena idea — hasta que ves los números.',
     'cost-t1':'El Piso Salarial','cost-d1':'Los analistas junior exigen $70k–$90k. Los senior superan $150k. Para cobertura 24/7 necesitas al menos 5 personas cubriendo turnos, vacaciones y rotación.',
     'cost-t2':'La Prima del Manager','cost-d2':'No puedes dejar analistas junior sin supervisión. Un SOC Manager agrega $140k+ a tu presupuesto antes de beneficios o honorarios de reclutamiento.',
@@ -384,13 +384,13 @@ const T={
     'dnav5':'Pare-feu en tant que Service','dnav5d':'Pare-feu next-gen géré, aucun matériel requis',
     'dnav6':'Architecture Zero Trust','dnav6d':'Ne jamais faire confiance, toujours vérifier — conception ZTA complète',
     'dnav7':'Formation en Sécurité','dnav7d':'Hameçonnage, ingénierie sociale &amp; menaces internes',
-    'hero-h1':'Cybersécurité<br><em>Sans Constituer</em><br><em>d\'Équipes Internes</em>',
-    'hero-sub':'Obtenez une sécurité de niveau entreprise sans embaucher ni gérer des équipes. SOC 24/7 alimenté par IA, Tests d\'Intrusion, Réponse aux Incidents et GRC — tout sous un même toit.',
+    'hero-h1':'Protégez votre Entreprise<br><em>en 24 Heures —</em><em>Sans Équipe</em>Interne',
+    'hero-sub':'Sécurité enterprise sans équipes internes. SOC-CSIRT 24/7, Pentesting, IR et GRC.',
     'hero-btn1':'Protégé en 24h','hero-btn2':'Parler à un Expert',
     'hero-label':'Cybersécurité en tant que Service',
     'svc-label':'Nos Services',
-    'svc-h2':'Full AI<br><span style="color:var(--cyan)">Powered</span><br>Cybersécurité',
-    'svc-sub':'Cybersécurité de niveau entreprise entièrement pilotée par l\'IA — surveillance SOC, détection des menaces, réponse aux incidents et conformité, tout automatisé.',
+    'svc-h2':'Cybersécurité<br><span style="color:var(--cyan)">Complète</span><br>Pilotée par IA',
+    'svc-sub':'INVERSSYS remplace vos équipes internes. Un partenaire pour toute votre sécurité.',
     'svc1-name':'SOC 24/7 Surveillance (Alimenté par IA)','svc1-desc':'L\'IA surveille en permanence votre environnement via SIEM et XDR — détection, corrélation et réponse automatique aux menaces avant qu\'elles ne causent des dommages.',
     'svc2-name':'Tests d\'Intrusion','svc2-desc':'Les attaques simulées assistées par IA exposent vos véritables vulnérabilités — avec un rapport priorisé et des étapes de remédiation.',
     'svc3-name':'CSIRT','svc3-desc':"Unité Opérations de Sécurité et Réponse aux Incidents — la même équipe qui détecte une menace est celle qui la contient. Aucun transfert. Aucun délai. Action rapide 24h/24.",
@@ -398,14 +398,14 @@ const T={
     'svc5-name':'Investigation Numérique','svc5-desc':'Investigation post-incident et rapports de qualité légale pour la conformité et les procédures judiciaires.',
     'more-label':'Plus de Services',
     'cost-label':'Le Coût Réel de la Sécurité Interne',
-    'cost-h2':'Pourquoi payer pour un analyste quand vous pouvez avoir une équipe complète 24/7 ?',
-    'cost-sub':'Construire un SOC interne semble judicieux — jusqu\'à ce que vous voyez les chiffres. La cybersécurité n\'a pas besoin d\'être interne.',
+    'cost-h2':'Pourquoi payer pour<br>un analyste quand vous<br>pouvez avoir une équipe 24/7 ?',
+    'cost-sub':'Construire un SOC interne paraît bien — jusqu\'à ce que vous voyiez les chiffres.',
     'cost-t1':'Le Plancher Salarial','cost-d1':'Les analystes juniors exigent 70 000–90 000 $. Les seniors dépassent 150 000 $. Pour une couverture 24/7, il faut au moins 5 personnes.',
     'cost-t2':'La Prime du Manager','cost-d2':'Vous ne pouvez pas laisser les analystes juniors sans surveillance. Un responsable SOC ajoute 140 000 $+ à votre budget.',
     'cost-t3':'La Taxe Outillage','cost-d3':'SIEM, EDR, SOAR et les flux de renseignements peuvent facilement atteindre 200 000 $+ en licences annuelles.',
     'cost-t4':'Le Cycle de Départ des Talents','cost-d4':'La pénurie de talents est critique. Vos meilleurs éléments seront débauchés dans les 12 mois.',
     'alt-label':'L\'Alternative','alt-h2':'INVERSSYS SOC-CSIRT',
-    'alt-body':'Un forfait mensuel fixe. Une équipe complète d\'experts. Outils d\'entreprise inclus. Sans recrutement, sans épuisement, sans contrats d\'outils — protection 24/7/365 dès le premier jour.',
+    'alt-body':'Forfait fixe. Équipe complète. Outils inclus. Sans recrutement ni contrats complexes.',
     'alt-btn':'Calculer mes Économies',
     'alt-l1':'Couverture 24/7/365','alt-s1':' — Protection immédiate dès le premier jour',
     'alt-l2':'Stack Intégré','alt-s2':' — SIEM, EDR, SOAR, Threat Intel inclus',
@@ -421,13 +421,13 @@ const T={
     'ind5':'Finance &amp; Juridique','ind5r':'Conformité réglementaire, fraude bancaire, données confidentielles',
     'ind6':'Éducation &amp; Gouvernement','ind6r':'Vol d\'identifiants, menaces étatiques, systèmes hérités',
     'hiw-label':'Comment Ça Fonctionne','hiw-h2':'Protégé en 3 étapes. En 24 heures.',
-    'hiw-t1':'Évaluation','hiw-b1':'Nous cartographions toute votre surface d\'attaque — endpoints, réseaux, cloud et accès physique — et identifions vos vulnérabilités les plus critiques en 24 heures.',
+    'hiw-t1':'Évaluation','hiw-b1':'Nous cartographions votre surface d\'attaque et identifions vos vulnérabilités critiques en 24h.',
     'hiw-t2':'Déploiement','hiw-b2':'Agents légers déployés, infrastructure connectée à notre SOC — zéro interruption.',
-    'hiw-t3':'Protection 24/7','hiw-b3':'Notre IA et nos analystes surveillent tout en permanence. Les menaces sont détectées, contenues et neutralisées — vous recevez des rapports et la tranquillité d\'esprit.',
+    'hiw-t3':'Protection 24/7','hiw-b3':'IA et analystes surveillent 24/7. Menaces détectées, contenues, neutralisées. Rapports inclus.',
     'hiw-btn':'Voir vos Vulnérabilités Aujourd\'hui',
     'whu-label':'Le Risque de Ne Rien Faire','whu-h2':'Que se passe-t-il sans nous ?',
     'whu-sub':'La plupart des entreprises ne découvrent qu\'elles ont été compromises qu\'après qu\'il soit trop tard. Sans surveillance, pas d\'alerte — seulement des dégâts.',
-    'whu-btn':'N\'Attendez Pas. Protégez-vous.',
+    'whu-btn':'Protégez-vous Maintenant',
     'whu-t1':'Les Attaques Passent Inaperçues','whu-b1':'Sans surveillance 24/7, les attaquants peuvent rester dans votre réseau pendant des mois — volant des données et préparant une attaque plus importante.',
     'whu-t2':'Perte de Données &amp; Ransomware','whu-b2':'Le ransomware chiffre vos fichiers en minutes. Sans containment, un endpoint infecté devient un arrêt total de l\'activité.',
     'whu-t3':'Interruption d\'Activité','whu-b3':'Chaque heure d\'arrêt coûte de l\'argent, des clients et de la réputation. La récupération sans plan prend des jours — avec un plan, des heures.',
@@ -456,7 +456,7 @@ const T={
     'ir-li4':'<strong>Éradication</strong>Suppression complète des malwares, backdoors et persistance',
     'ir-li5':'<strong>Récupération &amp; Renforcement</strong>Restauration complète avec améliorations de sécurité',
     'ir-btn':'Nous Contacter','ir-visual-label':'Phases de Réponse',
-    'grc-label':'GRC — Gouvernance, Risque &amp; Conformité','grc-h2':'Sécurité qui satisfait les régulateurs, clients et partenaires.',
+    'grc-label':'GRC — Gouvernance, Risque &amp; Conformité','grc-h2':'Conformité sans complication.<br>Audits toujours prêts.',
     'grc-body':'La conformité n\'est pas seulement de la paperasse — c\'est le fondement de la confiance client. INVERSSYS construit et maintient votre cadre GRC.',
     'grc-li1':'<strong>Évaluations des Risques</strong>Identifier, quantifier et prioriser les risques de sécurité',
     'grc-li2':'<strong>Développement de Politiques</strong>Politiques de sécurité adaptées à votre entreprise',
@@ -468,7 +468,7 @@ const T={
     'stat1-label':'Couverture SOC IA','stat2-label':'Réponse Moy. Alertes','stat3-label':'Écosystème Sécurité','stat4-label':'27001 Aligné',
     'about-label':'Pourquoi INVERSSYS','about-h2':'L\'équipe de cybersécurité construite pour votre entreprise',
     'about-p1':'INVERSSYS fournit une <strong>cybersécurité complète en service</strong> — sans équipes internes.',
-    'about-p2':'Nous avons vu trop d\'entreprises subir des violations et des pertes de données simplement par manque d\'expertise en sécurité réelle. <strong>Cela change avec nous.</strong>',
+    'about-p2':'Trop d\'entreprises subissent des violations par manque d\'expertise. <strong>Cela change avec nous.</strong>',
     'about-p3':'Basé à Santo Domingo. Activement en cours de certification <strong>ISO/IEC 27001:2022</strong>.',
     'diff1-title':'SOC-CSIRT 24/7','diff1-body':'Notre SOC-CSIRT ne dort jamais. Une équipe unifiée — détection, confinement et réponse — par IA, 24h/24.',
     'diff2-title':'Réponse Immédiate','diff2-body':'Quand une menace réelle est confirmée, nous agissons. Pas d\'attente — le confinement commence en minutes.',
@@ -538,6 +538,8 @@ function toggleLang(){
   document.getElementById('langLabel').textContent=langLabel2[lang];
   document.querySelector('.lang-flag').textContent=langFlag[lang];
   document.documentElement.lang=lang;
+  const navEl=document.querySelector('.nav');
+  if(navEl){navEl.classList.toggle('fr-nav',lang==='fr');}
 
   const s=(id,k,html)=>{const el=document.getElementById(id);if(el&&t[k]){if(html)el.innerHTML=t[k];else el.textContent=t[k];}};
   const ph=(id,k)=>{const el=document.getElementById(id);if(el&&t[k])el.placeholder=t[k];};
