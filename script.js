@@ -606,13 +606,23 @@ function toggleLang(){
 function toggleMobileNav(){
   const h=document.getElementById('hamburger');
   const n=document.getElementById('nav-links');
+  const isOpen = n.classList.toggle('open');
   h.classList.toggle('open');
-  n.classList.toggle('open');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 function closeMobileNav(){
   document.getElementById('hamburger').classList.remove('open');
   document.getElementById('nav-links').classList.remove('open');
+  document.body.style.overflow = '';
 }
+// Close mobile nav if clicking outside
+document.addEventListener('click', function(e){
+  const nav = document.getElementById('nav-links');
+  const hamburger = document.getElementById('hamburger');
+  if(nav && nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)){
+    closeMobileNav();
+  }
+});
 
 // Formspree AJAX form handler
 const form = document.getElementById('contact-form');

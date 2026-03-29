@@ -141,6 +141,21 @@ body.show-more .main-content{display:none!important}
 .pricing-tbl td.row-label{color:var(--white);font-weight:500;font-family:'Space Mono',monospace;font-size:12px}
 .pricing-tbl td.feat-col{color:var(--white)}
 .pricing-tbl tr:last-child td{border-bottom:none}
+/* Mobile pricing cards */
+@media(max-width:768px){
+  .pricing-tbl{display:none}
+  .pricing-cards{display:flex;flex-direction:column;gap:20px;margin-top:40px}
+  .pricing-card{border:1px solid var(--border);padding:28px 24px;background:var(--bg2)}
+  .pricing-card.featured{border-color:var(--cyan);background:var(--bg3)}
+  .pricing-card-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--white);margin-bottom:6px}
+  .pricing-card.featured .pricing-card-title{color:var(--cyan)}
+  .pricing-card-sub{font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px}
+  .pricing-card-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}
+  .pricing-card-row:last-of-type{border-bottom:none}
+  .pricing-card-row span:first-child{color:var(--muted)}
+  .pricing-card-row span:last-child{color:var(--white);font-weight:500;text-align:right}
+}
+@media(min-width:769px){.pricing-cards{display:none}}
 .check{color:var(--cyan)}.cross{opacity:0.3}
 .price-row td{padding-top:28px;font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--white);border-top:1px solid var(--border-bright)}
 .price-row td.feat-col{color:var(--cyan)}
@@ -175,18 +190,25 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:38px 56p
 @media(max-width:960px){
   .container{padding:0 20px}
   .nav{padding:14px 20px}
-  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,6,15,0.98);flex-direction:column;align-items:center;justify-content:center;gap:28px;z-index:500;backdrop-filter:blur(20px)}
+  .nav-logo-text{font-size:15px}
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,6,15,0.97);flex-direction:column;align-items:flex-start;justify-content:center;gap:0;z-index:500;backdrop-filter:blur(24px);padding:80px 36px 40px}
   .nav-links.open{display:flex}
-  .nav-links li a{font-size:20px;font-family:'Syne',sans-serif;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:0.01em;transition:color 0.2s}
+  .nav-links li{width:100%;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .nav-links li a{display:block;padding:18px 0;font-size:20px;font-family:'Syne',sans-serif;font-weight:700;color:var(--white);text-decoration:none;letter-spacing:0.01em;transition:color 0.2s}
   .nav-links li a:hover{color:var(--cyan)}
-  .mobile-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--white);font-size:28px;cursor:pointer;padding:8px;line-height:1;z-index:501}
+  .mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--white);font-size:24px;cursor:pointer;padding:8px;line-height:1;z-index:501;opacity:0.7}
+  .mobile-close:hover{opacity:1}
   .hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:600;position:relative}
-  .hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:all 0.3s}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--white);transition:all 0.3s}
   .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
   .hamburger.open span:nth-child(2){opacity:0}
   .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-  .nav-right .lang-toggle{padding:7px 12px;font-size:10px}
+  .nav-right{gap:8px}
+  .nav-right .lang-toggle{padding:8px 12px;font-size:11px;letter-spacing:0.08em;border-radius:6px}
   .nav-cta{display:none}
+  /* Mobile lang inside menu - bottom of overlay */
+  .mobile-menu-lang{display:none;position:absolute;bottom:36px;left:36px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.1em;color:var(--muted)}
+  .nav-links.open ~ .mobile-menu-lang{display:block}
   .hero{padding:100px 20px 60px}
   .hero-headline{font-size:clamp(36px,9vw,72px);margin-bottom:40px}
   .hero-actions{flex-direction:column;gap:12px;width:100%}
