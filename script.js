@@ -13,7 +13,7 @@ const T={
     'dnav6':'Zero Trust Architecture','dnav6d':'Never trust, always verify — full ZTA design',
     'dnav7':'Security Awareness Training','dnav7d':'Phishing, social engineering &amp; insider threat training',
     'hero-label':'Cybersecurity as a Service',
-    'hero-h1':'Protect Your Business<br><em>in 24 Hours —</em><em>Without Hiring</em>a Security Team',
+    'hero-h1':'Protect Your<br><em>Business —</em><em>No Internal</em>Team Needed',
     'hero-sub':'Get enterprise-level security without hiring or managing teams. SOC 24/7 AI-powered, Penetration Testing, Incident Response, and GRC — all under one roof.',
     'hero-btn1':'Get Protected in 24 Hours','hero-btn2':'Talk to a Security Expert',
     'svc-label':'Our Services',
