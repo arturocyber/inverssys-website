@@ -514,6 +514,8 @@ function toggleLang(){
   lang=langCycle[lang];
   const t=T[lang];
   document.getElementById('langLabel').textContent=langLabel2[lang];
+  var mob=document.getElementById('langLabelMobile');
+  if(mob) mob.textContent=langLabel2[lang];
   document.querySelector('.lang-flag').textContent=langFlag[lang];
   document.documentElement.lang=lang;
   const navEl=document.querySelector('.nav');
@@ -604,25 +606,23 @@ function toggleLang(){
 }
 
 function toggleMobileNav(){
-  const h=document.getElementById('hamburger');
-  const n=document.getElementById('nav-links');
-  const isOpen = n.classList.toggle('open');
-  h.classList.toggle('open');
+  var drawer = document.getElementById('mobile-drawer');
+  var overlay = document.getElementById('drawer-overlay');
+  var h = document.getElementById('hamburger');
+  var isOpen = drawer.classList.toggle('open');
+  if(overlay) overlay.classList.toggle('open', isOpen);
+  h.classList.toggle('open', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 function closeMobileNav(){
-  document.getElementById('hamburger').classList.remove('open');
-  document.getElementById('nav-links').classList.remove('open');
+  var drawer = document.getElementById('mobile-drawer');
+  var overlay = document.getElementById('drawer-overlay');
+  var h = document.getElementById('hamburger');
+  if(drawer) drawer.classList.remove('open');
+  if(overlay) overlay.classList.remove('open');
+  if(h) h.classList.remove('open');
   document.body.style.overflow = '';
 }
-// Close mobile nav if clicking outside
-document.addEventListener('click', function(e){
-  const nav = document.getElementById('nav-links');
-  const hamburger = document.getElementById('hamburger');
-  if(nav && nav.classList.contains('open') && !nav.contains(e.target) && !hamburger.contains(e.target)){
-    closeMobileNav();
-  }
-});
 
 // Formspree AJAX form handler
 const form = document.getElementById('contact-form');
