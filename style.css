@@ -1,6 +1,6 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#04060f;--bg2:#070a18;--bg3:#0b1028;--cyan:#4a7fff;--cyan-dim:rgba(74,127,255,0.08);--cyan-border:rgba(74,127,255,0.25);--white:#eef2ff;--muted:#6a7899;--border:rgba(255,255,255,0.07);--border-bright:rgba(255,255,255,0.15)}
+:root{--bg:#0a0e1f;--bg2:#0e1428;--bg3:#131a35;--cyan:#4a7fff;--cyan-dim:rgba(74,127,255,0.09);--cyan-border:rgba(74,127,255,0.28);--white:#eef2ff;--muted:#7a8db0;--border:rgba(255,255,255,0.09);--border-bright:rgba(255,255,255,0.18)}
 html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
 body{background:var(--bg);color:var(--white);font-family:'Outfit',sans-serif;font-size:17px;line-height:1.7;overflow-x:hidden;max-width:100%;position:relative}
 h1,h2,h3{font-family:'Syne',sans-serif;font-weight:800;line-height:1.03;letter-spacing:-0.025em}
@@ -195,7 +195,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:38px 56p
   .nav{padding:14px 20px}
   .nav-logo-text{font-size:15px}
   /* ── Mobile nav bar: hamburger left, logo center ── */
-  .nav{justify-content:center;padding:0 16px;height:60px}
+  .nav{position:fixed !important;top:0;left:0;right:0;justify-content:center;padding:0 16px;height:60px}
   .nav-logo{position:absolute;left:50%;transform:translateX(-50%);z-index:1}
   .hamburger{display:flex !important;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:10px;z-index:600;position:relative}
   .hamburger span{display:block;width:22px;height:2px;background:var(--white);transition:all 0.3s}
