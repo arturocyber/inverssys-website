@@ -33,9 +33,9 @@ body.show-more .main-content{display:none!important}
 .drop-item:last-child:nth-child(odd){grid-column:span 2;border-right:none;border-bottom:none}
 .drop-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:3px}
 .drop-desc{font-size:12px;color:var(--muted);font-weight:300;line-height:1.45}
-.nav.fr-nav .nav-links{gap:18px;margin-left:20px}
-.nav.fr-nav .nav-links a{font-size:10px;letter-spacing:0.07em}
-.nav.fr-nav .nav-cta{padding:10px 14px;font-size:10px;letter-spacing:0.07em}
+.nav.fr-nav .nav-links{gap:22px;margin-left:28px}
+.nav.fr-nav .nav-links a{font-size:10.5px;letter-spacing:0.09em}
+.nav.fr-nav .nav-cta{padding:10px 16px;font-size:10.5px;letter-spacing:0.09em}
 .nav-dropdown>a::after{content:' ↓';font-size:9px;opacity:0.5;margin-left:2px}
 .lang-toggle{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:transparent;color:var(--muted);border:1px solid var(--border);padding:9px 16px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:8px;margin-right:12px}
 .lang-toggle:hover{color:var(--white);border-color:var(--border-bright)}
