@@ -152,8 +152,8 @@ const T={
     'pt-c36':'Advanced enterprise<br><span style="color:var(--muted);font-size:12px">(Splunk / Sentinel + IR)</span>',
     'pricing-cta1':'Get Started','pricing-cta2':'Start Protection','pricing-cta3':'Request Consultation',
     'pkg-placeholder':'Interested package',
-    'pkg-opt1':'Essential — $25 / device / month','pkg-opt2':'MDR — $45 / device / month',
-    'pkg-opt3':'Enterprise — From $60 / device / month','pkg-opt4':'Custom / Not sure yet',
+    'pkg-opt1':'Essential','pkg-opt2':'MDR',
+    'pkg-opt3':'Enterprise','pkg-opt4':'Custom / Not sure yet',
     'pricing-note':'// All prices quoted in USD. Per-endpoint pricing available. Contact us for a custom quote.',
     'p-feature':'Feature','p-best':'Best for','p-best1':'1–10 endpoints','p-best2':'10–50 endpoints','p-best3':'50+ / Multi-location',
     'p-soc':'SOC Monitoring','p-soc1':'Business hours','p-soc2':'24/7 AI','p-soc3':'24/7 AI Priority',
@@ -354,8 +354,8 @@ const T={
     'pt-c36':'Stack empresarial avanzado<br><span style="color:var(--muted);font-size:12px">(Splunk / Sentinel + IR)</span>',
     'pricing-cta1':'Comenzar','pricing-cta2':'Iniciar Protección','pricing-cta3':'Solicitar Consultoría',
     'pkg-placeholder':'Paquete de interés',
-    'pkg-opt1':'Essential — $25 / dispositivo / mes','pkg-opt2':'MDR — $45 / dispositivo / mes',
-    'pkg-opt3':'Enterprise — Desde $60 / dispositivo / mes','pkg-opt4':'Personalizado / No estoy seguro aún',
+    'pkg-opt1':'Essential','pkg-opt2':'MDR',
+    'pkg-opt3':'Enterprise','pkg-opt4':'Personalizado / No estoy seguro aún',
     'pricing-note':'Todos los precios están en USD. Los planes Enterprise pueden incluir licencias separadas según los requisitos del cliente. Precios personalizados disponibles.',
     'p-feature':'Característica','p-best':'Ideal para','p-best1':'1–10 endpoints','p-best2':'10–50 endpoints','p-best3':'50+ / Multi-ubicación',
     'p-soc':'Monitoreo SOC','p-soc1':'Horario laboral','p-soc2':'24/7 IA','p-soc3':'24/7 IA Prioritario',
@@ -534,8 +534,8 @@ const T={
     'pt-c36':'Stack entreprise avancé<br><span style="color:var(--muted);font-size:12px">(Splunk / Sentinel + IR)</span>',
     'pricing-cta1':'Commencer','pricing-cta2':'Démarrer la Protection','pricing-cta3':'Demander une Consultation',
     'pkg-placeholder':'Package souhaité',
-    'pkg-opt1':'Essential — 25 $ / appareil / mois','pkg-opt2':'MDR — 45 $ / appareil / mois',
-    'pkg-opt3':'Enterprise — À partir de 60 $ / appareil / mois','pkg-opt4':'Personnalisé / Pas encore sûr',
+    'pkg-opt1':'Essential','pkg-opt2':'MDR',
+    'pkg-opt3':'Enterprise','pkg-opt4':'Personnalisé / Pas encore sûr',
     'pricing-note':'Tous les prix sont en USD. Les plans Enterprise peuvent inclure des licences séparées selon les exigences du client. Tarification personnalisée disponible.',
     'p-feature':'Fonctionnalité','p-best':'Idéal pour','p-best1':'1–10 endpoints','p-best2':'10–50 endpoints','p-best3':'50+ / Multi-sites',
     'p-soc':'Surveillance SOC','p-soc1':'Heures ouvrables','p-soc2':'24/7 IA','p-soc3':'24/7 IA Prioritaire',
@@ -822,17 +822,16 @@ document.addEventListener('DOMContentLoaded', function() {
   on('hero-btn2', 'click', function(){ showMain(); });
   on('more-cta-btn', 'click', function(){ showMain(); });
   function goToForm(pkg) {
-    showMain();
-    setTimeout(function(){
-      var form = document.getElementById('contact-form');
-      if(form) {
-        form.scrollIntoView({behavior:'smooth', block:'center'});
-        if(pkg) {
-          var sel = document.getElementById('contact-pkg');
-          if(sel) sel.value = pkg;
-        }
+    // Hide "more" view if active, but don't scroll to top
+    document.body.classList.remove('show-more');
+    var form = document.getElementById('contact-form');
+    if(form) {
+      form.scrollIntoView({behavior:'smooth', block:'start'});
+      if(pkg) {
+        var sel = document.getElementById('contact-pkg');
+        if(sel) sel.value = pkg;
       }
-    }, 80);
+    }
   }
   on('pricing-cta1', 'click', function(e){ e.preventDefault(); goToForm('Essential'); });
   on('pricing-cta2', 'click', function(e){ e.preventDefault(); goToForm('MDR'); });
