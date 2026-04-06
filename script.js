@@ -671,3 +671,57 @@ function showMain(anchor) {
     window.scrollTo({top:0, behavior:'instant'});
   }
 }
+
+// ── Event listeners (replaces all inline onclick attributes) ──────────
+document.addEventListener('DOMContentLoaded', function() {
+  function on(id, evt, fn) {
+    var el = document.getElementById(id);
+    if(el) el.addEventListener(evt, fn);
+  }
+  function onAll(sel, evt, fn) {
+    document.querySelectorAll(sel).forEach(function(el){ el.addEventListener(evt, fn); });
+  }
+
+  // Hamburger
+  on('hamburger', 'click', toggleMobileNav);
+
+  // Drawer close & overlay
+  on('drawer-close-btn', 'click', closeMobileNav);
+  on('drawer-overlay', 'click', closeMobileNav);
+
+  // Logo links (scroll to top)
+  on('nav-logo-link', 'click', function(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
+  on('footer-logo-link', 'click', function(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
+
+  // Lang toggles
+  on('lang-toggle-desktop', 'click', toggleLang);
+  on('drawer-lang-btn', 'click', toggleLang);
+
+  // Nav CTA
+  on('nav-cta', 'click', showMain);
+
+  // Desktop nav links
+  on('nav-svc',     'click', function(){ showMain(); });
+  on('nav-more',    'click', function(e){ showMore(e); });
+  on('nav-soc',     'click', function(){ showMain('#soc-csirt'); });
+  on('nav-pentest', 'click', function(){ showMain(); });
+  on('nav-grc',     'click', function(){ showMain(); });
+  on('nav-about',   'click', function(){ showMain(); });
+  on('nav-pricing', 'click', function(){ showMain(); });
+
+  // Mobile drawer nav links (close drawer first, then navigate)
+  ['mob-svc','mob-about','mob-pricing','mob-contact','mob-pentest','mob-grc'].forEach(function(id){
+    on(id, 'click', function(){ closeMobileNav(); showMain(); });
+  });
+  on('mob-more', 'click', function(e){ closeMobileNav(); showMore(e); });
+  on('mob-soc',  'click', function(){ closeMobileNav(); showMain('#soc-csirt'); });
+
+  // Hero / CTA buttons
+  on('hero-btn1', 'click', function(){ showMain(); });
+  on('hero-btn2', 'click', function(){ showMain(); });
+  on('more-cta-btn', 'click', function(){ showMain(); });
+
+  // More section back button
+  on('more-back-btn', 'click', function(){ showMain(); });
+  // Hover styles for back button via CSS (no inline onmouseover)
+});
