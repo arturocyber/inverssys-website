@@ -138,7 +138,7 @@ const T={
     'contact-h2':'Get Protected.<br>Start Today.',
     'contact-sub':"No sales pressure. No jargon. We'll evaluate your current security posture and tell you exactly where you stand — for free.",
     'contact-label1':'Phone','contact-label2':'Email','contact-label3':'Address',
-    'contact-ph1':'Your name','contact-ph2':'Email address','contact-ph3':'Phone number','contact-ph4':'Tell us about your business and what you need',
+    'contact-ph1':'Your name','contact-ph5':'Company name','contact-ph6':'Position / Title','contact-ph2':'Email address','contact-ph3':'Phone / WhatsApp','contact-ph4':'Tell us about your business and what you need',
     'contact-btn':'Send Message →',
     'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 DR  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN',
     'cost-label':'The Real Cost of In-House Security',
@@ -313,7 +313,7 @@ const T={
     'contact-h2':'Protégete.<br>Empieza Hoy.',
     'contact-sub':'Sin presión ni tecnicismos. Evaluamos tu seguridad gratis.',
     'contact-label1':'Teléfono','contact-label2':'Correo','contact-label3':'Dirección',
-    'contact-ph1':'Tu nombre','contact-ph2':'Correo electrónico','contact-ph3':'Número de teléfono','contact-ph4':'Cuéntanos sobre tu empresa y lo que necesitas',
+    'contact-ph1':'Tu nombre','contact-ph5':'Nombre de la empresa','contact-ph6':'Cargo / Título','contact-ph2':'Correo electrónico','contact-ph3':'Teléfono / WhatsApp','contact-ph4':'Cuéntanos sobre tu empresa y lo que necesitas',
     'contact-btn':'Solicitar Evaluación →',
     'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 RD  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN',
     'cost-label':'El Costo Real de la Seguridad Interna',
@@ -466,7 +466,7 @@ const T={
     'contact-h2':'Soyez Protégé.<br>Commencez Aujourd\'hui.',
     'contact-sub':'Sans pression ni jargon. Évaluation de sécurité gratuite.',
     'contact-label1':'Téléphone','contact-label2':'E-mail','contact-label3':'Adresse',
-    'contact-ph1':'Votre nom','contact-ph2':'Adresse e-mail','contact-ph3':'Numéro de téléphone','contact-ph4':'Parlez-nous de votre entreprise et de vos besoins',
+    'contact-ph1':'Votre nom','contact-ph5':'Nom de l\'entreprise','contact-ph6':'Poste / Titre','contact-ph2':'Adresse e-mail','contact-ph3':'Téléphone / WhatsApp','contact-ph4':'Parlez-nous de votre entreprise et de vos besoins',
     'contact-btn':'Demander une Évaluation →',
     'footer-copy':'© 2026 INVERSSYS · 🇺🇸 USA · 🇩🇴 DR · 🇵🇦 PAN · 🇨🇴 COL · 🇨🇦 CAN',
     'footer-svc':'Services','footer-soc':'SOC','footer-pt':'Pentesting','footer-grc':'GRC','footer-about':'À Propos','footer-pricing':'Tarifs','footer-contact':'Contact',
@@ -598,7 +598,7 @@ function toggleLang(){
   // CONTACT
   s('contact-h2','contact-h2',true); s('contact-sub','contact-sub',true);
   s('contact-label1','contact-label1'); s('contact-label2','contact-label2'); s('contact-label3','contact-label3');
-  ph('contact-ph1','contact-ph1'); ph('contact-ph2','contact-ph2'); ph('contact-ph3','contact-ph3'); ph('contact-ph4','contact-ph4');
+  ph('contact-ph1','contact-ph1'); ph('contact-ph5','contact-ph5'); ph('contact-ph6','contact-ph6'); ph('contact-ph2','contact-ph2'); ph('contact-ph3','contact-ph3'); ph('contact-ph4','contact-ph4');
   s('contact-btn','contact-btn');
   // Form success card
   var fsLabel={'en':'Message Received','es':'Mensaje Recibido','fr':'Message Reçu'};
@@ -649,10 +649,8 @@ if(form) {
       });
       if(res.ok) {
         form.reset();
-        // Hide all inputs and button
-        form.querySelectorAll('.f-field, .f-submit').forEach(function(el){ el.style.display = 'none'; });
-        form.querySelector('div[style*="Or send"]').style.display = 'none';
-        if(success) success.style.display = 'block';
+        form.style.display = 'none';
+        if(success) { success.style.display = 'block'; }
       } else {
         btn.textContent = 'Error — try again';
         btn.style.opacity = '1';
