@@ -645,7 +645,9 @@
           <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--white);margin-bottom:10px" id="fs-title">We'll be in touch within 24 hours.</div>
           <div style="font-family:'Outfit',sans-serif;font-size:14px;font-weight:300;color:var(--muted);line-height:1.6" id="fs-body">Our team monitors threats 24/7 — your message is already in our queue. Expect a response from <span style="color:var(--white)">info@inverssys.com</span>.</div>
       </div>
-      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mdapyejg" method="POST">
+      <form class="contact-form" id="contact-form" name="contact" action="/success" method="POST" netlify netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="bot-field" style="display:none">
         <div id="form-label" style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:20px">Or send a message</div>
         <div class="f-field"><input type="text" name="Name" id="contact-ph1" placeholder="Your name" required></div>
         <div class="f-field"><input type="text" name="Company" id="contact-ph5" placeholder="Company name" required></div>

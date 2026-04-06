@@ -721,7 +721,7 @@ function closeMobileNav(){
   document.body.style.overflow = '';
 }
 
-// Formspree AJAX form handler
+// Netlify Forms AJAX handler
 const form = document.getElementById('contact-form');
 if(form) {
   form.addEventListener('submit', async function(e) {
@@ -732,25 +732,24 @@ if(form) {
     btn.style.opacity = '0.6';
     btn.disabled = true;
 
-    // Build clean JSON payload — Formspree renders JSON as a neat table
+    // Encode as URL-encoded for Netlify Forms
     const get = function(id){ var el=document.getElementById(id); return el ? el.value.trim() : ''; };
-    const payload = {
+    const data = new URLSearchParams({
+      'form-name':        'contact',
       'Name':             get('contact-ph1'),
       'Company':          get('contact-ph5'),
       'Position':         get('contact-ph6'),
       'Package':          get('contact-pkg'),
       'Email':            get('contact-ph2'),
-      'Phone / WhatsApp': get('contact-ph3'),
-      'Message':          get('contact-ph4'),
-      '_subject':         'New inquiry — INVERSSYS website',
-      '_replyto':         get('contact-ph2')
-    };
+      'Phone':            get('contact-ph3'),
+      'Message':          get('contact-ph4')
+    });
 
     try {
-      const res = await fetch(form.action, {
+      const res = await fetch('/', {
         method: 'POST',
-        body: JSON.stringify(payload),
-        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data.toString()
       });
       if(res.ok) {
         form.reset();
