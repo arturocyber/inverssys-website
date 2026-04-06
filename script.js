@@ -600,6 +600,13 @@ function toggleLang(){
   s('contact-label1','contact-label1'); s('contact-label2','contact-label2'); s('contact-label3','contact-label3');
   ph('contact-ph1','contact-ph1'); ph('contact-ph2','contact-ph2'); ph('contact-ph3','contact-ph3'); ph('contact-ph4','contact-ph4');
   s('contact-btn','contact-btn');
+  // Form success card
+  var fsLabel={'en':'Message Received','es':'Mensaje Recibido','fr':'Message Reçu'};
+  var fsTitle={'en':"We'll be in touch within 24 hours.",'es':'Estaremos en contacto en 24 horas.','fr':'Nous vous contacterons sous 24 heures.'};
+  var fsBody={'en':'Our team monitors threats 24/7 — your message is already in our queue. Expect a response from <span style="color:var(--white)">info@inverssys.com</span>.','es':'Nuestro equipo monitorea amenazas 24/7 — tu mensaje ya está en nuestra cola. Espera respuesta de <span style="color:var(--white)">info@inverssys.com</span>.','fr':'Notre équipe surveille les menaces 24h/24 — votre message est déjà dans notre file. Attendez une réponse de <span style="color:var(--white)">info@inverssys.com</span>.'};
+  var fsl=document.getElementById('fs-label'); if(fsl) fsl.textContent=fsLabel[lang];
+  var fst=document.getElementById('fs-title'); if(fst) fst.textContent=fsTitle[lang];
+  var fsb=document.getElementById('fs-body'); if(fsb) fsb.innerHTML=fsBody[lang];
   // FOOTER
   s('footer-copy','footer-copy');
   ['footer-svc','footer-soc','footer-pt','footer-grc','footer-about','footer-pricing','footer-contact'].forEach(id=>s(id,id));
@@ -642,7 +649,9 @@ if(form) {
       });
       if(res.ok) {
         form.reset();
-        btn.style.display = 'none';
+        // Hide all inputs and button
+        form.querySelectorAll('.f-field, .f-submit').forEach(function(el){ el.style.display = 'none'; });
+        form.querySelector('div[style*="Or send"]').style.display = 'none';
         if(success) success.style.display = 'block';
       } else {
         btn.textContent = 'Error — try again';

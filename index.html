@@ -559,7 +559,14 @@
         <div class="f-field"><input type="tel" name="phone" id="contact-ph3" placeholder="Phone / WhatsApp"></div>
         <div class="f-field"><textarea name="message" id="contact-ph4" placeholder="Tell us about your business and what you need" required></textarea></div>
         <input type="hidden" name="_subject" value="New inquiry from INVERSSYS website">
-        <div id="form-success" style="display:none;font-family:'Space Mono',monospace;font-size:12px;color:var(--cyan);padding:16px 0;letter-spacing:0.05em">✓ Message sent! We'll be in touch within 24 hours.</div>
+        <div id="form-success" style="display:none;padding:32px 24px;border:1px solid var(--cyan);background:rgba(74,127,255,0.05);text-align:center">
+          <div style="width:52px;height:52px;border-radius:50%;background:rgba(74,127,255,0.12);border:2px solid var(--cyan);display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px" id="fs-label">Message Received</div>
+          <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--white);margin-bottom:10px" id="fs-title">We'll be in touch within 24 hours.</div>
+          <div style="font-family:'Outfit',sans-serif;font-size:14px;font-weight:300;color:var(--muted);line-height:1.6" id="fs-body">Our team monitors threats 24/7 — your message is already in our queue. Expect a response from <span style="color:var(--white)">info@inverssys.com</span>.</div>
+        </div>
         <button class="f-submit" type="submit" id="contact-btn">Request Assessment →</button>
       </form>
     </div>
