@@ -126,7 +126,34 @@ const T={
     'diff4-title':'Compliance Ready','diff4-body':'ISO/IEC 27001 and NIST-aligned. We build your compliance posture and keep it audit-ready at all times.',
     'diff5-title':'Scalable Cloud Integration','diff5-body':'Our platform scales with your business — from a single office to a multi-location cloud-connected operation.',
     'diff6-title':'One Strategic Partner','diff6-body':'No vendor chaos. INVERSSYS is your single point of accountability for the entire security and infrastructure stack.',
-    'pricing-label':'Pricing','pricing-h2':'Transparent pricing.<br>No surprises.',
+    'pricing-label':'Pricing',
+    'pricing-h2':'Managed Cybersecurity Plans',
+    'pricing-sub':'Enterprise-grade protection, monitoring, and response tailored to your business.',
+    'pt-badge':'Most Popular',
+    'pt-l1':'Best for','pt-l2':'Monitoring','pt-l3':'Protection (XDR)',
+    'pt-l4':'SIEM (Visibility)','pt-l5':'Threat Intelligence','pt-l6':'Incident Response',
+    'pt-l7':'IR & Forensics','pt-l8':'Compliance Support','pt-l9':'Security Testing',
+    'pt-l10':'Reporting','pt-l11':'Support','pt-l12':'Technology stack',
+    'pt-c1':'1–25 devices','pt-c2':'25–150 devices','pt-c3':'100+ / Multi-location',
+    'pt-c4':'Business hours','pt-c5':'24/7 Monitoring','pt-c6':'24/7 Priority',
+    'pt-c7':'Basic','pt-c8':'Advanced','pt-c9':'Full Coverage',
+    'pt-c12':'Advanced<br><span style="color:var(--muted);font-size:12px">Splunk / Sentinel</span>',
+    'pt-c15':'✓ <span style="color:var(--muted);font-size:12px">Advanced</span>',
+    'pt-c16':'Alerts only','pt-c17':'Remote Response','pt-c18':'Dedicated Analyst',
+    'pt-c23':'Basic Guidance','pt-c24':'ISO 27001 Support',
+    'pt-c25':'Add-on',
+    'pt-c28':'Monthly Summary',
+    'pt-c29':'Weekly Updates<br><span style="color:var(--muted);font-size:12px">+ Detailed Report</span>',
+    'pt-c30':'Executive +<br><span style="color:var(--muted);font-size:12px">Technical Reports</span>',
+    'pt-c32':'Email + Phone',
+    'pt-c33':'Priority +<br><span style="color:var(--muted);font-size:12px">Dedicated Analyst</span>',
+    'pt-c34':'Open-source<br><span style="color:var(--muted);font-size:12px">(Wazuh-based)</span>',
+    'pt-c35':'Enterprise<br><span style="color:var(--muted);font-size:12px">(XDR + SIEM)</span>',
+    'pt-c36':'Advanced enterprise<br><span style="color:var(--muted);font-size:12px">(Splunk / Sentinel + IR)</span>',
+    'pricing-cta1':'Get Started','pricing-cta2':'Start Protection','pricing-cta3':'Request Consultation',
+    'pkg-placeholder':'Interested package',
+    'pkg-opt1':'Essential — $25 / device / month','pkg-opt2':'MDR — $45 / device / month',
+    'pkg-opt3':'Enterprise — From $60 / device / month','pkg-opt4':'Custom / Not sure yet',
     'pricing-note':'// All prices quoted in USD. Per-endpoint pricing available. Contact us for a custom quote.',
     'p-feature':'Feature','p-best':'Best for','p-best1':'1–10 endpoints','p-best2':'10–50 endpoints','p-best3':'50+ / Multi-location',
     'p-soc':'SOC Monitoring','p-soc1':'Business hours','p-soc2':'24/7 AI','p-soc3':'24/7 AI Priority',
@@ -301,8 +328,35 @@ const T={
     'diff4-title':'Listo para el Cumplimiento','diff4-body':'Alineado con ISO/IEC 27001 y NIST. Construimos tu postura de cumplimiento y la mantenemos lista para auditorías.',
     'diff5-title':'Integración Cloud Escalable','diff5-body':'Nuestra plataforma escala con tu negocio — desde una sola oficina hasta una operación multilocación conectada a la nube.',
     'diff6-title':'Un Socio Estratégico','diff6-body':'Sin caos de proveedores. INVERSSYS es tu único punto de responsabilidad para toda la pila de seguridad e infraestructura.',
-    'pricing-label':'Precios','pricing-h2':'Precios claros.<br>Sin sorpresas.',
-    'pricing-note':'// Precios en USD. Cotización personalizada disponible.',
+    'pricing-label':'Precios',
+    'pricing-h2':'Planes de Ciberseguridad Gestionada',
+    'pricing-sub':'Protección, monitoreo y respuesta de nivel empresarial adaptados a tu negocio.',
+    'pt-badge':'Más Popular',
+    'pt-l1':'Ideal para','pt-l2':'Monitoreo','pt-l3':'Protección (XDR)',
+    'pt-l4':'SIEM (Visibilidad)','pt-l5':'Inteligencia de Amenazas','pt-l6':'Respuesta a Incidentes',
+    'pt-l7':'IR y Forense','pt-l8':'Soporte de Cumplimiento','pt-l9':'Pruebas de Seguridad',
+    'pt-l10':'Reportes','pt-l11':'Soporte','pt-l12':'Stack Tecnológico',
+    'pt-c1':'1–25 dispositivos','pt-c2':'25–150 dispositivos','pt-c3':'100+ / Multi-ubicación',
+    'pt-c4':'Horario laboral','pt-c5':'Monitoreo 24/7','pt-c6':'24/7 Prioritario',
+    'pt-c7':'Básico','pt-c8':'Avanzado','pt-c9':'Cobertura Total',
+    'pt-c12':'Avanzado<br><span style="color:var(--muted);font-size:12px">Splunk / Sentinel</span>',
+    'pt-c15':'✓ <span style="color:var(--muted);font-size:12px">Avanzado</span>',
+    'pt-c16':'Solo alertas','pt-c17':'Respuesta Remota','pt-c18':'Analista Dedicado',
+    'pt-c23':'Orientación Básica','pt-c24':'Apoyo ISO 27001',
+    'pt-c25':'Complemento',
+    'pt-c28':'Resumen Mensual',
+    'pt-c29':'Actualizaciones semanales<br><span style="color:var(--muted);font-size:12px">+ Informe Detallado</span>',
+    'pt-c30':'Ejecutivo +<br><span style="color:var(--muted);font-size:12px">Informes Técnicos</span>',
+    'pt-c32':'Correo + Teléfono',
+    'pt-c33':'Prioritario +<br><span style="color:var(--muted);font-size:12px">Analista Dedicado</span>',
+    'pt-c34':'Open-source<br><span style="color:var(--muted);font-size:12px">(basado en Wazuh)</span>',
+    'pt-c35':'Empresarial<br><span style="color:var(--muted);font-size:12px">(XDR + SIEM)</span>',
+    'pt-c36':'Stack empresarial avanzado<br><span style="color:var(--muted);font-size:12px">(Splunk / Sentinel + IR)</span>',
+    'pricing-cta1':'Comenzar','pricing-cta2':'Iniciar Protección','pricing-cta3':'Solicitar Consultoría',
+    'pkg-placeholder':'Paquete de interés',
+    'pkg-opt1':'Essential — $25 / dispositivo / mes','pkg-opt2':'MDR — $45 / dispositivo / mes',
+    'pkg-opt3':'Enterprise — Desde $60 / dispositivo / mes','pkg-opt4':'Personalizado / No estoy seguro aún',
+    'pricing-note':'Todos los precios están en USD. Los planes Enterprise pueden incluir licencias separadas según los requisitos del cliente. Precios personalizados disponibles.',
     'p-feature':'Característica','p-best':'Ideal para','p-best1':'1–10 endpoints','p-best2':'10–50 endpoints','p-best3':'50+ / Multi-ubicación',
     'p-soc':'Monitoreo SOC','p-soc1':'Horario laboral','p-soc2':'24/7 IA','p-soc3':'24/7 IA Prioritario',
     'p-agents':'Agentes Endpoint','p-agents1':'Hasta 10','p-agents2':'Hasta 50','p-agents3':'Ilimitado',
@@ -454,8 +508,35 @@ const T={
     'diff4-title':'Prêt pour la Conformité','diff4-body':'Aligné ISO/IEC 27001 et NIST. Nous construisons votre posture de conformité et la maintenons prête pour les audits.',
     'diff5-title':'Intégration Cloud Évolutive','diff5-body':'Notre plateforme évolue avec votre entreprise — d\'un seul bureau à une opération multi-sites connectée au cloud.',
     'diff6-title':'Un Partenaire Stratégique','diff6-body':'Pas de chaos de fournisseurs. INVERSSYS est votre seul point de responsabilité pour l\'ensemble de la stack de sécurité.',
-    'pricing-label':'Tarifs','pricing-h2':'Tarifs clairs.<br>Sans surprises.',
-    'pricing-note':'// Prix en USD. Devis personnalisé disponible.',
+    'pricing-label':'Tarifs',
+    'pricing-h2':'Plans de Cybersécurité Managée',
+    'pricing-sub':'Protection, surveillance et réponse de niveau entreprise adaptées à votre activité.',
+    'pt-badge':'Le Plus Populaire',
+    'pt-l1':'Idéal pour','pt-l2':'Surveillance','pt-l3':'Protection (XDR)',
+    'pt-l4':'SIEM (Visibilité)','pt-l5':'Renseignements sur les Menaces','pt-l6':'Réponse aux Incidents',
+    'pt-l7':'IR et Forensique','pt-l8':'Support Conformité','pt-l9':'Tests de Sécurité',
+    'pt-l10':'Rapports','pt-l11':'Support','pt-l12':'Stack Technologique',
+    'pt-c1':'1–25 appareils','pt-c2':'25–150 appareils','pt-c3':'100+ / Multi-site',
+    'pt-c4':'Heures ouvrables','pt-c5':'Surveillance 24/7','pt-c6':'24/7 Prioritaire',
+    'pt-c7':'Basique','pt-c8':'Avancé','pt-c9':'Couverture Complète',
+    'pt-c12':'Avancé<br><span style="color:var(--muted);font-size:12px">Splunk / Sentinel</span>',
+    'pt-c15':'✓ <span style="color:var(--muted);font-size:12px">Avancé</span>',
+    'pt-c16':'Alertes uniquement','pt-c17':'Réponse à Distance','pt-c18':'Analyste Dédié',
+    'pt-c23':'Conseil de Base','pt-c24':'Support ISO 27001',
+    'pt-c25':'En option',
+    'pt-c28':'Résumé Mensuel',
+    'pt-c29':'Mises à jour hebdomadaires<br><span style="color:var(--muted);font-size:12px">+ Rapport Détaillé</span>',
+    'pt-c30':'Exécutif +<br><span style="color:var(--muted);font-size:12px">Rapports Techniques</span>',
+    'pt-c32':'E-mail + Téléphone',
+    'pt-c33':'Prioritaire +<br><span style="color:var(--muted);font-size:12px">Analyste Dédié</span>',
+    'pt-c34':'Open-source<br><span style="color:var(--muted);font-size:12px">(basé sur Wazuh)</span>',
+    'pt-c35':'Entreprise<br><span style="color:var(--muted);font-size:12px">(XDR + SIEM)</span>',
+    'pt-c36':'Stack entreprise avancé<br><span style="color:var(--muted);font-size:12px">(Splunk / Sentinel + IR)</span>',
+    'pricing-cta1':'Commencer','pricing-cta2':'Démarrer la Protection','pricing-cta3':'Demander une Consultation',
+    'pkg-placeholder':'Package souhaité',
+    'pkg-opt1':'Essential — 25 $ / appareil / mois','pkg-opt2':'MDR — 45 $ / appareil / mois',
+    'pkg-opt3':'Enterprise — À partir de 60 $ / appareil / mois','pkg-opt4':'Personnalisé / Pas encore sûr',
+    'pricing-note':'Tous les prix sont en USD. Les plans Enterprise peuvent inclure des licences séparées selon les exigences du client. Tarification personnalisée disponible.',
     'p-feature':'Fonctionnalité','p-best':'Idéal pour','p-best1':'1–10 endpoints','p-best2':'10–50 endpoints','p-best3':'50+ / Multi-sites',
     'p-soc':'Surveillance SOC','p-soc1':'Heures ouvrables','p-soc2':'24/7 IA','p-soc3':'24/7 IA Prioritaire',
     'p-agents':'Agents Endpoint','p-agents1':'Jusqu\'à 10','p-agents2':'Jusqu\'à 50','p-agents3':'Illimité',
@@ -590,7 +671,16 @@ function toggleLang(){
   s('about-p1','about-p1',true); s('about-p2','about-p2',true); s('about-p3','about-p3',true);
   for(let i=1;i<=6;i++){s('diff'+i+'-title','diff'+i+'-title'); s('diff'+i+'-body','diff'+i+'-body',true);}
   // PRICING
-  s('pricing-label','pricing-label'); s('pricing-h2','pricing-h2',true); s('pricing-note','pricing-note',true);
+  s('pricing-label','pricing-label'); s('pricing-h2','pricing-h2',true);
+  s('pricing-sub','pricing-sub'); s('pricing-note','pricing-note',true);
+  s('pt-badge','pt-badge');
+  for(var i=1;i<=12;i++) s('pt-l'+i,'pt-l'+i);
+  // Cells that need text translation (✓ and — cells are skipped)
+  [1,2,3,4,5,6,7,8,9,12,15,16,17,18,23,24,25,28,29,30,32,33,34,35,36].forEach(function(n){
+    s('pt-c'+n,'pt-c'+n,true);
+  });
+  s('pricing-cta1','pricing-cta1'); s('pricing-cta2','pricing-cta2'); s('pricing-cta3','pricing-cta3');
+  s('pkg-placeholder','pkg-placeholder'); s('pkg-opt1','pkg-opt1'); s('pkg-opt2','pkg-opt2'); s('pkg-opt3','pkg-opt3'); s('pkg-opt4','pkg-opt4');
   document.querySelectorAll('[data-pricing]').forEach(el=>{
     const k='p-'+el.getAttribute('data-pricing');
     if(t[k]) el.textContent=t[k];
@@ -731,9 +821,22 @@ document.addEventListener('DOMContentLoaded', function() {
   on('hero-btn1', 'click', function(){ showMain(); });
   on('hero-btn2', 'click', function(){ showMain(); });
   on('more-cta-btn', 'click', function(){ showMain(); });
-  on('pricing-cta1', 'click', function(){ showMain(); });
-  on('pricing-cta2', 'click', function(){ showMain(); });
-  on('pricing-cta3', 'click', function(){ showMain(); });
+  function goToForm(pkg) {
+    showMain();
+    setTimeout(function(){
+      var form = document.getElementById('contact-form');
+      if(form) {
+        form.scrollIntoView({behavior:'smooth', block:'center'});
+        if(pkg) {
+          var sel = document.getElementById('contact-pkg');
+          if(sel) sel.value = pkg;
+        }
+      }
+    }, 80);
+  }
+  on('pricing-cta1', 'click', function(e){ e.preventDefault(); goToForm('Essential'); });
+  on('pricing-cta2', 'click', function(e){ e.preventDefault(); goToForm('MDR'); });
+  on('pricing-cta3', 'click', function(e){ e.preventDefault(); goToForm('Enterprise'); });
 
   // More section back button
   on('more-back-btn', 'click', function(){ showMain(); });

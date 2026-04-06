@@ -319,3 +319,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:38px 56p
 .ptfeat{background:rgba(74,127,255,0.06);border-left:1px solid rgba(74,127,255,0.25);border-right:1px solid rgba(74,127,255,0.25)}
 .pt-check{color:var(--cyan);font-size:16px;font-weight:700}
 .pt-dash{color:var(--border-bright);font-size:18px}
+
+/* Package selector */
+#contact-pkg option{background:#0b1028;color:#fff}
+#contact-pkg:focus{border-bottom-color:var(--cyan)}
+#contact-pkg:invalid{color:var(--muted)}
