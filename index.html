@@ -454,68 +454,177 @@
 </section>
 
 <!-- PRICING -->
-<section class="pricing" id="pricing">
+<section id="pricing" style="background:var(--bg);padding:100px 0 80px;border-bottom:1px solid var(--border)">
   <div class="container">
-    <div class="label" style="margin-bottom:22px" id="pricing-label">Pricing</div>
-    <h2 style="font-size:clamp(34px,4vw,56px)" id="pricing-h2">Transparent pricing.<br>No surprises.</h2>
-    <table class="pricing-tbl">
-      <thead>
-        <tr>
-          <th class="row-label" data-pricing="feature">Feature</th>
-          <th>Starter</th>
-          <th class="feat-col">Standard</th>
-          <th>Enterprise</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td class="row-label" data-pricing="best">Best for</td><td data-pricing="best1">1–10 endpoints</td><td class="feat-col" data-pricing="best2">10–50 endpoints</td><td data-pricing="best3">50+ / Multi-location</td></tr>
-        <tr><td class="row-label" data-pricing="soc">SOC Monitoring</td><td data-pricing="soc1">Business hours</td><td class="feat-col" data-pricing="soc2">24/7 AI</td><td data-pricing="soc3">24/7 AI Priority</td></tr>
-        <tr><td class="row-label" data-pricing="agents">Endpoint Agents</td><td data-pricing="agents1">Up to 10</td><td class="feat-col" data-pricing="agents2">Up to 50</td><td data-pricing="agents3">Unlimited</td></tr>
-        <tr><td class="row-label" data-pricing="ti">Threat Intelligence</td><td><span class="cross">✕</span></td><td class="feat-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-        <tr><td class="row-label" data-pricing="ir">Incident Response</td><td data-pricing="ir1">Email</td><td class="feat-col" data-pricing="ir2">Phone + Email</td><td data-pricing="ir3">Dedicated Analyst</td></tr>
-        <tr><td class="row-label" data-pricing="grc">GRC &amp; Compliance</td><td><span class="cross">✕</span></td><td class="feat-col" data-pricing="grc1">ISO 27001 Prep</td><td data-pricing="grc2">Full Audit Support</td></tr>
-        <tr><td class="row-label" data-pricing="pt">Penetration Test</td><td data-pricing="pt1">Add-on</td><td class="feat-col" data-pricing="pt2">1× / year</td><td data-pricing="pt3">2× / year</td></tr>
-        <tr><td class="row-label" data-pricing="report">Monthly Report</td><td data-pricing="report1">Summary</td><td class="feat-col" data-pricing="report2">Detailed</td><td data-pricing="report3">Executive + Technical</td></tr>
-      </tbody>
-    </table>
-    <p class="pricing-note" id="pricing-note">// All prices quoted in USD. Per-endpoint pricing available. Contact us for a custom quote.</p>
 
-    <!-- Mobile pricing cards -->
-    <div class="pricing-cards">
-      <div class="pricing-card">
-        <div class="pricing-card-title">Starter</div>
-        <div class="pricing-card-sub">1–10 endpoints</div>
-        <div class="pricing-card-row"><span>SOC Monitoring</span><span>Business hours</span></div>
-        <div class="pricing-card-row"><span>Endpoint Agents</span><span>Up to 10</span></div>
-        <div class="pricing-card-row"><span>Threat Intelligence</span><span>✕</span></div>
-        <div class="pricing-card-row"><span>Incident Response</span><span>Email</span></div>
-        <div class="pricing-card-row"><span>GRC &amp; Compliance</span><span>✕</span></div>
-        <div class="pricing-card-row"><span>Penetration Test</span><span>Add-on</span></div>
-        <div class="pricing-card-row"><span>Monthly Report</span><span>Summary</span></div>
-      </div>
-      <div class="pricing-card featured">
-        <div class="pricing-card-title">Standard</div>
-        <div class="pricing-card-sub">10–50 endpoints</div>
-        <div class="pricing-card-row"><span>SOC Monitoring</span><span>24/7 AI</span></div>
-        <div class="pricing-card-row"><span>Endpoint Agents</span><span>Up to 50</span></div>
-        <div class="pricing-card-row"><span>Threat Intelligence</span><span>✓</span></div>
-        <div class="pricing-card-row"><span>Incident Response</span><span>Phone + Email</span></div>
-        <div class="pricing-card-row"><span>GRC &amp; Compliance</span><span>ISO 27001 Prep</span></div>
-        <div class="pricing-card-row"><span>Penetration Test</span><span>1× / year</span></div>
-        <div class="pricing-card-row"><span>Monthly Report</span><span>Detailed</span></div>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-card-title">Enterprise</div>
-        <div class="pricing-card-sub">50+ / Multi-location</div>
-        <div class="pricing-card-row"><span>SOC Monitoring</span><span>24/7 AI Priority</span></div>
-        <div class="pricing-card-row"><span>Endpoint Agents</span><span>Unlimited</span></div>
-        <div class="pricing-card-row"><span>Threat Intelligence</span><span>✓</span></div>
-        <div class="pricing-card-row"><span>Incident Response</span><span>Dedicated Analyst</span></div>
-        <div class="pricing-card-row"><span>GRC &amp; Compliance</span><span>Full Audit Support</span></div>
-        <div class="pricing-card-row"><span>Penetration Test</span><span>2× / year</span></div>
-        <div class="pricing-card-row"><span>Monthly Report</span><span>Executive + Technical</span></div>
-      </div>
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:64px">
+      <div class="label" style="margin-bottom:18px" id="pricing-label">Pricing</div>
+      <h2 style="font-size:clamp(30px,3.6vw,50px);line-height:1.08;margin-bottom:16px" id="pricing-h2">Managed Cybersecurity Plans</h2>
+      <p style="font-family:'Outfit',sans-serif;font-size:17px;font-weight:300;color:var(--muted);max-width:560px;margin:0 auto;line-height:1.6" id="pricing-sub">Enterprise-grade protection, monitoring, and response tailored to your business.</p>
     </div>
+
+    <!-- TABLE WRAPPER -->
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+      <table style="width:100%;border-collapse:collapse;min-width:700px">
+
+        <!-- COLUMN HEADERS -->
+        <thead>
+          <tr>
+            <th style="width:26%;padding:20px 24px;text-align:left;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);font-weight:400;border-bottom:1px solid var(--border)">Feature</th>
+            <th style="width:18.5%;padding:20px 16px;text-align:center;border-bottom:1px solid var(--border)">
+              <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--white);margin-bottom:4px">Essential</div>
+            </th>
+            <th style="width:18.5%;padding:20px 16px;text-align:center;background:rgba(74,127,255,0.06);border-left:1px solid rgba(74,127,255,0.25);border-right:1px solid rgba(74,127,255,0.25);border-bottom:2px solid var(--cyan);position:relative">
+              <div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--cyan)"></div>
+              <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px">Most Popular</div>
+              <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--white);margin-bottom:4px">MDR</div>
+            </th>
+            <th style="width:18.5%;padding:20px 16px;text-align:center;border-bottom:1px solid var(--border)">
+              <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--white);margin-bottom:4px">Enterprise</div>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody id="pricing-tbody">
+
+          <!-- ROW: Best for -->
+          <tr class="ptrow">
+            <td class="ptlabel">Best for</td>
+            <td class="ptcell">1–25 devices</td>
+            <td class="ptcell ptfeat">25–150 devices</td>
+            <td class="ptcell">100+ / Multi-location</td>
+          </tr>
+
+          <!-- ROW: Monitoring -->
+          <tr class="ptrow">
+            <td class="ptlabel">Monitoring</td>
+            <td class="ptcell">Business hours</td>
+            <td class="ptcell ptfeat">24/7 Monitoring</td>
+            <td class="ptcell">24/7 Priority</td>
+          </tr>
+
+          <!-- ROW: Protection XDR -->
+          <tr class="ptrow">
+            <td class="ptlabel">Protection (XDR)</td>
+            <td class="ptcell">Basic</td>
+            <td class="ptcell ptfeat">Advanced</td>
+            <td class="ptcell">Full Coverage</td>
+          </tr>
+
+          <!-- ROW: SIEM -->
+          <tr class="ptrow">
+            <td class="ptlabel">SIEM (Visibility)</td>
+            <td class="ptcell"><span class="pt-dash">—</span></td>
+            <td class="ptcell ptfeat"><span class="pt-check">✓</span></td>
+            <td class="ptcell" style="font-size:13px">Advanced<br><span style="color:var(--muted);font-size:12px">Splunk / Sentinel</span></td>
+          </tr>
+
+          <!-- ROW: Threat Intelligence -->
+          <tr class="ptrow">
+            <td class="ptlabel">Threat Intelligence</td>
+            <td class="ptcell"><span class="pt-dash">—</span></td>
+            <td class="ptcell ptfeat"><span class="pt-check">✓</span></td>
+            <td class="ptcell"><span class="pt-check">✓</span> <span style="color:var(--muted);font-size:12px">Advanced</span></td>
+          </tr>
+
+          <!-- ROW: Incident Response -->
+          <tr class="ptrow">
+            <td class="ptlabel">Incident Response</td>
+            <td class="ptcell" style="color:var(--muted)">Alerts only</td>
+            <td class="ptcell ptfeat">Remote Response</td>
+            <td class="ptcell">Dedicated Analyst</td>
+          </tr>
+
+          <!-- ROW: IR & Forensics -->
+          <tr class="ptrow">
+            <td class="ptlabel">IR &amp; Forensics</td>
+            <td class="ptcell"><span class="pt-dash">—</span></td>
+            <td class="ptcell ptfeat"><span class="pt-dash">—</span></td>
+            <td class="ptcell"><span class="pt-check">✓</span></td>
+          </tr>
+
+          <!-- ROW: Compliance -->
+          <tr class="ptrow">
+            <td class="ptlabel">Compliance Support</td>
+            <td class="ptcell"><span class="pt-dash">—</span></td>
+            <td class="ptcell ptfeat" style="font-size:13px">Basic Guidance</td>
+            <td class="ptcell" style="font-size:13px">ISO 27001 Support</td>
+          </tr>
+
+          <!-- ROW: Security Testing -->
+          <tr class="ptrow">
+            <td class="ptlabel">Security Testing</td>
+            <td class="ptcell" style="color:var(--muted);font-size:13px">Add-on</td>
+            <td class="ptcell ptfeat">1× / year</td>
+            <td class="ptcell">2× / year</td>
+          </tr>
+
+          <!-- ROW: Reporting -->
+          <tr class="ptrow">
+            <td class="ptlabel">Reporting</td>
+            <td class="ptcell" style="font-size:13px">Monthly Summary</td>
+            <td class="ptcell ptfeat" style="font-size:13px">Weekly Updates<br><span style="color:var(--muted);font-size:12px">+ Detailed Report</span></td>
+            <td class="ptcell" style="font-size:13px">Executive +<br><span style="color:var(--muted);font-size:12px">Technical Reports</span></td>
+          </tr>
+
+          <!-- ROW: Support -->
+          <tr class="ptrow">
+            <td class="ptlabel">Support</td>
+            <td class="ptcell" style="font-size:13px">Email</td>
+            <td class="ptcell ptfeat" style="font-size:13px">Email + Phone</td>
+            <td class="ptcell" style="font-size:13px">Priority +<br><span style="color:var(--muted);font-size:12px">Dedicated Analyst</span></td>
+          </tr>
+
+          <!-- ROW: Technology — subtle -->
+          <tr class="ptrow" style="background:rgba(255,255,255,0.015)">
+            <td class="ptlabel" style="color:var(--muted);font-size:12px">Technology stack</td>
+            <td class="ptcell" style="color:var(--muted);font-size:12px">Open-source<br>(Wazuh-based)</td>
+            <td class="ptcell ptfeat" style="color:var(--muted);font-size:12px">Enterprise<br>(XDR + SIEM)</td>
+            <td class="ptcell" style="color:var(--muted);font-size:12px">Advanced enterprise<br>(Splunk / Sentinel + IR)</td>
+          </tr>
+
+          <!-- ROW: PRICING -->
+          <tr class="ptrow">
+            <td style="padding:28px 24px;border-bottom:1px solid var(--border)"></td>
+            <td style="padding:28px 16px;text-align:center;border-bottom:1px solid var(--border)">
+              <div style="font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:var(--white);line-height:1">$25</div>
+              <div style="font-family:'Outfit',sans-serif;font-size:12px;color:var(--muted);margin-top:4px">/ device / month</div>
+            </td>
+            <td style="padding:28px 16px;text-align:center;background:rgba(74,127,255,0.06);border-left:1px solid rgba(74,127,255,0.25);border-right:1px solid rgba(74,127,255,0.25);border-bottom:1px solid rgba(74,127,255,0.2)">
+              <div style="font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:var(--cyan);line-height:1">$45</div>
+              <div style="font-family:'Outfit',sans-serif;font-size:12px;color:var(--muted);margin-top:4px">/ device / month</div>
+            </td>
+            <td style="padding:28px 16px;text-align:center;border-bottom:1px solid var(--border)">
+              <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--white);line-height:1">From $60</div>
+              <div style="font-family:'Outfit',sans-serif;font-size:12px;color:var(--muted);margin-top:4px">/ device / month</div>
+            </td>
+          </tr>
+
+          <!-- ROW: CTAs -->
+          <tr>
+            <td style="padding:24px 24px"></td>
+            <td style="padding:24px 16px;text-align:center">
+              <a href="#contact" id="pricing-cta1"
+                 style="display:inline-block;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);border:1px solid var(--border-bright);padding:13px 24px;text-decoration:none;transition:border-color 0.2s">Get Started</a>
+            </td>
+            <td style="padding:24px 16px;text-align:center;background:rgba(74,127,255,0.06);border-left:1px solid rgba(74,127,255,0.25);border-right:1px solid rgba(74,127,255,0.25);border-bottom:2px solid rgba(74,127,255,0.3)">
+              <a href="#contact" id="pricing-cta2"
+                 style="display:inline-block;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--bg);background:var(--cyan);padding:13px 24px;text-decoration:none;transition:opacity 0.2s">Start Protection</a>
+            </td>
+            <td style="padding:24px 16px;text-align:center">
+              <a href="#contact" id="pricing-cta3"
+                 style="display:inline-block;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);border:1px solid var(--border-bright);padding:13px 24px;text-decoration:none;transition:border-color 0.2s">Request Consultation</a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div><!-- /overflow -->
+
+    <!-- Footer note -->
+    <p style="font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);text-align:center;margin-top:32px;line-height:1.6;max-width:700px;margin-left:auto;margin-right:auto" id="pricing-note">All prices are in USD. Enterprise plans may include separate licensing for security tools depending on client requirements. Custom pricing available.</p>
+
   </div>
 </section>
 
@@ -568,9 +677,8 @@
         <div class="f-field"><input type="email" name="Email" id="contact-ph2" placeholder="Email address" required></div>
         <div class="f-field"><input type="tel" name="Phone / WhatsApp" id="contact-ph3" placeholder="Phone / WhatsApp"></div>
         <div class="f-field"><textarea name="Message" id="contact-ph4" placeholder="Tell us about your business and what you need" required></textarea></div>
-        <input type="hidden" name="_subject" value="New inquiry from INVERSSYS website">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_language" value="en">
+        <input type="hidden" name="_subject" value="New inquiry — INVERSSYS website">
+        <input type="hidden" name="_replyto" id="form-replyto" value="">
         <button class="f-submit" type="submit" id="contact-btn">Request Assessment →</button>
       </form>
     </div>

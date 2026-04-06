@@ -309,3 +309,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:38px 56p
 .ms-name{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--white);margin-bottom:8px;line-height:1.3}
 .ms-desc{font-size:13px;color:var(--muted);font-weight:300;line-height:1.6}
 @media(max-width:960px){.ms-grid{grid-template-columns:1fr 1fr}.container{padding:0 24px}[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;gap:32px !important}}
+
+/* ── New pricing comparison table ── */
+.ptrow td{border-bottom:1px solid var(--border)}
+.ptrow:hover td{background:rgba(255,255,255,0.02)}
+.ptrow:hover td.ptfeat{background:rgba(74,127,255,0.1)}
+.ptlabel{padding:18px 24px;font-family:'Space Mono',monospace;font-size:12px;font-weight:400;color:var(--white);text-align:left;letter-spacing:0.02em;vertical-align:middle}
+.ptcell{padding:18px 16px;font-family:'Outfit',sans-serif;font-size:14px;color:var(--white);text-align:center;vertical-align:middle;line-height:1.45}
+.ptfeat{background:rgba(74,127,255,0.06);border-left:1px solid rgba(74,127,255,0.25);border-right:1px solid rgba(74,127,255,0.25)}
+.pt-check{color:var(--cyan);font-size:16px;font-weight:700}
+.pt-dash{color:var(--border-bright);font-size:18px}

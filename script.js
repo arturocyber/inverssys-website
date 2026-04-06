@@ -641,6 +641,10 @@ if(form) {
     btn.textContent = 'Sending...';
     btn.style.opacity = '0.6';
     btn.disabled = true;
+    // mirror email into _replyto so admin can reply directly
+    var emailEl = document.getElementById('contact-ph2');
+    var replyto = document.getElementById('form-replyto');
+    if(emailEl && replyto) replyto.value = emailEl.value;
     try {
       const res = await fetch(form.action, {
         method: 'POST',
@@ -727,6 +731,9 @@ document.addEventListener('DOMContentLoaded', function() {
   on('hero-btn1', 'click', function(){ showMain(); });
   on('hero-btn2', 'click', function(){ showMain(); });
   on('more-cta-btn', 'click', function(){ showMain(); });
+  on('pricing-cta1', 'click', function(){ showMain(); });
+  on('pricing-cta2', 'click', function(){ showMain(); });
+  on('pricing-cta3', 'click', function(){ showMain(); });
 
   // More section back button
   on('more-back-btn', 'click', function(){ showMain(); });
