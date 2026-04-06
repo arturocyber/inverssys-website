@@ -731,15 +731,26 @@ if(form) {
     btn.textContent = 'Sending...';
     btn.style.opacity = '0.6';
     btn.disabled = true;
-    // mirror email into _replyto so admin can reply directly
-    var emailEl = document.getElementById('contact-ph2');
-    var replyto = document.getElementById('form-replyto');
-    if(emailEl && replyto) replyto.value = emailEl.value;
+
+    // Build clean JSON payload — Formspree renders JSON as a neat table
+    const get = function(id){ var el=document.getElementById(id); return el ? el.value.trim() : ''; };
+    const payload = {
+      'Name':             get('contact-ph1'),
+      'Company':          get('contact-ph5'),
+      'Position':         get('contact-ph6'),
+      'Package':          get('contact-pkg'),
+      'Email':            get('contact-ph2'),
+      'Phone / WhatsApp': get('contact-ph3'),
+      'Message':          get('contact-ph4'),
+      '_subject':         'New inquiry — INVERSSYS website',
+      '_replyto':         get('contact-ph2')
+    };
+
     try {
       const res = await fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        body: JSON.stringify(payload),
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
       });
       if(res.ok) {
         form.reset();
