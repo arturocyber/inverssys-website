@@ -33,9 +33,9 @@ body.show-more .main-content{display:none!important}
 .drop-item:last-child:nth-child(odd){grid-column:span 2;border-right:none;border-bottom:none}
 .drop-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--white);margin-bottom:3px}
 .drop-desc{font-size:12px;color:var(--muted);font-weight:300;line-height:1.45}
-.nav.fr-nav .nav-links{gap:22px;margin-left:28px}
-.nav.fr-nav .nav-links a{font-size:10.5px;letter-spacing:0.09em}
-.nav.fr-nav .nav-cta{padding:10px 16px;font-size:10.5px;letter-spacing:0.09em}
+.nav.fr-nav .nav-links{gap:26px;margin-left:36px}
+.nav.fr-nav .nav-links a{font-size:11px;letter-spacing:0.1em}
+.nav.fr-nav .nav-cta{padding:10px 18px;font-size:11px;letter-spacing:0.1em}
 .nav-dropdown>a::after{content:' ↓';font-size:9px;opacity:0.5;margin-left:2px}
 .lang-toggle{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:transparent;color:var(--muted);border:1px solid var(--border);padding:9px 16px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:8px;margin-right:12px}
 .lang-toggle:hover{color:var(--white);border-color:var(--border-bright)}
@@ -175,6 +175,10 @@ body.show-more .main-content{display:none!important}
 .contact-form{display:flex;flex-direction:column}
 .f-field input,.f-field textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--border);color:var(--white);font-family:'Outfit',sans-serif;font-size:16px;padding:20px 0;outline:none;transition:border-color 0.2s}
 .f-field input::placeholder,.f-field textarea::placeholder{color:var(--muted)}
+.f-field input:-webkit-autofill,
+.f-field input:-webkit-autofill:hover,
+.f-field input:-webkit-autofill:focus,
+.f-field input:-webkit-autofill:active{-webkit-box-shadow:0 0 0 60px #0b1028 inset !important;-webkit-text-fill-color:#ffffff !important;caret-color:#ffffff}
 .f-field input:focus,.f-field textarea:focus{border-bottom-color:var(--cyan)}
 .f-field textarea{resize:none;height:120px}
 .f-submit{margin-top:36px;font-family:'Space Mono',monospace;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:var(--white);color:var(--bg);border:none;padding:18px 48px;cursor:pointer;align-self:flex-start;transition:all 0.2s}
