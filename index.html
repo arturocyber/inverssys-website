@@ -576,13 +576,6 @@
             <td class="ptcell" id="pt-c33" style="font-size:13px">Priority +<br><span style="color:var(--muted);font-size:12px">Dedicated Analyst</span></td>
           </tr>
 
-          <!-- ROW: Technology — subtle -->
-          <tr class="ptrow" style="background:rgba(255,255,255,0.015)">
-            <td class="ptlabel" style="color:var(--muted);font-size:12px" id="pt-l12">Technology stack</td>
-            <td class="ptcell" id="pt-c34" style="color:var(--muted);font-size:12px">Open-source<br>(Wazuh-based)</td>
-            <td class="ptcell ptfeat" id="pt-c35" style="color:var(--muted);font-size:12px">Enterprise<br>(XDR + SIEM)</td>
-            <td class="ptcell" id="pt-c36" style="color:var(--muted);font-size:12px">Advanced enterprise<br>(Splunk / Sentinel + IR)</td>
-          </tr>
 
           <!-- ROW: CTAs -->
           <tr>
@@ -657,14 +650,15 @@
         <div class="f-field"><input type="text" name="Name" id="contact-ph1" placeholder="Your name" required></div>
         <div class="f-field"><input type="text" name="Company" id="contact-ph5" placeholder="Company name" required></div>
         <div class="f-field"><input type="text" name="Position" id="contact-ph6" placeholder="Position / Title"></div>
-        <div class="f-field">
-          <select name="Package" id="contact-pkg" required style="width:100%;background:transparent;border:none;border-bottom:1px solid var(--border);color:var(--white);font-family:'Outfit',sans-serif;font-size:16px;padding:20px 0;outline:none;transition:border-color 0.2s;appearance:none;-webkit-appearance:none;cursor:pointer">
+        <div class="f-field" style="position:relative">
+          <select name="Package" id="contact-pkg" required style="width:100%;background:transparent;border:none;border-bottom:1px solid var(--border);color:var(--white);font-family:'Outfit',sans-serif;font-size:16px;padding:20px 32px 20px 0;outline:none;transition:border-color 0.2s;appearance:none;-webkit-appearance:none;cursor:pointer">
             <option value="" disabled selected style="background:var(--bg3);color:var(--muted)" id="pkg-placeholder">Interested package</option>
             <option value="Essential" style="background:var(--bg3)" id="pkg-opt1">Essential</option>
             <option value="MDR" style="background:var(--bg3)" id="pkg-opt2">MDR</option>
             <option value="Enterprise" style="background:var(--bg3)" id="pkg-opt3">Enterprise</option>
             <option value="Custom" style="background:var(--bg3)" id="pkg-opt4">Custom / Not sure yet</option>
           </select>
+          <svg style="position:absolute;right:4px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted)" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
         <div class="f-field"><input type="email" name="Email" id="contact-ph2" placeholder="Email address" required></div>
         <div class="f-field"><input type="tel" name="Phone / WhatsApp" id="contact-ph3" placeholder="Phone / WhatsApp"></div>

@@ -674,9 +674,9 @@ function toggleLang(){
   s('pricing-label','pricing-label'); s('pricing-h2','pricing-h2',true);
   s('pricing-sub','pricing-sub'); s('pricing-note','pricing-note',true);
   s('pt-badge','pt-badge');
-  for(var i=1;i<=12;i++) s('pt-l'+i,'pt-l'+i);
+  for(var i=1;i<=11;i++) s('pt-l'+i,'pt-l'+i);
   // Cells that need text translation (✓ and — cells are skipped)
-  [1,2,3,4,5,6,7,8,9,12,15,16,17,18,23,24,25,28,29,30,32,33,34,35,36].forEach(function(n){
+  [1,2,3,4,5,6,7,8,9,12,15,16,17,18,23,24,25,28,29,30,32,33].forEach(function(n){
     s('pt-c'+n,'pt-c'+n,true);
   });
   s('pricing-cta1','pricing-cta1'); s('pricing-cta2','pricing-cta2'); s('pricing-cta3','pricing-cta3');
