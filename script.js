@@ -130,6 +130,30 @@ const T={
     'pricing-h2':'Managed Cybersecurity Plans',
     'pricing-sub':'Enterprise-grade protection, monitoring, and response tailored to your business.',
     'pt-badge':'Most Popular',
+    'pc-badge':'Core service',
+    'pc-t1':'Tier 1','pc-t2':'Tier 2','pc-t3':'Tier 3',
+    'pc-n1':'Essential Security','pc-n2':'MDR','pc-n3':'Enterprise SOC',
+    'pc-d1':'Entry-level protection for businesses starting their security journey. Business-hours visibility with core endpoint defense.',
+    'pc-d2':'Managed Detection & Response. 24/7 monitoring with full SIEM visibility, AI-driven analytics, and automated response.',
+    'pc-d3':'Full security operations with dedicated analyst, compliance-ready reporting, forensics, and priority incident response.',
+    'pc-pu1':'/ device / mo','pc-pu2':'/ device / mo','pc-pu3':'/ device / mo',
+    'pc-pn1':'Business hours · Mon–Fri','pc-pn2':'24/7 continuous coverage','pc-pn3':'Hybrid pricing available · custom SLAs',
+    'pc-inc1':'Includes','pc-inc2':'Includes','pc-inc3':'Includes',
+    'pf1-1':'Endpoint protection (XDR)','pf1-2':'Basic SIEM monitoring','pf1-3':'Email + SMS alerting',
+    'pf1-4':'Monthly security report','pf1-5':'24/7 coverage','pf1-6':'Threat intelligence','pf1-7':'IR & forensics',
+    'pf2-1':'Everything in Essential','pf2-2':'24/7 SOC monitoring','pf2-3':'SIEM + AI behavioral analytics',
+    'pf2-4':'Threat intelligence integration','pf2-5':'SOAR automated response','pf2-6':'Device isolation + IP blocking','pf2-7':'Dedicated analyst',
+    'pf3-1':'Everything in MDR','pf3-2':'Dedicated SOC analyst','pf3-3':'Priority incident response',
+    'pf3-4':'Digital forensics (full stack)','pf3-5':'Malware analysis lab','pf3-6':'Compliance-ready reporting','pf3-7':'Executive + technical reports',
+    'pc-cta1':'Request proposal','pc-cta2':'Request proposal','pc-cta3':'Request proposal',
+    'cap-hdr0':'Capability','cap-hdr1':'Essential','cap-hdr2':'MDR','cap-hdr3':'Enterprise',
+    'cap-r1':'Endpoint protection (XDR)','cap-r2':'SIEM monitoring','cap-r3':'Coverage hours',
+    'cap-r4':'AI behavioral analytics','cap-r5':'Threat intelligence','cap-r6':'SOAR automated response',
+    'cap-r7':'Incident response','cap-r8':'Digital forensics','cap-r9':'Malware analysis',
+    'cap-r10':'Dedicated analyst','cap-r11':'Compliance reporting',
+    'cap-r2e':'Basic','cap-r2m':'Full','cap-r2x':'Full',
+    'cap-r7e':'Add-on','cap-r7m':'Add-on','cap-r7x':'Included',
+    'cap-r11m':'Basic','cap-r11x':'Full',
     'pt-l1':'Best for','pt-l2':'Monitoring','pt-l3':'Protection (XDR)',
     'pt-l4':'SIEM (Visibility)','pt-l5':'Threat Intelligence','pt-l6':'Incident Response',
     'pt-l7':'IR & Forensics','pt-l8':'Compliance Support','pt-l9':'Security Testing',
@@ -332,6 +356,30 @@ const T={
     'pricing-h2':'Planes de Ciberseguridad Gestionada',
     'pricing-sub':'Protección, monitoreo y respuesta de nivel empresarial adaptados a tu negocio.',
     'pt-badge':'Más Popular',
+    'pc-badge':'Servicio principal',
+    'pc-t1':'Nivel 1','pc-t2':'Nivel 2','pc-t3':'Nivel 3',
+    'pc-n1':'Essential Security','pc-n2':'MDR','pc-n3':'Enterprise SOC',
+    'pc-d1':'Protección básica para empresas que inician su camino en ciberseguridad. Visibilidad en horario laboral con defensa de endpoints.',
+    'pc-d2':'Detección y Respuesta Gestionada. Monitoreo 24/7 con visibilidad SIEM completa, analítica con IA y respuesta automatizada.',
+    'pc-d3':'Operaciones de seguridad completas con analista dedicado, reportes de cumplimiento, forense y respuesta prioritaria a incidentes.',
+    'pc-pu1':'/ dispositivo / mes','pc-pu2':'/ dispositivo / mes','pc-pu3':'/ dispositivo / mes',
+    'pc-pn1':'Horario laboral · Lun–Vie','pc-pn2':'Cobertura continua 24/7','pc-pn3':'Precios híbridos disponibles · SLAs personalizados',
+    'pc-inc1':'Incluye','pc-inc2':'Incluye','pc-inc3':'Incluye',
+    'pf1-1':'Protección de endpoints (XDR)','pf1-2':'Monitoreo SIEM básico','pf1-3':'Alertas por email + SMS',
+    'pf1-4':'Informe mensual de seguridad','pf1-5':'Cobertura 24/7','pf1-6':'Inteligencia de amenazas','pf1-7':'IR y forense',
+    'pf2-1':'Todo en Essential','pf2-2':'Monitoreo SOC 24/7','pf2-3':'SIEM + analítica conductual con IA',
+    'pf2-4':'Integración de inteligencia de amenazas','pf2-5':'Respuesta automatizada SOAR','pf2-6':'Aislamiento de dispositivos + bloqueo IP','pf2-7':'Analista dedicado',
+    'pf3-1':'Todo en MDR','pf3-2':'Analista SOC dedicado','pf3-3':'Respuesta prioritaria a incidentes',
+    'pf3-4':'Forense digital (stack completo)','pf3-5':'Laboratorio de análisis de malware','pf3-6':'Reportes listos para cumplimiento','pf3-7':'Informes ejecutivos y técnicos',
+    'pc-cta1':'Solicitar propuesta','pc-cta2':'Solicitar propuesta','pc-cta3':'Solicitar propuesta',
+    'cap-hdr0':'Capacidad','cap-hdr1':'Essential','cap-hdr2':'MDR','cap-hdr3':'Enterprise',
+    'cap-r1':'Protección de endpoints (XDR)','cap-r2':'Monitoreo SIEM','cap-r3':'Horas de cobertura',
+    'cap-r4':'Analítica conductual con IA','cap-r5':'Inteligencia de amenazas','cap-r6':'Respuesta automatizada SOAR',
+    'cap-r7':'Respuesta a incidentes','cap-r8':'Forense digital','cap-r9':'Análisis de malware',
+    'cap-r10':'Analista dedicado','cap-r11':'Reportes de cumplimiento',
+    'cap-r2e':'Básico','cap-r2m':'Completo','cap-r2x':'Completo',
+    'cap-r7e':'Complemento','cap-r7m':'Complemento','cap-r7x':'Incluido',
+    'cap-r11m':'Básico','cap-r11x':'Completo',
     'pt-l1':'Ideal para','pt-l2':'Monitoreo','pt-l3':'Protección (XDR)',
     'pt-l4':'SIEM (Visibilidad)','pt-l5':'Inteligencia de Amenazas','pt-l6':'Respuesta a Incidentes',
     'pt-l7':'IR y Forense','pt-l8':'Soporte de Cumplimiento','pt-l9':'Pruebas de Seguridad',
@@ -512,6 +560,30 @@ const T={
     'pricing-h2':'Plans de Cybersécurité Managée',
     'pricing-sub':'Protection, surveillance et réponse de niveau entreprise adaptées à votre activité.',
     'pt-badge':'Le Plus Populaire',
+    'pc-badge':'Service principal',
+    'pc-t1':'Niveau 1','pc-t2':'Niveau 2','pc-t3':'Niveau 3',
+    'pc-n1':'Essential Security','pc-n2':'MDR','pc-n3':'Enterprise SOC',
+    'pc-d1':'Protection de base pour les entreprises débutant en cybersécurité. Visibilité aux heures ouvrables avec défense des endpoints.',
+    'pc-d2':'Détection et Réponse Managées. Surveillance 24/7 avec visibilité SIEM complète, analytique IA et réponse automatisée.',
+    'pc-d3':'Opérations de sécurité complètes avec analyste dédié, rapports conformité, forensique et réponse prioritaire aux incidents.',
+    'pc-pu1':'/ appareil / mois','pc-pu2':'/ appareil / mois','pc-pu3':'/ appareil / mois',
+    'pc-pn1':'Heures ouvrables · Lun–Ven','pc-pn2':'Couverture continue 24/7','pc-pn3':'Tarification hybride · SLAs personnalisés',
+    'pc-inc1':'Inclut','pc-inc2':'Inclut','pc-inc3':'Inclut',
+    'pf1-1':'Protection des endpoints (XDR)','pf1-2':'Surveillance SIEM basique','pf1-3':'Alertes e-mail + SMS',
+    'pf1-4':'Rapport mensuel de sécurité','pf1-5':'Couverture 24/7','pf1-6':'Renseignements sur les menaces','pf1-7':'IR et forensique',
+    'pf2-1':'Tout en Essential','pf2-2':'Surveillance SOC 24/7','pf2-3':'SIEM + analytique comportementale IA',
+    'pf2-4':'Intégration renseignements menaces','pf2-5':'Réponse automatisée SOAR','pf2-6':'Isolation appareils + blocage IP','pf2-7':'Analyste dédié',
+    'pf3-1':'Tout en MDR','pf3-2':'Analyste SOC dédié','pf3-3':'Réponse prioritaire aux incidents',
+    'pf3-4':'Forensique numérique (stack complet)','pf3-5':'Laboratoire analyse malware','pf3-6':'Rapports conformité','pf3-7':'Rapports exécutifs et techniques',
+    'pc-cta1':'Demander un devis','pc-cta2':'Demander un devis','pc-cta3':'Demander un devis',
+    'cap-hdr0':'Capacité','cap-hdr1':'Essential','cap-hdr2':'MDR','cap-hdr3':'Enterprise',
+    'cap-r1':'Protection des endpoints (XDR)','cap-r2':'Surveillance SIEM','cap-r3':'Heures de couverture',
+    'cap-r4':'Analytique comportementale IA','cap-r5':'Renseignements sur les menaces','cap-r6':'Réponse automatisée SOAR',
+    'cap-r7':'Réponse aux incidents','cap-r8':'Forensique numérique','cap-r9':'Analyse de malware',
+    'cap-r10':'Analyste dédié','cap-r11':'Rapports de conformité',
+    'cap-r2e':'Basique','cap-r2m':'Complet','cap-r2x':'Complet',
+    'cap-r7e':'En option','cap-r7m':'En option','cap-r7x':'Inclus',
+    'cap-r11m':'Basique','cap-r11x':'Complet',
     'pt-l1':'Idéal pour','pt-l2':'Surveillance','pt-l3':'Protection (XDR)',
     'pt-l4':'SIEM (Visibilité)','pt-l5':'Renseignements sur les Menaces','pt-l6':'Réponse aux Incidents',
     'pt-l7':'IR et Forensique','pt-l8':'Support Conformité','pt-l9':'Tests de Sécurité',
@@ -675,6 +747,19 @@ function toggleLang(){
   s('pricing-sub','pricing-sub'); s('pricing-note','pricing-note',true);
   s('pt-badge','pt-badge');
   for(var i=1;i<=11;i++) s('pt-l'+i,'pt-l'+i);
+  // Package cards
+  s('pc-badge','pc-badge');
+  for(var i=1;i<=3;i++){
+    s('pc-t'+i,'pc-t'+i); s('pc-n'+i,'pc-n'+i); s('pc-d'+i,'pc-d'+i);
+    s('pc-pu'+i,'pc-pu'+i); s('pc-pn'+i,'pc-pn'+i); s('pc-inc'+i,'pc-inc'+i); s('pc-cta'+i,'pc-cta'+i);
+    for(var j=1;j<=7;j++) s('pf'+i+'-'+j,'pf'+i+'-'+j);
+  }
+  // Capability table headers + row labels
+  s('cap-hdr0','cap-hdr0'); s('cap-hdr1','cap-hdr1'); s('cap-hdr2','cap-hdr2'); s('cap-hdr3','cap-hdr3');
+  for(var i=1;i<=11;i++) s('cap-r'+i,'cap-r'+i);
+  s('cap-r2e','cap-r2e'); s('cap-r2m','cap-r2m'); s('cap-r2x','cap-r2x');
+  s('cap-r7e','cap-r7e'); s('cap-r7m','cap-r7m'); s('cap-r7x','cap-r7x');
+  s('cap-r11m','cap-r11m'); s('cap-r11x','cap-r11x');
   // Cells that need text translation (✓ and — cells are skipped)
   [1,2,3,4,5,6,7,8,9,12,15,16,17,18,23,24,25,28,29,30,32,33].forEach(function(n){
     s('pt-c'+n,'pt-c'+n,true);
