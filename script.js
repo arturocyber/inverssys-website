@@ -891,7 +891,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Lang toggles
   on('lang-toggle-desktop', 'click', toggleLang);
-  on('drawer-lang-btn', 'click', toggleLang);
+  on('drawer-lang-btn', 'click', function(){ toggleLang(); closeMobileNav(); });
 
   // Nav CTA
   on('nav-cta', 'click', showMain);
