@@ -705,6 +705,8 @@ function toggleLang(){
   for(let i=1;i<=5;i++){s('alt-l'+i,'alt-l'+i); s('alt-s'+i,'alt-s'+i);}
   // NAV
   s('nav-cta','nav-cta'); s('nav-svc','nav-svc'); s('nav-about','nav-about'); s('nav-pricing','nav-pricing'); s('nav-more','nav-more');
+  // MOBILE DRAWER MENU
+  s('mob-svc','nav-svc'); s('mob-about','nav-about'); s('mob-pricing','nav-pricing'); s('mob-more','nav-more');
   for(let i=1;i<=7;i++){s('dnav'+i,'dnav'+i,true); s('dnav'+i+'d','dnav'+i+'d',true);}
   // HERO
   s('hero-label','hero-label'); s('hero-h1','hero-h1',true); s('hero-sub','hero-sub',true);
@@ -884,6 +886,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Drawer close & overlay
   on('drawer-close-btn', 'click', closeMobileNav);
   on('drawer-overlay', 'click', closeMobileNav);
+  on('drawer-overlay', 'touchstart', function(e){ e.preventDefault(); closeMobileNav(); });
 
   // Logo links (scroll to top)
   on('nav-logo-link', 'click', function(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
