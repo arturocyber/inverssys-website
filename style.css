@@ -98,6 +98,7 @@ body.show-more .main-content{display:none!important}
 /* FEATURE */
 .feature{background:var(--bg2);padding:88px 0}
 @keyframes irpulse{0%,100%{box-shadow:0 0 10px #22c55e}50%{box-shadow:0 0 20px #22c55e,0 0 40px #22c55e66}}
+@media(max-width:768px){.ir-bottom{grid-template-columns:1fr !important;gap:24px !important}.ir-bottom .f-list{columns:1 !important}.ir-bottom .btn-primary{width:100%;text-align:center;box-sizing:border-box}}
 .feature-alt{background:var(--bg);padding:88px 0}
 .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:120px;align-items:center}
 .f-label{margin-bottom:24px}
