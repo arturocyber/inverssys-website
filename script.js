@@ -886,7 +886,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Drawer close & overlay
   on('drawer-close-btn', 'click', closeMobileNav);
   on('drawer-overlay', 'click', closeMobileNav);
-  on('drawer-overlay', 'touchstart', function(e){ e.preventDefault(); closeMobileNav(); });
+
+  // Close drawer on ANY tap anywhere on screen (except the hamburger toggle)
+  document.addEventListener('touchstart', function(e){
+    var drawer = document.getElementById('mobile-drawer');
+    var hamburger = document.getElementById('hamburger');
+    if(drawer && drawer.classList.contains('open') && !hamburger.contains(e.target)){
+      closeMobileNav();
+    }
+  }, {passive:true});
 
   // Logo links (scroll to top)
   on('nav-logo-link', 'click', function(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
@@ -898,6 +906,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Nav CTA
   on('nav-cta', 'click', showMain);
+  on('nav-free-assess', 'click', function(e){
+    e.preventDefault();
+    showMain();
+    setTimeout(function(){ var el=document.getElementById('contact'); if(el) el.scrollIntoView({behavior:'smooth'}); }, 320);
+  });
 
   // Desktop nav links
   on('nav-svc',     'click', function(){ showMain(); });
