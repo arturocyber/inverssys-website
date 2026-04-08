@@ -891,7 +891,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('touchstart', function(e){
     var drawer = document.getElementById('mobile-drawer');
     var hamburger = document.getElementById('hamburger');
-    if(drawer && drawer.classList.contains('open') && !hamburger.contains(e.target)){
+    if(drawer && drawer.classList.contains('open') && !drawer.contains(e.target) && !hamburger.contains(e.target)){
       closeMobileNav();
     }
   }, {passive:true});
