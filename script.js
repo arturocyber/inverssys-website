@@ -4,7 +4,7 @@ document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
 
 const T={
   en:{
-    'nav-cta':'Contact Us','nav-svc':'Services','nav-about':'Why','nav-pricing':'Pricing','nav-more':'More','nav-free-assess':'Free Assessment','mob-free-assess':'Free Assessment',
+    'nav-cta':'Contact Us','nav-svc':'Services','nav-about':'Why','nav-pricing':'Pricing','nav-more':'More','nav-free-assess':'Free Assessment','mob-free-assess':'Free Assessment','contact-free-assess':'Free Assessment',
     'dnav1':'Network &amp; IT Infrastructure','dnav1d':'Enterprise-grade networks, structured cabling, Wi-Fi, VLANs',
     'dnav2':'Cloud &amp; Data Center','dnav2d':'Secure cloud architecture, hybrid environments',
     'dnav3':'Connectivity Solutions','dnav3d':'High-availability internet, SD-WAN, failover',
@@ -98,13 +98,21 @@ const T={
     'pt-li4':'<strong>Full Written Report</strong> — Severity ratings, proof-of-concept, remediation checklist',
     'pt-li5':'<strong>Retest Included</strong> — We verify your fixes after remediation',
     'pt-btn':'Request a Pentest Quote','pt-visual-label':'Phase Methodology',
-    'ir-label':'CSIRT','ir-h2':'When an alert becomes an attack, our CSIRT activates immediately.',
-    'ir-body':'Security Operations and Incident Response Unit — the same team that detects a threat is the team that contains it. No handoffs. No delays. Just rapid, specialized action protecting your business around the clock.',
-    'ir-li1':'<strong>Detection &amp; Triage</strong> — Rapid identification of threat scope and affected systems',
-    'ir-li2':'<strong>Containment</strong> — Immediate isolation to stop the attack from spreading',
-    'ir-li3':'<strong>Forensic Analysis</strong> — Deep investigation of root cause and attacker behavior',
-    'ir-li4':'<strong>Eradication</strong> — Complete removal of malware, backdoors, and persistence',
-    'ir-li5':'<strong>Recovery &amp; Hardening</strong> — Full restoration with security improvements to prevent recurrence',
+    'ir-label':'CSIRT — Incident Response','ir-h2':'We respond in minutes,<br>not hours.',
+    'ir-body':'AI-powered detection identifies threats in seconds. Our CSIRT team activates instantly — the same people who detect the threat contain it. No handoffs. No delays.',
+    'ir-ai-label':'AI Detection Active','ir-ttd-label':'Avg. Time to Detect','ir-ttr-label':'Critical Response','ir-coverage-label':'Coverage',
+    'ir-table-label':'Response Times by Severity &amp; Package',
+    'ir-th-sev':'Severity','ir-th-p1':'💎 Premium','ir-th-p2':'⚖️ Standard','ir-th-p3':'🪙 Essential',
+    'ir-sev1':'🔴 Critical','ir-sev1d':'Active breach / attack',
+    'ir-sev2':'🟠 High','ir-sev2d':'Suspicious active activity',
+    'ir-sev3':'🟡 Medium','ir-sev3d':'Anomaly requiring investigation',
+    'ir-sev4':'🟢 Low','ir-sev4d':'Informational / low risk',
+    'ir-footnote':'⚠️ Response = acknowledge + begin action. Resolution time varies by incident complexity.',
+    'ir-li1':'<strong>Detection &amp; Triage</strong>Rapid identification of threat scope and affected systems',
+    'ir-li2':'<strong>Containment</strong>Immediate isolation to stop the attack from spreading',
+    'ir-li3':'<strong>Forensic Analysis</strong>Deep investigation of root cause and attacker behavior',
+    'ir-li4':'<strong>Eradication</strong>Complete removal of malware, backdoors, and persistence',
+    'ir-li5':'<strong>Recovery &amp; Hardening</strong>Full restoration with security improvements',
     'ir-btn':'Talk to Us About IR','ir-visual-label':'Response Phases',
     'grc-label':'GRC — Governance, Risk &amp; Compliance','grc-h2':'Security that satisfies regulators, clients, and partners.',
     'grc-body':"Compliance isn't just paperwork — it's the foundation of client trust. INVERSSYS builds and maintains your GRC framework so audits never catch you off-guard.",
@@ -230,7 +238,7 @@ const T={
     'footer-svc':'Services','footer-soc':'SOC','footer-pt':'Pentesting','footer-grc':'GRC','footer-about':'About','footer-pricing':'Pricing','footer-contact':'Contact',
   },
   es:{
-    'nav-cta':'Contáctanos','nav-svc':'Servicios','nav-about':'Por Qué','nav-pricing':'Precios','nav-more':'Más','nav-free-assess':'Evaluación Gratuita','mob-free-assess':'Evaluación Gratuita',
+    'nav-cta':'Contáctanos','nav-svc':'Servicios','nav-about':'Por Qué','nav-pricing':'Precios','nav-more':'Más','nav-free-assess':'Evaluación Gratuita','mob-free-assess':'Evaluación Gratuita','contact-free-assess':'Evaluación Gratuita',
     'dnav1':'Red e Infraestructura IT','dnav1d':'Redes empresariales, cableado estructurado, Wi-Fi, VLANs',
     'dnav2':'Nube y Centro de Datos','dnav2d':'Arquitectura cloud segura, entornos híbridos',
     'dnav3':'Soluciones de Conectividad','dnav3d':'Internet alta disponibilidad, SD-WAN, failover',
@@ -324,13 +332,21 @@ const T={
     'pt-li4':'<strong>Informe Completo</strong> — Clasificación de severidad, prueba de concepto, lista de remediación',
     'pt-li5':'<strong>Reprueba Incluida</strong> — Verificamos tus correcciones después de la remediación',
     'pt-btn':'Solicitar Cotización de Pentest','pt-visual-label':'Metodología de Fases',
-    'ir-label':'CSIRT','ir-h2':'Cuando ocurre un ataque,<br>actuamos de inmediato.',
-    'ir-body':'Unidad de Operaciones de Seguridad y Respuesta a Incidentes — el mismo equipo que detecta la amenaza es el que la contiene. Sin traspasos. Sin demoras. Acción rápida y especializada protegiendo tu negocio las 24 horas.',
-    'ir-li1':'<strong>Detección y Triaje</strong> — Identificación rápida del alcance de la amenaza y sistemas afectados',
-    'ir-li2':'<strong>Contención</strong> — Aislamiento inmediato para detener la propagación del ataque',
-    'ir-li3':'<strong>Análisis Forense</strong> — Investigación profunda de la causa raíz y comportamiento del atacante',
-    'ir-li4':'<strong>Erradicación</strong> — Eliminación completa de malware, backdoors y persistencia',
-    'ir-li5':'<strong>Recuperación y Refuerzo</strong> — Restauración completa con mejoras de seguridad para evitar recurrencia',
+    'ir-label':'CSIRT — Respuesta a Incidentes','ir-h2':'Respondemos en minutos,<br>no en horas.',
+    'ir-body':'La detección con IA identifica amenazas en segundos. Nuestro equipo CSIRT activa inmediatamente — las mismas personas que detectan la amenaza la contienen. Sin traspasos. Sin demoras.',
+    'ir-ai-label':'Detección IA Activa','ir-ttd-label':'Tiempo Prom. de Detección','ir-ttr-label':'Respuesta Crítica','ir-coverage-label':'Cobertura',
+    'ir-table-label':'Tiempos de Respuesta por Severidad y Paquete',
+    'ir-th-sev':'Severidad','ir-th-p1':'💎 Premium','ir-th-p2':'⚖️ Estándar','ir-th-p3':'🪙 Esencial',
+    'ir-sev1':'🔴 Crítico','ir-sev1d':'Brecha / ataque activo',
+    'ir-sev2':'🟠 Alto','ir-sev2d':'Actividad sospechosa activa',
+    'ir-sev3':'🟡 Medio','ir-sev3d':'Anomalía que requiere investigación',
+    'ir-sev4':'🟢 Bajo','ir-sev4d':'Informativo / riesgo bajo',
+    'ir-footnote':'⚠️ Respuesta = reconocer + comenzar acción. El tiempo de resolución varía según la complejidad.',
+    'ir-li1':'<strong>Detección y Triaje</strong>Identificación rápida del alcance de la amenaza y sistemas afectados',
+    'ir-li2':'<strong>Contención</strong>Aislamiento inmediato para detener la propagación del ataque',
+    'ir-li3':'<strong>Análisis Forense</strong>Investigación profunda de la causa raíz y comportamiento del atacante',
+    'ir-li4':'<strong>Erradicación</strong>Eliminación completa de malware, backdoors y persistencia',
+    'ir-li5':'<strong>Recuperación y Refuerzo</strong>Restauración completa con mejoras de seguridad',
     'ir-btn':'Hablar sobre IR','ir-visual-label':'Fases de Respuesta',
     'grc-label':'GRC — Gobernanza, Riesgo y Cumplimiento','grc-h2':'Cumplimiento sin complicaciones.<br>Auditorías siempre listas.',
     'grc-body':'Cumplimiento sin complicaciones. Construimos y mantenemos tu marco GRC.',
@@ -456,7 +472,7 @@ const T={
     'footer-svc':'Servicios','footer-soc':'SOC','footer-pt':'Pentesting','footer-grc':'GRC','footer-about':'Nosotros','footer-pricing':'Precios','footer-contact':'Contacto',
   },
   fr:{
-    'nav-cta':'Contactez-nous','nav-svc':'Services','nav-about':'Pourquoi','nav-pricing':'Tarifs','nav-more':'Plus','nav-free-assess':'Évaluation Gratuite','mob-free-assess':'Évaluation Gratuite',
+    'nav-cta':'Contactez-nous','nav-svc':'Services','nav-about':'Pourquoi','nav-pricing':'Tarifs','nav-more':'Plus','nav-free-assess':'Évaluation Gratuite','mob-free-assess':'Évaluation Gratuite','contact-free-assess':'Évaluation Gratuite',
     'dnav1':'Réseau &amp; Infrastructure IT','dnav1d':'Réseaux enterprise, câblage structuré, Wi-Fi, VLANs',
     'dnav2':'Cloud &amp; Centre de Données','dnav2d':'Architecture cloud sécurisée, environnements hybrides',
     'dnav3':'Solutions de Connectivité','dnav3d':'Internet haute disponibilité, SD-WAN, basculement',
@@ -528,8 +544,16 @@ const T={
     'pt-li4':'<strong>Rapport Complet</strong>Évaluations de gravité, preuve de concept, liste de remédiation',
     'pt-li5':'<strong>Re-test Inclus</strong>Nous vérifions vos corrections après remédiation',
     'pt-btn':'Demander un Devis Pentest','pt-visual-label':'Méthodologie en Phases',
-    'ir-label':'CSIRT','ir-h2':"Quand une alerte devient attaque, notre CSIRT s'active immédiatement.",
-    'ir-body':"Unité Opérations de Sécurité et Réponse aux Incidents — la même équipe qui détecte une menace est celle qui la contient. Aucun transfert. Aucun délai. Action rapide et spécialisée 24h/24.",
+    'ir-label':'CSIRT — Réponse aux Incidents','ir-h2':'Nous répondons en minutes,<br>pas en heures.',
+    'ir-body':"La détection par IA identifie les menaces en secondes. Notre équipe CSIRT s'active immédiatement — les mêmes personnes qui détectent la menace la contiennent. Aucun transfert. Aucun délai.",
+    'ir-ai-label':'Détection IA Active','ir-ttd-label':'Temps Moy. de Détection','ir-ttr-label':'Réponse Critique','ir-coverage-label':'Couverture',
+    'ir-table-label':'Temps de Réponse par Sévérité et Forfait',
+    'ir-th-sev':'Sévérité','ir-th-p1':'💎 Premium','ir-th-p2':'⚖️ Standard','ir-th-p3':'🪙 Essentiel',
+    'ir-sev1':'🔴 Critique','ir-sev1d':'Brèche / attaque active',
+    'ir-sev2':'🟠 Élevé','ir-sev2d':'Activité suspecte active',
+    'ir-sev3':'🟡 Moyen','ir-sev3d':'Anomalie nécessitant investigation',
+    'ir-sev4':'🟢 Faible','ir-sev4d':'Informatif / risque bas',
+    'ir-footnote':"⚠️ Réponse = accusé de réception + début d'action. Le temps de résolution varie selon la complexité.",
     'ir-li1':'<strong>Détection &amp; Triage</strong>Identification rapide de la portée de la menace et des systèmes affectés',
     'ir-li2':'<strong>Confinement</strong>Isolation immédiate pour arrêter la propagation de l\'attaque',
     'ir-li3':'<strong>Analyse Forensique</strong>Investigation approfondie de la cause racine et du comportement de l\'attaquant',
@@ -707,6 +731,7 @@ function toggleLang(){
   s('nav-cta','nav-cta'); s('nav-svc','nav-svc'); s('nav-about','nav-about'); s('nav-pricing','nav-pricing'); s('nav-more','nav-more'); s('nav-free-assess','nav-free-assess');
   // MOBILE DRAWER MENU
   s('mob-svc','nav-svc'); s('mob-about','nav-about'); s('mob-pricing','nav-pricing'); s('mob-more','nav-more'); s('mob-free-assess','mob-free-assess');
+  s('contact-free-assess','contact-free-assess');
   for(let i=1;i<=7;i++){s('dnav'+i,'dnav'+i,true); s('dnav'+i+'d','dnav'+i+'d',true);}
   // HERO
   s('hero-label','hero-label'); s('hero-h1','hero-h1',true); s('hero-sub','hero-sub',true);
@@ -730,6 +755,12 @@ function toggleLang(){
   s('pt-btn','pt-btn'); s('pt-visual-label','pt-visual-label');
   // IR
   s('ir-label','ir-label'); s('ir-h2','ir-h2',true); s('ir-body','ir-body',true);
+  s('ir-ai-label','ir-ai-label'); s('ir-ttd-label','ir-ttd-label'); s('ir-ttr-label','ir-ttr-label'); s('ir-coverage-label','ir-coverage-label');
+  s('ir-table-label','ir-table-label');
+  s('ir-th-sev','ir-th-sev'); s('ir-th-p1','ir-th-p1'); s('ir-th-p2','ir-th-p2'); s('ir-th-p3','ir-th-p3');
+  s('ir-sev1','ir-sev1'); s('ir-sev1d','ir-sev1d'); s('ir-sev2','ir-sev2'); s('ir-sev2d','ir-sev2d');
+  s('ir-sev3','ir-sev3'); s('ir-sev3d','ir-sev3d'); s('ir-sev4','ir-sev4'); s('ir-sev4d','ir-sev4d');
+  s('ir-footnote','ir-footnote',true);
   for(let i=1;i<=5;i++) s('ir-li'+i,'ir-li'+i,true);
   s('ir-btn','ir-btn'); s('ir-visual-label','ir-visual-label');
   // GRC
