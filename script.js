@@ -909,7 +909,7 @@ document.addEventListener('DOMContentLoaded', function() {
   on('nav-pricing', 'click', function(){ showMain(); });
 
   // Mobile drawer nav links (close drawer first, then navigate)
-  ['mob-svc','mob-about','mob-pricing','mob-contact','mob-pentest','mob-grc'].forEach(function(id){
+  ['mob-svc','mob-about','mob-pricing','mob-free-assess','mob-pentest','mob-grc'].forEach(function(id){
     on(id, 'click', function(){ closeMobileNav(); showMain(); });
   });
   on('mob-more', 'click', function(e){ closeMobileNav(); showMore(e); });
