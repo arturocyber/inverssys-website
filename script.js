@@ -4,7 +4,7 @@ document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
 
 const T={
   en:{
-    'nav-cta':'Contact Us','nav-svc':'Services','nav-about':'Why','nav-pricing':'Pricing','nav-more':'More',
+    'nav-cta':'Contact Us','nav-svc':'Services','nav-about':'Why','nav-pricing':'Pricing','nav-more':'More','nav-free-assess':'Free Assessment','mob-free-assess':'Free Assessment',
     'dnav1':'Network &amp; IT Infrastructure','dnav1d':'Enterprise-grade networks, structured cabling, Wi-Fi, VLANs',
     'dnav2':'Cloud &amp; Data Center','dnav2d':'Secure cloud architecture, hybrid environments',
     'dnav3':'Connectivity Solutions','dnav3d':'High-availability internet, SD-WAN, failover',
@@ -230,7 +230,7 @@ const T={
     'footer-svc':'Services','footer-soc':'SOC','footer-pt':'Pentesting','footer-grc':'GRC','footer-about':'About','footer-pricing':'Pricing','footer-contact':'Contact',
   },
   es:{
-    'nav-cta':'Contáctanos','nav-svc':'Servicios','nav-about':'Por Qué','nav-pricing':'Precios','nav-more':'Más',
+    'nav-cta':'Contáctanos','nav-svc':'Servicios','nav-about':'Por Qué','nav-pricing':'Precios','nav-more':'Más','nav-free-assess':'Evaluación Gratuita','mob-free-assess':'Evaluación Gratuita',
     'dnav1':'Red e Infraestructura IT','dnav1d':'Redes empresariales, cableado estructurado, Wi-Fi, VLANs',
     'dnav2':'Nube y Centro de Datos','dnav2d':'Arquitectura cloud segura, entornos híbridos',
     'dnav3':'Soluciones de Conectividad','dnav3d':'Internet alta disponibilidad, SD-WAN, failover',
@@ -456,7 +456,7 @@ const T={
     'footer-svc':'Servicios','footer-soc':'SOC','footer-pt':'Pentesting','footer-grc':'GRC','footer-about':'Nosotros','footer-pricing':'Precios','footer-contact':'Contacto',
   },
   fr:{
-    'nav-cta':'Contactez-nous','nav-svc':'Services','nav-about':'Pourquoi','nav-pricing':'Tarifs','nav-more':'Plus',
+    'nav-cta':'Contactez-nous','nav-svc':'Services','nav-about':'Pourquoi','nav-pricing':'Tarifs','nav-more':'Plus','nav-free-assess':'Évaluation Gratuite','mob-free-assess':'Évaluation Gratuite',
     'dnav1':'Réseau &amp; Infrastructure IT','dnav1d':'Réseaux enterprise, câblage structuré, Wi-Fi, VLANs',
     'dnav2':'Cloud &amp; Centre de Données','dnav2d':'Architecture cloud sécurisée, environnements hybrides',
     'dnav3':'Solutions de Connectivité','dnav3d':'Internet haute disponibilité, SD-WAN, basculement',
@@ -704,9 +704,9 @@ function toggleLang(){
   s('alt-label','alt-label'); s('alt-h2','alt-h2',true); s('alt-body','alt-body',true); s('alt-btn','alt-btn');
   for(let i=1;i<=5;i++){s('alt-l'+i,'alt-l'+i); s('alt-s'+i,'alt-s'+i);}
   // NAV
-  s('nav-cta','nav-cta'); s('nav-svc','nav-svc'); s('nav-about','nav-about'); s('nav-pricing','nav-pricing'); s('nav-more','nav-more');
+  s('nav-cta','nav-cta'); s('nav-svc','nav-svc'); s('nav-about','nav-about'); s('nav-pricing','nav-pricing'); s('nav-more','nav-more'); s('nav-free-assess','nav-free-assess');
   // MOBILE DRAWER MENU
-  s('mob-svc','nav-svc'); s('mob-about','nav-about'); s('mob-pricing','nav-pricing'); s('mob-more','nav-more');
+  s('mob-svc','nav-svc'); s('mob-about','nav-about'); s('mob-pricing','nav-pricing'); s('mob-more','nav-more'); s('mob-free-assess','mob-free-assess');
   for(let i=1;i<=7;i++){s('dnav'+i,'dnav'+i,true); s('dnav'+i+'d','dnav'+i+'d',true);}
   // HERO
   s('hero-label','hero-label'); s('hero-h1','hero-h1',true); s('hero-sub','hero-sub',true);
