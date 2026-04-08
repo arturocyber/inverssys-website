@@ -669,7 +669,7 @@ function toggleLang(){
   document.getElementById('langLabel').textContent=langLabel2[lang];
   var mob=document.getElementById('langLabelMobile');
   if(mob) mob.textContent=langLabel2[lang];
-  document.querySelector('.lang-flag').textContent=langFlag[lang];
+  document.querySelectorAll('.lang-flag').forEach(function(el){ el.textContent=langFlag[lang]; });
   document.documentElement.lang=lang;
   const navEl=document.querySelector('.nav');
   if(navEl){navEl.classList.toggle('fr-nav',lang==='fr');}

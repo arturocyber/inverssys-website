@@ -206,7 +206,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:38px 56p
   /* ── Mobile nav bar: hamburger left, logo center ── */
   .nav{position:fixed !important;top:0;left:0;right:0;justify-content:center;padding:0 16px;height:60px}
   .nav-logo{position:absolute;left:50%;transform:translateX(-50%);z-index:1}
-  .hamburger{display:flex !important;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:10px;z-index:600;position:relative}
+  .hamburger{display:flex !important;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:10px;padding-right:16px;z-index:600;position:relative}
   .hamburger span{display:block;width:22px;height:2px;background:var(--white);transition:all 0.3s}
   .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
   .hamburger.open span:nth-child(2){opacity:0}
