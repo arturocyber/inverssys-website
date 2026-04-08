@@ -900,6 +900,17 @@ function showMain(anchor) {
     window.scrollTo({top:0, behavior:'instant'});
   }
 }
+function goToForm() {
+  // Close more-page overlay if open
+  document.body.classList.remove('show-more');
+  // Allow overlay to close, then scroll and focus
+  setTimeout(function(){
+    var section = document.getElementById('contact');
+    var field   = document.getElementById('contact-ph1');
+    if(section) section.scrollIntoView({behavior:'smooth'});
+    if(field)   setTimeout(function(){ field.focus(); }, 500);
+  }, 50);
+}
 
 // ── Event listeners (replaces all inline onclick attributes) ──────────
 document.addEventListener('DOMContentLoaded', function() {
@@ -976,11 +987,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Nav CTA
   on('nav-cta', 'click', showMain);
-  on('nav-free-assess', 'click', function(e){
-    e.preventDefault();
-    showMain();
-    setTimeout(function(){ var el=document.getElementById('contact'); if(el) el.scrollIntoView({behavior:'smooth'}); }, 320);
-  });
+  on('nav-free-assess', 'click', function(e){ e.preventDefault(); goToForm(); });
 
   // Desktop nav links
   on('nav-svc',     'click', function(){ showMain(); });
@@ -992,16 +999,17 @@ document.addEventListener('DOMContentLoaded', function() {
   on('nav-pricing', 'click', function(){ showMain(); });
 
   // Mobile drawer nav links (close drawer first, then navigate)
-  ['mob-svc','mob-about','mob-pricing','mob-free-assess','mob-pentest','mob-grc'].forEach(function(id){
+  ['mob-svc','mob-about','mob-pricing','mob-pentest','mob-grc'].forEach(function(id){
     on(id, 'click', function(){ closeMobileNav(); showMain(); });
   });
+  on('mob-free-assess', 'click', function(){ closeMobileNav(); goToForm(); });
   on('mob-more', 'click', function(e){ closeMobileNav(); showMore(e); });
   on('mob-soc',  'click', function(){ closeMobileNav(); showMain('#soc-csirt'); });
 
-  // Hero / CTA buttons
-  on('hero-btn1', 'click', function(){ showMain(); });
-  on('hero-btn2', 'click', function(){ showMain(); });
-  on('more-cta-btn', 'click', function(){ showMain(); setTimeout(function(){ var el=document.getElementById('contact'); if(el) el.scrollIntoView({behavior:'smooth'}); }, 320); });
+  // Hero / CTA buttons — all go to form with name field focused
+  on('hero-btn1', 'click', function(){ goToForm(); });
+  on('hero-btn2', 'click', function(){ goToForm(); });
+  on('more-cta-btn', 'click', function(){ goToForm(); });
   function goToForm(pkg) {
     // Hide "more" view if active, but don't scroll to top
     document.body.classList.remove('show-more');

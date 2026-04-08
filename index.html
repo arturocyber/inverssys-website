@@ -84,7 +84,7 @@
       <a href="#grc" id="mob-grc">GRC</a>
       <a href="#about" id="mob-about">Why</a>
       <a href="#pricing" id="mob-pricing">Pricing</a>
-      <a href="#contact" class="mob-free-assess" id="mob-free-assess" onclick="closeMobileNav()">Free Assessment</a>
+      <a href="#contact" class="mob-free-assess" id="mob-free-assess" onclick="closeMobileNav();goToForm();return false;">Free Assessment</a>
     </nav>
     <div class="drawer-lang">
       <button class="lang-toggle drawer-lang-btn" id="drawer-lang-btn">
@@ -862,7 +862,7 @@
       <h2 style="font-size:clamp(24px,2.5vw,38px);margin-bottom:12px" id="more-cta-h">Ready to build your complete security stack?</h2>
       <p style="color:var(--muted);font-size:16px;font-weight:300" id="more-cta-sub">Combine any of these with our core SOC, Pentesting, IR, and GRC offering.</p>
     </div>
-    <a href="#contact" class="btn-primary" id="more-cta-btn" style="flex-shrink:0" onclick="showMain();setTimeout(function(){var el=document.getElementById('contact');if(el)el.scrollIntoView({behavior:'smooth'});},320);return false;">Get a Custom Quote</a>
+    <a href="#contact" class="btn-primary" id="more-cta-btn" style="flex-shrink:0" onclick="goToForm();return false;">Get a Custom Quote</a>
   </div>
 </section>
 
