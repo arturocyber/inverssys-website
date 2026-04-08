@@ -918,7 +918,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Hero / CTA buttons
   on('hero-btn1', 'click', function(){ showMain(); });
   on('hero-btn2', 'click', function(){ showMain(); });
-  on('more-cta-btn', 'click', function(){ showMain(); });
+  on('more-cta-btn', 'click', function(){ showMain(); setTimeout(function(){ var el=document.getElementById('contact'); if(el) el.scrollIntoView({behavior:'smooth'}); }, 320); });
   function goToForm(pkg) {
     // Hide "more" view if active, but don't scroll to top
     document.body.classList.remove('show-more');
