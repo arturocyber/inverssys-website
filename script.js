@@ -900,6 +900,45 @@ document.addEventListener('DOMContentLoaded', function() {
   on('nav-logo-link', 'click', function(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
   on('footer-logo-link', 'click', function(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
 
+  // Smart scroll button (mobile) — down when near top, up when near footer
+  (function(){
+    var btn = document.getElementById('nav-scroll-down');
+    var arrow = btn ? btn.querySelector('.scroll-arrow') : null;
+    if(!btn) return;
+
+    function nearFooter(){
+      var footer = document.querySelector('footer');
+      if(!footer) return false;
+      var rect = footer.getBoundingClientRect();
+      return rect.top < window.innerHeight * 1.2;
+    }
+
+    function updateBtn(){
+      if(nearFooter()){
+        // Show UP arrow
+        arrow.setAttribute('points','18 15 12 9 6 15');
+        btn.setAttribute('aria-label','Back to top');
+        btn.classList.add('scroll-up');
+      } else {
+        // Show DOWN arrow
+        arrow.setAttribute('points','6 9 12 15 18 9');
+        btn.setAttribute('aria-label','Go to footer');
+        btn.classList.remove('scroll-up');
+      }
+    }
+
+    btn.addEventListener('click', function(){
+      if(nearFooter()){
+        window.scrollTo({top:0, behavior:'smooth'});
+      } else {
+        document.querySelector('footer').scrollIntoView({behavior:'smooth'});
+      }
+    });
+
+    window.addEventListener('scroll', updateBtn, {passive:true});
+    updateBtn();
+  })();
+
   // Lang toggles
   on('lang-toggle-desktop', 'click', toggleLang);
   on('drawer-lang-btn', 'click', function(){ toggleLang(); closeMobileNav(); });
