@@ -943,6 +943,14 @@ function showMore(e) {
   window.scrollTo({top:0, behavior:'instant'});
 }
 
+function togglePricingNotes(btn){
+  var panel = btn.nextElementSibling;
+  var arrow = btn.querySelector('.pn-arrow');
+  var open  = panel.style.display === 'block';
+  panel.style.display = open ? 'none' : 'block';
+  if(arrow) arrow.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+
 function showMain(anchor) {
   document.body.classList.remove('show-more');
   if(anchor) {
