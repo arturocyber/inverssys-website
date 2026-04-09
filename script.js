@@ -688,7 +688,16 @@ const langFlag={en:'🇪🇸',es:'🇫🇷',fr:'🇺🇸'};
 const langLabel2={en:'ES',es:'FR',fr:'EN'};
 
 function toggleLang(){
-  lang=langCycle[lang];
+  var ov=document.getElementById('lang-overlay');
+  // Phase 1: overlay fades in
+  ov.style.transition='none'; ov.style.opacity='0'; ov.offsetHeight; // force reflow
+  ov.classList.remove('fade-out','logo-in','logo-out','visible');
+  ov.classList.add('fade-in');
+  setTimeout(function(){
+    ov.classList.add('visible','logo-in');
+    // Phase 2: swap language content while hidden
+    setTimeout(function(){
+      lang=langCycle[lang];
   const t=T[lang];
   document.getElementById('langLabel').textContent=langLabel2[lang];
   var mob=document.getElementById('langLabelMobile');
@@ -818,6 +827,19 @@ function toggleLang(){
   // FOOTER
   s('footer-copy','footer-copy');
   ['footer-svc','footer-soc','footer-pt','footer-grc','footer-about','footer-pricing','footer-contact'].forEach(id=>s(id,id));
+      // Phase 3: logo holds, then fades out, then overlay fades out
+    }, 400); // wait for overlay to fully appear before swapping content
+    setTimeout(function(){
+      ov.classList.add('logo-out');
+      setTimeout(function(){
+        ov.classList.add('fade-out');
+        setTimeout(function(){
+          ov.classList.remove('fade-in','fade-out','visible','logo-in','logo-out');
+          ov.style.opacity='0';
+        }, 420);
+      }, 2800); // logo visible for ~2.8s
+    }, 300);
+  }, 10);
 }
 
 function toggleMobileNav(){
@@ -900,15 +922,17 @@ function showMain(anchor) {
     window.scrollTo({top:0, behavior:'instant'});
   }
 }
-function goToForm() {
+function goToForm(pkg) {
   // Close more-page overlay if open
   document.body.classList.remove('show-more');
-  // Allow overlay to close, then scroll and focus
   setTimeout(function(){
     var section = document.getElementById('contact');
     var field   = document.getElementById('contact-ph1');
     if(section) section.scrollIntoView({behavior:'smooth'});
-    if(field)   setTimeout(function(){ field.focus(); }, 500);
+    // Pre-select pricing package if provided
+    if(pkg){ var sel = document.getElementById('contact-pkg'); if(sel) sel.value = pkg; }
+    // Focus name field after scroll completes
+    if(field) setTimeout(function(){ field.focus(); }, 500);
   }, 50);
 }
 
@@ -1010,21 +1034,13 @@ document.addEventListener('DOMContentLoaded', function() {
   on('hero-btn1', 'click', function(){ goToForm(); });
   on('hero-btn2', 'click', function(){ goToForm(); });
   on('more-cta-btn', 'click', function(){ goToForm(); });
-  function goToForm(pkg) {
-    // Hide "more" view if active, but don't scroll to top
-    document.body.classList.remove('show-more');
-    var form = document.getElementById('contact-form');
-    if(form) {
-      form.scrollIntoView({behavior:'smooth', block:'start'});
-      if(pkg) {
-        var sel = document.getElementById('contact-pkg');
-        if(sel) sel.value = pkg;
-      }
-    }
-  }
   on('pricing-cta1', 'click', function(e){ e.preventDefault(); goToForm('Essential'); });
   on('pricing-cta2', 'click', function(e){ e.preventDefault(); goToForm('MDR'); });
   on('pricing-cta3', 'click', function(e){ e.preventDefault(); goToForm('Enterprise'); });
+  // All other CTA buttons → scroll to form + focus name field
+  ['alt-btn','pt-btn','ir-btn','grc-btn','hiw-btn','whu-btn'].forEach(function(id){
+    on(id, 'click', function(e){ e.preventDefault(); goToForm(); });
+  });
 
   // More section back button
   on('more-back-btn', 'click', function(){ showMain(); });
