@@ -39,10 +39,11 @@ body.show-more .main-content{display:none!important}
 .nav-dropdown>a::after{content:' ↓';font-size:9px;opacity:0.5;margin-left:2px}
 .nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
 /* Language transition overlay */
-#lang-overlay{position:fixed;inset:0;z-index:9999;background:#04060f;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0}
-#lang-overlay-logo{opacity:0;transform:scale(0.9);transition:opacity 0.4s ease,transform 0.45s cubic-bezier(0.34,1.56,0.64,1)}
+#lang-overlay{position:fixed;inset:0;z-index:9999;background:#04060f;display:flex;align-items:center;justify-content:center;pointer-events:none;opacity:0;will-change:opacity}
+#lang-overlay[style*="opacity: 1"],#lang-overlay[style*="opacity:1"]{pointer-events:auto}
+#lang-overlay-logo{opacity:0;transform:scale(0.88);transition:opacity 0.4s ease,transform 0.5s cubic-bezier(0.34,1.56,0.64,1)}
 #lang-overlay.logo-in #lang-overlay-logo{opacity:1;transform:scale(1)}
-#lang-overlay.logo-out #lang-overlay-logo{opacity:0;transform:scale(1.05);transition:opacity 0.3s ease,transform 0.3s ease}
+#lang-overlay.logo-out #lang-overlay-logo{opacity:0;transform:scale(1.06);transition:opacity 0.35s ease,transform 0.35s ease}
 .lang-toggle{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:transparent;color:var(--muted);border:1px solid var(--border);padding:9px 16px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:8px;margin-right:12px}
 .lang-toggle:hover{color:var(--white);border-color:var(--border-bright)}
 .lang-flag{font-size:13px}
