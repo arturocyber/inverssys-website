@@ -712,10 +712,12 @@ function toggleLang(){
   var ov = document.getElementById('lang-overlay');
   if(!ov) return;
 
-  // STEP 1: Cover page INSTANTLY (no transition) before anything changes
+  // STEP 1: Make overlay visible and cover page INSTANTLY
+  ov.classList.add('active');
   ov.style.transition = 'none';
   ov.style.opacity = '1';
-  void ov.offsetHeight; // force paint so overlay is visible NOW
+  ov.style.pointerEvents = 'auto';
+  void ov.offsetHeight;
 
   // STEP 2: Logo springs in
   ov.classList.remove('logo-in','logo-out');
@@ -868,6 +870,8 @@ function toggleLang(){
   setTimeout(function(){
     ov.style.transition = 'opacity 0.5s ease';
     ov.style.opacity = '0';
+    ov.style.pointerEvents = 'none';
+    setTimeout(function(){ ov.classList.remove('active'); ov.style.transition = ''; }, 520);
   }, 2900);
 }
 
