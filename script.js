@@ -943,10 +943,11 @@ function showMore(e) {
   window.scrollTo({top:0, behavior:'instant'});
 }
 
-function togglePricingNotes(btn){
-  var panel = btn.nextElementSibling;
-  var arrow = btn.querySelector('.pn-arrow');
-  var open  = panel.style.display === 'block';
+function togglePricingNotes(){
+  var panel = document.getElementById('pricing-notes-panel');
+  var arrow = document.getElementById('pn-arrow');
+  if(!panel) return;
+  var open = panel.style.display === 'block';
   panel.style.display = open ? 'none' : 'block';
   if(arrow) arrow.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
 }
