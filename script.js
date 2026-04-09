@@ -688,158 +688,166 @@ const langFlag={en:'🇪🇸',es:'🇫🇷',fr:'🇺🇸'};
 const langLabel2={en:'ES',es:'FR',fr:'EN'};
 
 function toggleLang(){
-  var ov=document.getElementById('lang-overlay');
-  // Phase 1: overlay fades in
-  ov.style.transition='none'; ov.style.opacity='0'; ov.offsetHeight; // force reflow
-  ov.classList.remove('fade-out','logo-in','logo-out','visible');
-  ov.classList.add('fade-in');
+  var ov = document.getElementById('lang-overlay');
+
+  // --- Step 1: fade in overlay ---
+  ov.style.cssText = 'opacity:0;transition:none';
+  ov.offsetHeight; // reflow
+  ov.style.transition = 'opacity 0.35s ease';
+  ov.style.opacity = '1';
+  ov.classList.remove('fade-out','logo-in','logo-out');
+
+  // --- Step 2: fade in logo (slightly delayed) ---
   setTimeout(function(){
-    ov.classList.add('visible','logo-in');
-    // Phase 2: swap language content while hidden
-    setTimeout(function(){
-      lang=langCycle[lang];
-  const t=T[lang];
-  document.getElementById('langLabel').textContent=langLabel2[lang];
-  var mob=document.getElementById('langLabelMobile');
-  if(mob) mob.textContent=langLabel2[lang];
-  document.querySelectorAll('.lang-flag').forEach(function(el){ el.textContent=langFlag[lang]; });
-  document.documentElement.lang=lang;
-  const navEl=document.querySelector('.nav');
-  if(navEl){navEl.classList.toggle('fr-nav',lang==='fr');}
+    ov.classList.add('logo-in');
+  }, 200);
 
-  const s=(id,k,html)=>{const el=document.getElementById(id);if(el&&t[k]){if(html)el.innerHTML=t[k];else el.textContent=t[k];}};
-  const ph=(id,k)=>{const el=document.getElementById(id);if(el&&t[k])el.placeholder=t[k];};
+  // --- Step 3: swap language content (hidden behind overlay) ---
+  setTimeout(function(){
+    lang=langCycle[lang];
+      const t=T[lang];
+      document.getElementById('langLabel').textContent=langLabel2[lang];
+      var mob=document.getElementById('langLabelMobile');
+      if(mob) mob.textContent=langLabel2[lang];
+      document.querySelectorAll('.lang-flag').forEach(function(el){ el.textContent=langFlag[lang]; });
+      document.documentElement.lang=lang;
+      const navEl=document.querySelector('.nav');
+      if(navEl){navEl.classList.toggle('fr-nav',lang==='fr');}
+    
+      const s=(id,k,html)=>{const el=document.getElementById(id);if(el&&t[k]){if(html)el.innerHTML=t[k];else el.textContent=t[k];}};
+      const ph=(id,k)=>{const el=document.getElementById(id);if(el&&t[k])el.placeholder=t[k];};
+    
+      // MORE SERVICES PAGE
+      s('more-hero-label','more-hero-label'); s('more-hero-h2','more-hero-h2',true); s('more-hero-sub','more-hero-sub',true);
+      s('more-cta-h','more-cta-h',true); s('more-cta-sub','more-cta-sub',true); s('more-cta-btn','more-cta-btn');
+      for(let sec=1;sec<=5;sec++){
+        s('ms'+sec+'-label','ms'+sec+'-label'); s('ms'+sec+'-h2','ms'+sec+'-h2',true); s('ms'+sec+'-sub','ms'+sec+'-sub',true);
+        for(let i=1;i<=6;i++){ s('ms'+sec+'i'+i,'ms'+sec+'i'+i,true); s('ms'+sec+'d'+i,'ms'+sec+'d'+i,true); }
+      }
+      const backEl=document.getElementById('back-btn-label');
+      const breadEl=document.getElementById('more-breadcrumb');
+      if(backEl) backEl.textContent=lang==='es'?'Volver al Inicio':lang==='fr'?'Retour à l\'Accueil':'Back to Home';
+      if(breadEl) breadEl.textContent=lang==='es'?'INVERSSYS / Más Servicios':lang==='fr'?'INVERSSYS / Plus de Services':'INVERSSYS / More Services';
+      // INDUSTRIES
+      s('ind-label','ind-label'); s('ind-h2','ind-h2',true); s('ind-sub','ind-sub',true);
+      for(let i=1;i<=6;i++){s('ind'+i,'ind'+i,true); s('ind'+i+'r','ind'+i+'r',true);}
+      // HOW IT WORKS
+      s('hiw-label','hiw-label'); s('hiw-h2','hiw-h2',true);
+      for(let i=1;i<=3;i++){s('hiw-t'+i,'hiw-t'+i); s('hiw-b'+i,'hiw-b'+i,true);}
+      s('hiw-btn','hiw-btn');
+      // WITHOUT US
+      s('whu-label','whu-label'); s('whu-h2','whu-h2',true); s('whu-sub','whu-sub',true); s('whu-btn','whu-btn');
+      for(let i=1;i<=4;i++){s('whu-t'+i,'whu-t'+i); s('whu-b'+i,'whu-b'+i,true);}
+      // COST SECTION
+      s('cost-label','cost-label'); s('cost-h2','cost-h2',true); s('cost-sub','cost-sub',true);
+      for(let i=1;i<=4;i++){s('cost-t'+i,'cost-t'+i); s('cost-d'+i,'cost-d'+i,true);}
+      s('alt-label','alt-label'); s('alt-h2','alt-h2',true); s('alt-body','alt-body',true); s('alt-btn','alt-btn');
+      for(let i=1;i<=5;i++){s('alt-l'+i,'alt-l'+i); s('alt-s'+i,'alt-s'+i);}
+      // NAV
+      s('nav-cta','nav-cta'); s('nav-svc','nav-svc'); s('nav-about','nav-about'); s('nav-pricing','nav-pricing'); s('nav-more','nav-more'); s('nav-free-assess','nav-free-assess');
+      // MOBILE DRAWER MENU
+      s('mob-svc','nav-svc'); s('mob-about','nav-about'); s('mob-pricing','nav-pricing'); s('mob-more','nav-more'); s('mob-free-assess','mob-free-assess');
+      s('contact-free-assess','contact-free-assess');
+      for(let i=1;i<=7;i++){s('dnav'+i,'dnav'+i,true); s('dnav'+i+'d','dnav'+i+'d',true);}
+      // HERO
+      s('hero-label','hero-label'); s('hero-h1','hero-h1',true); s('hero-sub','hero-sub',true);
+      s('hero-btn1','hero-btn1'); s('hero-btn2','hero-btn2');
+      // SERVICES
+      s('svc-label','svc-label'); s('svc-h2','svc-h2',true); s('svc-sub','svc-sub',true);
+      s('svc1-name','svc1-name'); s('svc1-desc','svc1-desc',true);
+      s('svc2-name','svc2-name'); s('svc2-desc','svc2-desc',true);
+      s('svc3-name','svc3-name'); s('svc3-desc','svc3-desc',true);
+      s('svc4-name','svc4-name',true); s('svc4-desc','svc4-desc',true);
+      s('svc5-name','svc5-name',true); s('svc5-desc','svc5-desc',true);
+      s('more-label','more-label');
+      for(let i=1;i<=7;i++){s('more'+i,'more'+i,true); s('more'+i+'d','more'+i+'d',true);}
+      // SOC
+      s('soc-label','soc-label'); s('soc-h2','soc-h2',true); s('soc-body','soc-body',true);
+      for(let i=1;i<=5;i++) s('soc-li'+i,'soc-li'+i,true);
+      s('soc-btn','soc-btn'); s('soc-visual-label','soc-visual-label');
+      // PENTEST
+      s('pt-label','pt-label'); s('pt-h2','pt-h2',true); s('pt-body','pt-body',true);
+      for(let i=1;i<=5;i++) s('pt-li'+i,'pt-li'+i,true);
+      s('pt-btn','pt-btn'); s('pt-visual-label','pt-visual-label');
+      // IR
+      s('ir-label','ir-label'); s('ir-h2','ir-h2',true); s('ir-body','ir-body',true);
+      s('ir-ai-label','ir-ai-label'); s('ir-ttd-label','ir-ttd-label'); s('ir-ttr-label','ir-ttr-label'); s('ir-coverage-label','ir-coverage-label');
+      s('ir-table-label','ir-table-label');
+      s('ir-th-sev','ir-th-sev'); s('ir-th-p1','ir-th-p1'); s('ir-th-p2','ir-th-p2'); s('ir-th-p3','ir-th-p3');
+      s('ir-sev1','ir-sev1'); s('ir-sev1d','ir-sev1d'); s('ir-sev2','ir-sev2'); s('ir-sev2d','ir-sev2d');
+      s('ir-sev3','ir-sev3'); s('ir-sev3d','ir-sev3d'); s('ir-sev4','ir-sev4'); s('ir-sev4d','ir-sev4d');
+      s('ir-footnote','ir-footnote',true);
+      for(let i=1;i<=5;i++) s('ir-li'+i,'ir-li'+i,true);
+      s('ir-btn','ir-btn'); s('ir-visual-label','ir-visual-label');
+      // GRC
+      s('grc-label','grc-label',true); s('grc-h2','grc-h2',true); s('grc-body','grc-body',true);
+      for(let i=1;i<=5;i++) s('grc-li'+i,'grc-li'+i,true);
+      s('grc-btn','grc-btn'); s('grc-visual-label','grc-visual-label');
+      // PARTNERS
+      s('partners-label','partners-label'); s('partners-h2','partners-h2',true);
+      // STATS
+      for(let i=1;i<=4;i++) s('stat'+i+'-label','stat'+i+'-label');
+      // ABOUT
+      s('about-label','about-label'); s('about-h2','about-h2',true);
+      s('about-p1','about-p1',true); s('about-p2','about-p2',true); s('about-p3','about-p3',true);
+      for(let i=1;i<=6;i++){s('diff'+i+'-title','diff'+i+'-title'); s('diff'+i+'-body','diff'+i+'-body',true);}
+      // PRICING
+      s('pricing-label','pricing-label'); s('pricing-h2','pricing-h2',true);
+      s('pricing-sub','pricing-sub'); s('pricing-note','pricing-note',true);
+      s('pt-badge','pt-badge');
+      for(var i=1;i<=11;i++) s('pt-l'+i,'pt-l'+i);
+      // Package cards
+      s('pc-badge','pc-badge');
+      for(var i=1;i<=3;i++){
+        s('pc-t'+i,'pc-t'+i); s('pc-n'+i,'pc-n'+i); s('pc-d'+i,'pc-d'+i);
+        s('pc-pu'+i,'pc-pu'+i); s('pc-pn'+i,'pc-pn'+i); s('pc-inc'+i,'pc-inc'+i); s('pc-cta'+i,'pc-cta'+i);
+        for(var j=1;j<=7;j++) s('pf'+i+'-'+j,'pf'+i+'-'+j);
+      }
+      // Capability table headers + row labels
+      s('cap-hdr0','cap-hdr0'); s('cap-hdr1','cap-hdr1'); s('cap-hdr2','cap-hdr2'); s('cap-hdr3','cap-hdr3');
+      for(var i=1;i<=11;i++) s('cap-r'+i,'cap-r'+i);
+      s('cap-r2e','cap-r2e'); s('cap-r2m','cap-r2m'); s('cap-r2x','cap-r2x');
+      s('cap-r7e','cap-r7e'); s('cap-r7m','cap-r7m'); s('cap-r7x','cap-r7x');
+      s('cap-r11m','cap-r11m'); s('cap-r11x','cap-r11x');
+      // Cells that need text translation (✓ and — cells are skipped)
+      [1,2,3,4,5,6,7,8,9,12,15,16,17,18,23,24,25,28,29,30,32,33].forEach(function(n){
+        s('pt-c'+n,'pt-c'+n,true);
+      });
+      s('pricing-cta1','pricing-cta1'); s('pricing-cta2','pricing-cta2'); s('pricing-cta3','pricing-cta3');
+      s('pkg-placeholder','pkg-placeholder'); s('pkg-opt1','pkg-opt1'); s('pkg-opt2','pkg-opt2'); s('pkg-opt3','pkg-opt3'); s('pkg-opt4','pkg-opt4');
+      document.querySelectorAll('[data-pricing]').forEach(el=>{
+        const k='p-'+el.getAttribute('data-pricing');
+        if(t[k]) el.textContent=t[k];
+      });
+      // CONTACT
+      s('contact-h2','contact-h2',true); s('contact-sub','contact-sub',true);
+      s('contact-label1','contact-label1'); s('contact-label2','contact-label2'); s('contact-label3','contact-label3');
+      ph('contact-ph1','contact-ph1'); ph('contact-ph5','contact-ph5'); ph('contact-ph6','contact-ph6'); ph('contact-ph2','contact-ph2'); ph('contact-ph3','contact-ph3'); ph('contact-ph4','contact-ph4');
+      s('contact-btn','contact-btn');
+      // Form success card
+      var fsLabel={'en':'Message Received','es':'Mensaje Recibido','fr':'Message Reçu'};
+      var fsTitle={'en':"We'll be in touch within 24 hours.",'es':'Estaremos en contacto en 24 horas.','fr':'Nous vous contacterons sous 24 heures.'};
+      var fsBody={'en':'Our team monitors threats 24/7 — your message is already in our queue. Expect a response from <span style="color:var(--white)">info@inverssys.com</span>.','es':'Nuestro equipo monitorea amenazas 24/7 — tu mensaje ya está en nuestra cola. Espera respuesta de <span style="color:var(--white)">info@inverssys.com</span>.','fr':'Notre équipe surveille les menaces 24h/24 — votre message est déjà dans notre file. Attendez une réponse de <span style="color:var(--white)">info@inverssys.com</span>.'};
+      var fsl=document.getElementById('fs-label'); if(fsl) fsl.textContent=fsLabel[lang];
+      var fst=document.getElementById('fs-title'); if(fst) fst.textContent=fsTitle[lang];
+      var fsb=document.getElementById('fs-body'); if(fsb) fsb.innerHTML=fsBody[lang];
+      // FOOTER
+      s('footer-copy','footer-copy');
+      ['footer-svc','footer-soc','footer-pt','footer-grc','footer-about','footer-pricing','footer-contact'].forEach(id=>s(id,id));
+  }, 450);
 
-  // MORE SERVICES PAGE
-  s('more-hero-label','more-hero-label'); s('more-hero-h2','more-hero-h2',true); s('more-hero-sub','more-hero-sub',true);
-  s('more-cta-h','more-cta-h',true); s('more-cta-sub','more-cta-sub',true); s('more-cta-btn','more-cta-btn');
-  for(let sec=1;sec<=5;sec++){
-    s('ms'+sec+'-label','ms'+sec+'-label'); s('ms'+sec+'-h2','ms'+sec+'-h2',true); s('ms'+sec+'-sub','ms'+sec+'-sub',true);
-    for(let i=1;i<=6;i++){ s('ms'+sec+'i'+i,'ms'+sec+'i'+i,true); s('ms'+sec+'d'+i,'ms'+sec+'d'+i,true); }
-  }
-  const backEl=document.getElementById('back-btn-label');
-  const breadEl=document.getElementById('more-breadcrumb');
-  if(backEl) backEl.textContent=lang==='es'?'Volver al Inicio':lang==='fr'?'Retour à l\'Accueil':'Back to Home';
-  if(breadEl) breadEl.textContent=lang==='es'?'INVERSSYS / Más Servicios':lang==='fr'?'INVERSSYS / Plus de Services':'INVERSSYS / More Services';
-  // INDUSTRIES
-  s('ind-label','ind-label'); s('ind-h2','ind-h2',true); s('ind-sub','ind-sub',true);
-  for(let i=1;i<=6;i++){s('ind'+i,'ind'+i,true); s('ind'+i+'r','ind'+i+'r',true);}
-  // HOW IT WORKS
-  s('hiw-label','hiw-label'); s('hiw-h2','hiw-h2',true);
-  for(let i=1;i<=3;i++){s('hiw-t'+i,'hiw-t'+i); s('hiw-b'+i,'hiw-b'+i,true);}
-  s('hiw-btn','hiw-btn');
-  // WITHOUT US
-  s('whu-label','whu-label'); s('whu-h2','whu-h2',true); s('whu-sub','whu-sub',true); s('whu-btn','whu-btn');
-  for(let i=1;i<=4;i++){s('whu-t'+i,'whu-t'+i); s('whu-b'+i,'whu-b'+i,true);}
-  // COST SECTION
-  s('cost-label','cost-label'); s('cost-h2','cost-h2',true); s('cost-sub','cost-sub',true);
-  for(let i=1;i<=4;i++){s('cost-t'+i,'cost-t'+i); s('cost-d'+i,'cost-d'+i,true);}
-  s('alt-label','alt-label'); s('alt-h2','alt-h2',true); s('alt-body','alt-body',true); s('alt-btn','alt-btn');
-  for(let i=1;i<=5;i++){s('alt-l'+i,'alt-l'+i); s('alt-s'+i,'alt-s'+i);}
-  // NAV
-  s('nav-cta','nav-cta'); s('nav-svc','nav-svc'); s('nav-about','nav-about'); s('nav-pricing','nav-pricing'); s('nav-more','nav-more'); s('nav-free-assess','nav-free-assess');
-  // MOBILE DRAWER MENU
-  s('mob-svc','nav-svc'); s('mob-about','nav-about'); s('mob-pricing','nav-pricing'); s('mob-more','nav-more'); s('mob-free-assess','mob-free-assess');
-  s('contact-free-assess','contact-free-assess');
-  for(let i=1;i<=7;i++){s('dnav'+i,'dnav'+i,true); s('dnav'+i+'d','dnav'+i+'d',true);}
-  // HERO
-  s('hero-label','hero-label'); s('hero-h1','hero-h1',true); s('hero-sub','hero-sub',true);
-  s('hero-btn1','hero-btn1'); s('hero-btn2','hero-btn2');
-  // SERVICES
-  s('svc-label','svc-label'); s('svc-h2','svc-h2',true); s('svc-sub','svc-sub',true);
-  s('svc1-name','svc1-name'); s('svc1-desc','svc1-desc',true);
-  s('svc2-name','svc2-name'); s('svc2-desc','svc2-desc',true);
-  s('svc3-name','svc3-name'); s('svc3-desc','svc3-desc',true);
-  s('svc4-name','svc4-name',true); s('svc4-desc','svc4-desc',true);
-  s('svc5-name','svc5-name',true); s('svc5-desc','svc5-desc',true);
-  s('more-label','more-label');
-  for(let i=1;i<=7;i++){s('more'+i,'more'+i,true); s('more'+i+'d','more'+i+'d',true);}
-  // SOC
-  s('soc-label','soc-label'); s('soc-h2','soc-h2',true); s('soc-body','soc-body',true);
-  for(let i=1;i<=5;i++) s('soc-li'+i,'soc-li'+i,true);
-  s('soc-btn','soc-btn'); s('soc-visual-label','soc-visual-label');
-  // PENTEST
-  s('pt-label','pt-label'); s('pt-h2','pt-h2',true); s('pt-body','pt-body',true);
-  for(let i=1;i<=5;i++) s('pt-li'+i,'pt-li'+i,true);
-  s('pt-btn','pt-btn'); s('pt-visual-label','pt-visual-label');
-  // IR
-  s('ir-label','ir-label'); s('ir-h2','ir-h2',true); s('ir-body','ir-body',true);
-  s('ir-ai-label','ir-ai-label'); s('ir-ttd-label','ir-ttd-label'); s('ir-ttr-label','ir-ttr-label'); s('ir-coverage-label','ir-coverage-label');
-  s('ir-table-label','ir-table-label');
-  s('ir-th-sev','ir-th-sev'); s('ir-th-p1','ir-th-p1'); s('ir-th-p2','ir-th-p2'); s('ir-th-p3','ir-th-p3');
-  s('ir-sev1','ir-sev1'); s('ir-sev1d','ir-sev1d'); s('ir-sev2','ir-sev2'); s('ir-sev2d','ir-sev2d');
-  s('ir-sev3','ir-sev3'); s('ir-sev3d','ir-sev3d'); s('ir-sev4','ir-sev4'); s('ir-sev4d','ir-sev4d');
-  s('ir-footnote','ir-footnote',true);
-  for(let i=1;i<=5;i++) s('ir-li'+i,'ir-li'+i,true);
-  s('ir-btn','ir-btn'); s('ir-visual-label','ir-visual-label');
-  // GRC
-  s('grc-label','grc-label',true); s('grc-h2','grc-h2',true); s('grc-body','grc-body',true);
-  for(let i=1;i<=5;i++) s('grc-li'+i,'grc-li'+i,true);
-  s('grc-btn','grc-btn'); s('grc-visual-label','grc-visual-label');
-  // PARTNERS
-  s('partners-label','partners-label'); s('partners-h2','partners-h2',true);
-  // STATS
-  for(let i=1;i<=4;i++) s('stat'+i+'-label','stat'+i+'-label');
-  // ABOUT
-  s('about-label','about-label'); s('about-h2','about-h2',true);
-  s('about-p1','about-p1',true); s('about-p2','about-p2',true); s('about-p3','about-p3',true);
-  for(let i=1;i<=6;i++){s('diff'+i+'-title','diff'+i+'-title'); s('diff'+i+'-body','diff'+i+'-body',true);}
-  // PRICING
-  s('pricing-label','pricing-label'); s('pricing-h2','pricing-h2',true);
-  s('pricing-sub','pricing-sub'); s('pricing-note','pricing-note',true);
-  s('pt-badge','pt-badge');
-  for(var i=1;i<=11;i++) s('pt-l'+i,'pt-l'+i);
-  // Package cards
-  s('pc-badge','pc-badge');
-  for(var i=1;i<=3;i++){
-    s('pc-t'+i,'pc-t'+i); s('pc-n'+i,'pc-n'+i); s('pc-d'+i,'pc-d'+i);
-    s('pc-pu'+i,'pc-pu'+i); s('pc-pn'+i,'pc-pn'+i); s('pc-inc'+i,'pc-inc'+i); s('pc-cta'+i,'pc-cta'+i);
-    for(var j=1;j<=7;j++) s('pf'+i+'-'+j,'pf'+i+'-'+j);
-  }
-  // Capability table headers + row labels
-  s('cap-hdr0','cap-hdr0'); s('cap-hdr1','cap-hdr1'); s('cap-hdr2','cap-hdr2'); s('cap-hdr3','cap-hdr3');
-  for(var i=1;i<=11;i++) s('cap-r'+i,'cap-r'+i);
-  s('cap-r2e','cap-r2e'); s('cap-r2m','cap-r2m'); s('cap-r2x','cap-r2x');
-  s('cap-r7e','cap-r7e'); s('cap-r7m','cap-r7m'); s('cap-r7x','cap-r7x');
-  s('cap-r11m','cap-r11m'); s('cap-r11x','cap-r11x');
-  // Cells that need text translation (✓ and — cells are skipped)
-  [1,2,3,4,5,6,7,8,9,12,15,16,17,18,23,24,25,28,29,30,32,33].forEach(function(n){
-    s('pt-c'+n,'pt-c'+n,true);
-  });
-  s('pricing-cta1','pricing-cta1'); s('pricing-cta2','pricing-cta2'); s('pricing-cta3','pricing-cta3');
-  s('pkg-placeholder','pkg-placeholder'); s('pkg-opt1','pkg-opt1'); s('pkg-opt2','pkg-opt2'); s('pkg-opt3','pkg-opt3'); s('pkg-opt4','pkg-opt4');
-  document.querySelectorAll('[data-pricing]').forEach(el=>{
-    const k='p-'+el.getAttribute('data-pricing');
-    if(t[k]) el.textContent=t[k];
-  });
-  // CONTACT
-  s('contact-h2','contact-h2',true); s('contact-sub','contact-sub',true);
-  s('contact-label1','contact-label1'); s('contact-label2','contact-label2'); s('contact-label3','contact-label3');
-  ph('contact-ph1','contact-ph1'); ph('contact-ph5','contact-ph5'); ph('contact-ph6','contact-ph6'); ph('contact-ph2','contact-ph2'); ph('contact-ph3','contact-ph3'); ph('contact-ph4','contact-ph4');
-  s('contact-btn','contact-btn');
-  // Form success card
-  var fsLabel={'en':'Message Received','es':'Mensaje Recibido','fr':'Message Reçu'};
-  var fsTitle={'en':"We'll be in touch within 24 hours.",'es':'Estaremos en contacto en 24 horas.','fr':'Nous vous contacterons sous 24 heures.'};
-  var fsBody={'en':'Our team monitors threats 24/7 — your message is already in our queue. Expect a response from <span style="color:var(--white)">info@inverssys.com</span>.','es':'Nuestro equipo monitorea amenazas 24/7 — tu mensaje ya está en nuestra cola. Espera respuesta de <span style="color:var(--white)">info@inverssys.com</span>.','fr':'Notre équipe surveille les menaces 24h/24 — votre message est déjà dans notre file. Attendez une réponse de <span style="color:var(--white)">info@inverssys.com</span>.'};
-  var fsl=document.getElementById('fs-label'); if(fsl) fsl.textContent=fsLabel[lang];
-  var fst=document.getElementById('fs-title'); if(fst) fst.textContent=fsTitle[lang];
-  var fsb=document.getElementById('fs-body'); if(fsb) fsb.innerHTML=fsBody[lang];
-  // FOOTER
-  s('footer-copy','footer-copy');
-  ['footer-svc','footer-soc','footer-pt','footer-grc','footer-about','footer-pricing','footer-contact'].forEach(id=>s(id,id));
-      // Phase 3: logo holds, then fades out, then overlay fades out
-    }, 400); // wait for overlay to fully appear before swapping content
-    setTimeout(function(){
-      ov.classList.add('logo-out');
-      setTimeout(function(){
-        ov.classList.add('fade-out');
-        setTimeout(function(){
-          ov.classList.remove('fade-in','fade-out','visible','logo-in','logo-out');
-          ov.style.opacity='0';
-        }, 420);
-      }, 2800); // logo visible for ~2.8s
-    }, 300);
-  }, 10);
+  // --- Step 4: start fading logo out after hold ---
+  setTimeout(function(){
+    ov.classList.add('logo-out');
+    ov.classList.remove('logo-in');
+  }, 2600);
+
+  // --- Step 5: fade out overlay ---
+  setTimeout(function(){
+    ov.style.transition = 'opacity 0.45s ease';
+    ov.style.opacity = '0';
+    setTimeout(function(){ ov.style.transition = ''; }, 500);
+  }, 2950);
 }
 
 function toggleMobileNav(){
