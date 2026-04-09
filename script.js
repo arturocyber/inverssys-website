@@ -1082,5 +1082,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // More section back button
   on('more-back-btn', 'click', function(){ showMain(); });
+  on('pricing-notes-btn', 'click', function(){ togglePricingNotes(); });
   // Hover styles for back button via CSS (no inline onmouseover)
 });
