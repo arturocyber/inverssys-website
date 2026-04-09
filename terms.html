@@ -136,34 +136,38 @@ body{font-family:'Outfit',sans-serif;font-weight:300;line-height:1.8}
 
 <div class="tsec" id="s4">
   <h2 data-i18n="s4-h">4. Service Levels and Availability</h2>
-  <h3 data-i18n="s4-h3a">SOC Response Times (MDR and Enterprise plans)</h3>
+  <h3 data-i18n="s4-h3a">Response Times by Plan</h3>
+  <p data-i18n="s4-h3a-note">Response time = acknowledge + begin action. Resolution time varies by incident complexity and is not guaranteed within a fixed window.</p>
   <ul>
-    <li data-i18n="s4-li1"><strong>Critical (P1):</strong> Initial triage within 15 minutes; containment action within 30 minutes</li>
-    <li data-i18n="s4-li2"><strong>High (P2):</strong> Initial triage within 1 hour; escalation within 4 hours</li>
-    <li data-i18n="s4-li3"><strong>Medium (P3):</strong> Investigation within 4 hours; report within 24 hours</li>
-    <li data-i18n="s4-li4"><strong>Low / Informational (P4):</strong> Included in next scheduled report cycle</li>
+    <li data-i18n="s4-li1"><strong>Essential Security (8&#215;5):</strong> Critical — 30–60 min &middot; High — 2–4 h &middot; Medium — 8 h &middot; Low — 24 h</li>
+    <li data-i18n="s4-li2"><strong>MDR (24&#215;7):</strong> Critical — 15 min &middot; High — 30–60 min &middot; Medium — 4 h &middot; Low — 24 h</li>
+    <li data-i18n="s4-li3"><strong>Enterprise SOC (24&#215;7 Priority):</strong> Critical — 5 min &middot; High — 15 min &middot; Medium — 2 h &middot; Low — Same day</li>
   </ul>
-  <p data-i18n="s4-1">Essential Security clients receive business-hours monitoring (Monday through Friday, 08:00 to 18:00 AST) with email notification for all alerts.</p>
+  <p data-i18n="s4-1">Essential Security monitoring is available Monday through Friday, 08:00&#8211;18:00 AST. Alerts outside business hours are queued and actioned at opening. MDR and Enterprise SOC maintain continuous 24/7 coverage.</p>
   <h3 data-i18n="s4-h3b">Platform Availability</h3>
-  <p data-i18n="s4-2">INVERSSYS targets 99.5% platform availability per calendar month. Scheduled maintenance windows are communicated at least 48 hours in advance and are excluded from availability calculations.</p>
+  <p data-i18n="s4-2">INVERSSYS targets 99.5% platform availability per calendar month, operating on dedicated infrastructure at NAP del Caribe secured via WireGuard VPN. Scheduled maintenance windows are communicated at least 48 hours in advance and are excluded from availability calculations.</p>
   <h3 data-i18n="s4-h3c">Force Majeure</h3>
   <p data-i18n="s4-3">INVERSSYS shall not be liable for service disruptions caused by circumstances beyond its reasonable control, including natural disasters, telecommunications failures, power outages, cyberattacks on INVERSSYS infrastructure, or government actions.</p>
 </div>
 
 <div class="tsec" id="s5">
   <h2 data-i18n="s5-h">5. Fees, Billing, and Payment</h2>
-  <h3 data-i18n="s5-h3a">Pricing</h3>
-  <p data-i18n="s5-1">Service fees are denominated in United States Dollars (USD) based on the number of managed devices and services included in the selected plan. INVERSSYS reserves the right to adjust pricing on 60 days&#8217; written notice.</p>
-  <h3 data-i18n="s5-h3b">Billing Cycles</h3>
-  <p data-i18n="s5-2">Managed service fees are invoiced monthly in advance on the first business day of each month. Penetration testing and incident response engagements are typically invoiced 50% at engagement start and 50% upon delivery of the final report.</p>
-  <h3 data-i18n="s5-h3c">Payment Terms</h3>
-  <p data-i18n="s5-3">Payment is due within <strong>15 calendar days</strong> of invoice date unless otherwise specified in writing. Overdue balances accrue interest at 1.5% per month (18% per annum) or the maximum permitted by applicable law.</p>
-  <h3 data-i18n="s5-h3d">Disputed Invoices</h3>
-  <p data-i18n="s5-4">Clients must notify INVERSSYS of any disputed invoice within 7 calendar days of receipt. Disputes do not relieve the Client of the obligation to pay undisputed amounts by the due date.</p>
-  <h3 data-i18n="s5-h3e">Taxes</h3>
-  <p data-i18n="s5-5">All fees are exclusive of applicable taxes. Clients are responsible for all taxes, levies, and duties imposed by applicable tax authorities on services received.</p>
-  <h3 data-i18n="s5-h3f">Suspension for Non-Payment</h3>
-  <p data-i18n="s5-6">INVERSSYS may suspend service with 5 business days&#8217; notice if any undisputed invoice remains unpaid for more than 30 days beyond the due date.</p>
+  <h3 data-i18n="s5-h3a">Pricing Model</h3>
+  <p data-i18n="s5-1">Fees are denominated in USD and calculated per managed device per month. Standard rates are: <strong>Essential Security</strong> from $25/device/mo &middot; <strong>MDR</strong> from $45/device/mo &middot; <strong>Enterprise SOC</strong> from $60/device/mo. Minimum device counts apply per tier. Enterprise SOC supports hybrid pricing where third-party security tool licenses may be billed separately from SOC service fees. INVERSSYS reserves the right to adjust pricing with 60 days&#8217; written notice.</p>
+  <h3 data-i18n="s5-h3b">Device Classification and Premiums</h3>
+  <p data-i18n="s5-2">Servers and network devices (firewalls, switches, routers) are assessed a premium over the base device rate, reflecting their significantly higher event-per-second (EPS) output and corresponding analyst workload. A high-volume EPS add-on applies only in environments consistently operating at High or Critical alert levels. Most SME clients operate below this threshold.</p>
+  <h3 data-i18n="s5-h3c">Log Retention</h3>
+  <p data-i18n="s5-3">Standard log and event retention of <strong>90 days</strong> is included across all plans at no additional charge. Extended retention periods (180 days, 12 months) are available as optional add-ons billed at agreed rates.</p>
+  <h3 data-i18n="s5-h3d">Billing Cycles</h3>
+  <p data-i18n="s5-4">Managed service fees are invoiced monthly in advance on the first business day of each month. Penetration testing and incident response engagements are invoiced 50% at engagement start and 50% upon delivery of the final report or close-out.</p>
+  <h3 data-i18n="s5-h3e">Payment Terms</h3>
+  <p data-i18n="s5-5">Payment is due within <strong>15 calendar days</strong> of invoice date. Overdue balances accrue interest at 1.5% per month (18% per annum) or the maximum permitted by applicable law.</p>
+  <h3 data-i18n="s5-h3f">Disputed Invoices</h3>
+  <p data-i18n="s5-6">Clients must notify INVERSSYS of any disputed invoice within 7 calendar days of receipt. Disputes do not relieve the Client of the obligation to pay undisputed amounts by the due date.</p>
+  <h3 data-i18n="s5-h3g">Taxes</h3>
+  <p data-i18n="s5-7">All fees are exclusive of applicable taxes. Clients are responsible for all taxes, levies, and duties imposed by applicable tax authorities.</p>
+  <h3 data-i18n="s5-h3h">Suspension for Non-Payment</h3>
+  <p data-i18n="s5-8">INVERSSYS may suspend service with 5 business days&#8217; notice if any undisputed invoice remains unpaid for more than 30 days beyond the due date.</p>
 </div>
 
 <div class="tsec" id="s6">
@@ -171,7 +175,7 @@ body{font-family:'Outfit',sans-serif;font-weight:300;line-height:1.8}
   <h3 data-i18n="s6-h3a">Data Handling</h3>
   <p data-i18n="s6-1">In the course of providing services, INVERSSYS may process Client data including log data, network traffic metadata, endpoint telemetry, and event records. This data is used solely for delivering contracted services and is not sold to or shared with third parties except as required by law or with the Client&#8217;s written consent.</p>
   <h3 data-i18n="s6-h3b">Data Retention</h3>
-  <p data-i18n="s6-2">Security event data and logs are retained for a minimum of 90 days and up to 12 months depending on the service tier. Upon termination, INVERSSYS will securely delete or return Client data within 30 days, subject to any legal hold requirements.</p>
+  <p data-i18n="s6-2">Security event data and logs are retained for a standard period of 90 days, included at no extra cost in all plans. Extended retention options (up to 12 months) are available at additional cost as documented in Section 5. Upon contract termination, INVERSSYS will securely delete or return Client data within 30 days, subject to any legal hold requirements.</p>
   <h3 data-i18n="s6-h3c">Confidentiality</h3>
   <p data-i18n="s6-3">Both parties agree to maintain the confidentiality of the other party&#8217;s Confidential Information and to use it only for performing obligations under these Terms. Confidentiality obligations survive termination for three (3) years.</p>
   <h3 data-i18n="s6-h3d">Data Protection</h3>
@@ -258,7 +262,7 @@ body{font-family:'Outfit',sans-serif;font-weight:300;line-height:1.8}
   <ul>
     <li data-i18n="s14-li1"><strong>Company:</strong> INVERSSYS SRL</li>
     <li data-i18n="s14-li2"><strong>Address:</strong> Av. M&#225;ximo G&#243;mez No. 29, Santo Domingo, Dominican Republic</li>
-    <li data-i18n="s14-li3"><strong>Email:</strong> info@inverssys.com</li>
+    <li data-i18n="s14-li3"><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7811161e173811160e1d0a0b0b010b561b1715">[email&#160;protected]</a></li>
     <li data-i18n="s14-li4"><strong>Phone:</strong> +1 (809) 729-7971</li>
   </ul>
   <p data-i18n="s14-2">Legal notices must be sent in writing via certified mail or email with read receipt and are effective upon confirmed receipt.</p>
@@ -268,8 +272,4 @@ body{font-family:'Outfit',sans-serif;font-weight:300;line-height:1.8}
 
 <footer class="tfooter">
   <span data-i18n="footer">&copy; 2026 INVERSSYS SRL &mdash; All rights reserved</span>
-  <a href="mailto:info@inverssys.com">info@inverssys.com</a>
-</footer>
-<script src="/terms-i18n.js"></script>
-</body>
-</html>
+  <a
