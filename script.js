@@ -188,7 +188,12 @@ const T={
     'pkg-placeholder':'Interested package',
     'pkg-opt1':'Essential','pkg-opt2':'MDR',
     'pkg-opt3':'Enterprise','pkg-opt4':'Custom / Not sure yet',
-    'pricing-note':'All plans run on dedicated infrastructure at NAP del Caribe, secured via WireGuard VPN. Pricing is per managed device per month — minimum counts may apply. IR engagements beyond included scope require a signed Statement of Work. By engaging INVERSSYS services you agree to our <a href="/terms.html" style="color:var(--cyan);text-decoration:underline;text-underline-offset:3px" id="pricing-note-terms">Terms &amp; Conditions</a>, including SLA definitions, liability limitations, and data handling policies.',
+    'pricing-note':'All plans run on dedicated infrastructure at NAP del Caribe, secured via WireGuard VPN. Pricing is per managed device per month — minimum counts may apply. IR engagements beyond included scope require a signed Statement of Work. By engaging INVERSSYS services you agree to our <a href="/terms.html" style="color:var(--cyan);text-decoration:underline;text-underline-offset:3px" id="pricing-note-terms">Terms &amp; Conditions</a>, including SLA definitions, liability limitations, and data handling policies.','pricing-note-toggle':'Pricing Notes',
+    'pn-d1':'· Servers and network devices carry a premium over base device rate — they generate significantly higher event-per-second (EPS) load and analyst workload.',
+    'pn-d2':'· The high-volume EPS add-on only applies in High/Critical environments. Most SME clients in the Caribbean operate below this threshold.',
+    'pn-d3':'· Standard 90-day log retention is included across all plans. Extended retention periods are available at additional cost.',
+    'pn-d4':'· Minimum device counts may apply per tier. Enterprise SOC supports hybrid pricing — security tool licenses billed separately from SOC service fees.',
+    'pn-d5':'· All prices in USD. INVERSSYS reserves the right to adjust pricing with 60 days\' written notice.',
     'p-feature':'Feature','p-best':'Best for','p-best1':'1–10 endpoints','p-best2':'10–50 endpoints','p-best3':'50+ / Multi-location',
     'p-soc':'SOC Monitoring','p-soc1':'Business hours','p-soc2':'24/7 AI','p-soc3':'24/7 AI Priority',
     'p-agents':'Endpoint Agents','p-agents1':'Up to 10','p-agents2':'Up to 50','p-agents3':'Unlimited',
@@ -424,7 +429,12 @@ const T={
     'pkg-placeholder':'Paquete de interés',
     'pkg-opt1':'Essential','pkg-opt2':'MDR',
     'pkg-opt3':'Enterprise','pkg-opt4':'Personalizado / No estoy seguro aún',
-    'pricing-note':'Todos los planes operan en infraestructura dedicada en NAP del Caribe, protegida con WireGuard VPN. Precio por dispositivo gestionado al mes — aplican mínimos. Los compromisos de IR fuera del alcance incluido requieren un Statement of Work firmado. Al contratar servicios de INVERSSYS aceptas nuestros <a href="/terms.html" style="color:var(--cyan);text-decoration:underline;text-underline-offset:3px">Términos y Condiciones</a>, incluyendo definiciones de SLA, limitaciones de responsabilidad y políticas de datos.',
+    'pricing-note':'Todos los planes operan en infraestructura dedicada en NAP del Caribe, protegida con WireGuard VPN. Precio por dispositivo gestionado al mes — aplican mínimos. Los compromisos de IR fuera del alcance incluido requieren un Statement of Work firmado. Al contratar servicios de INVERSSYS aceptas nuestros <a href="/terms.html" style="color:var(--cyan);text-decoration:underline;text-underline-offset:3px">Términos y Condiciones</a>, incluyendo definiciones de SLA, limitaciones de responsabilidad y políticas de datos.','pricing-note-toggle':'Notas de Precios',
+    'pn-d1':'· Los servidores y dispositivos de red pagan una prima sobre la tarifa base — generan significativamente más EPS y carga de trabajo para el analista.',
+    'pn-d2':'· El add-on por volumen EPS solo aplica en entornos Alto/Crítico. La mayoría de clientes SME en el Caribe operan por debajo de ese umbral.',
+    'pn-d3':'· La retención estándar de 90 días está incluida en todos los planes. Períodos extendidos disponibles con costo adicional.',
+    'pn-d4':'· Aplican mínimos de dispositivos por tier. Enterprise SOC soporta precios híbridos — licencias de herramientas facturadas por separado.',
+    'pn-d5':'· Todos los precios en USD. INVERSSYS se reserva el derecho de ajustar precios con 60 días de aviso escrito.',
     'p-feature':'Característica','p-best':'Ideal para','p-best1':'1–10 endpoints','p-best2':'10–50 endpoints','p-best3':'50+ / Multi-ubicación',
     'p-soc':'Monitoreo SOC','p-soc1':'Horario laboral','p-soc2':'24/7 IA','p-soc3':'24/7 IA Prioritario',
     'p-agents':'Agentes Endpoint','p-agents1':'Hasta 10','p-agents2':'Hasta 50','p-agents3':'Ilimitado',
@@ -638,7 +648,12 @@ const T={
     'pkg-placeholder':'Package souhaité',
     'pkg-opt1':'Essential','pkg-opt2':'MDR',
     'pkg-opt3':'Enterprise','pkg-opt4':'Personnalisé / Pas encore sûr',
-    'pricing-note':'Tous les plans opèrent sur une infrastructure dédiée au NAP del Caribe, sécurisée par WireGuard VPN. Tarif par appareil géré par mois — des minimums peuvent s\'appliquer. Les missions IR hors périmètre inclus nécessitent un Statement of Work signé. En faisant appel à INVERSSYS, vous acceptez nos <a href="/terms.html" style="color:var(--cyan);text-decoration:underline;text-underline-offset:3px">Conditions Générales</a>, incluant les définitions de SLA, limitations de responsabilité et politiques de données.',
+    'pricing-note':'Tous les plans opèrent sur une infrastructure dédiée au NAP del Caribe, sécurisée par WireGuard VPN. Tarif par appareil géré par mois — des minimums peuvent s\'appliquer. Les missions IR hors périmètre inclus nécessitent un Statement of Work signé. En faisant appel à INVERSSYS, vous acceptez nos <a href="/terms.html" style="color:var(--cyan);text-decoration:underline;text-underline-offset:3px">Conditions Générales</a>, incluant les définitions de SLA, limitations de responsabilité et politiques de données.','pricing-note-toggle':'Notes Tarifaires',
+    'pn-d1':'· Les serveurs et équipements réseau ont un surcoût par rapport au tarif de base — ils génèrent bien plus d\'EPS et de charge pour l\'analyste.',
+    'pn-d2':'· Le supplément EPS haut-volume ne s\'applique qu\'en environnements Élevé/Critique. La plupart des PME dans les Caraïbes opèrent en-dessous de ce seuil.',
+    'pn-d3':'· La rétention standard de 90 jours est incluse dans tous les plans. Des périodes étendues sont disponibles en option.',
+    'pn-d4':'· Des minimums d\'appareils peuvent s\'appliquer par niveau. Enterprise SOC supporte les prix hybrides — licences d\'outils facturées séparément.',
+    'pn-d5':'· Tous les prix en USD. INVERSSYS se réserve le droit d\'ajuster les tarifs avec 60 jours de préavis écrit.',
     'p-feature':'Fonctionnalité','p-best':'Idéal pour','p-best1':'1–10 endpoints','p-best2':'10–50 endpoints','p-best3':'50+ / Multi-sites',
     'p-soc':'Surveillance SOC','p-soc1':'Heures ouvrables','p-soc2':'24/7 IA','p-soc3':'24/7 IA Prioritaire',
     'p-agents':'Agents Endpoint','p-agents1':'Jusqu\'à 10','p-agents2':'Jusqu\'à 50','p-agents3':'Illimité',
@@ -798,6 +813,8 @@ function toggleLang(){
     // PRICING
     s('pricing-label','pricing-label'); s('pricing-h2','pricing-h2',true);
     s('pricing-sub','pricing-sub'); s('pricing-note','pricing-note',true);
+    s('pricing-note-toggle','pricing-note-toggle');
+    for(var i=1;i<=5;i++) s('pn-d'+i,'pn-d'+i);
     s('pt-badge','pt-badge');
     for(var i=1;i<=11;i++) s('pt-l'+i,'pt-l'+i);
     // Package cards
