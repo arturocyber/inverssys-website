@@ -364,10 +364,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:38px 56p
 .pkg-btn-featured:hover{background:#7dd3fc;border-color:#7dd3fc}
 
 /* ── Capability comparison table ── */
-.cap-row td{padding:9px 14px;border-bottom:1px solid #0d1724;vertical-align:middle}
+.cap-row td{padding:11px 16px;border-bottom:1px solid var(--border);vertical-align:middle}
 .cap-row:last-child td{border-bottom:none}
-.cap-alt td{background:rgba(255,255,255,0.02)}
-.cap-label{font-family:'Outfit',sans-serif;font-size:13px;color:#94a3b8;text-align:left}
-.cap-yes{color:#22c55e;font-weight:700;font-size:13px;text-align:center}
-.cap-partial{color:#f59e0b;font-size:13px;text-align:center}
-.cap-no{color:#1e2d45;font-size:16px;text-align:center}
+.cap-alt td{background:rgba(255,255,255,0.015)}
+.cap-label{font-family:'Outfit',sans-serif;font-size:14px;color:var(--muted);text-align:left}
+.cap-yes{color:#22c55e;font-weight:700;font-size:15px;text-align:center}
+.cap-partial{color:#f59e0b;font-size:13px;text-align:center;font-family:'Space Mono',monospace;letter-spacing:0.04em}
+.cap-no{color:var(--border-bright);font-size:16px;text-align:center}

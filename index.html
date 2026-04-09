@@ -543,7 +543,7 @@
       <div style="background:#111827;border:1px solid #1e2d45;border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;position:relative">
         <p style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#64748b;margin-bottom:6px" id="pc-t1">Tier 1</p>
         <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#f1f5f9;margin-bottom:8px" id="pc-n1">Essential Security</h3>
-        <p style="font-size:13px;color:#64748b;line-height:1.5;padding-bottom:20px;border-bottom:1px solid #1e2d45;margin-bottom:20px" id="pc-d1">Entry-level protection for businesses starting their security journey. Business-hours visibility with core endpoint defense.</p>
+        <p style="font-size:13px;color:#64748b;line-height:1.5;padding-bottom:20px;border-bottom:1px solid #1e2d45;margin-bottom:20px" id="pc-d1">Endpoint defense and SIEM visibility for businesses ready to get serious about security.</p>
         <div style="margin-bottom:20px">
           <div style="display:flex;align-items:baseline;gap:4px">
             <span style="font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:#f1f5f9">$25</span>
@@ -557,9 +557,9 @@
           <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-2">Basic SIEM monitoring</span></li>
           <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-3">Email + SMS alerting</span></li>
           <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-4">Monthly security report</span></li>
-          <li class="pkg-feat"><span class="pkg-dot"></span><span id="pf1-5">24/7 coverage</span></li>
-          <li class="pkg-feat"><span class="pkg-dot"></span><span id="pf1-6">Threat intelligence</span></li>
-          <li class="pkg-feat"><span class="pkg-dot"></span><span id="pf1-7">IR &amp; forensics</span></li>
+          <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-5">Vulnerability scanning</span></li>
+          <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-6">Security awareness training</span></li>
+          <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-7">Business-hours analyst access</span></li>
         </ul>
         <a href="#contact" id="pricing-cta1" class="pkg-btn"><span id="pc-cta1">Request proposal</span></a>
       </div>
@@ -594,7 +594,7 @@
       <div style="background:#111827;border:1px solid #1e2d45;border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;position:relative">
         <p style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#64748b;margin-bottom:6px" id="pc-t3">Tier 3</p>
         <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#f1f5f9;margin-bottom:8px" id="pc-n3">Enterprise SOC</h3>
-        <p style="font-size:13px;color:#64748b;line-height:1.5;padding-bottom:20px;border-bottom:1px solid #1e2d45;margin-bottom:20px" id="pc-d3">Full security operations with dedicated analyst, compliance-ready reporting, forensics, and priority incident response.</p>
+        <p style="font-size:13px;color:#64748b;line-height:1.5;padding-bottom:20px;border-bottom:1px solid #1e2d45;margin-bottom:20px" id="pc-d3">Full SOC operations — dedicated analyst, forensics, compliance reporting, and priority IR.</p>
         <div style="margin-bottom:20px">
           <div style="display:flex;align-items:baseline;gap:4px">
             <span style="font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:#f1f5f9">$60+</span>
@@ -618,14 +618,19 @@
     </div><!-- /cards -->
 
     <!-- CAPABILITY TABLE -->
-    <div style="overflow-x:auto">
-      <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:600px">
+    <div style="margin-top:56px">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
+        <div class="label" id="cap-hdr0" style="margin:0">Capability Comparison</div>
+        <div style="flex:1;height:1px;background:var(--border-bright)"></div>
+      </div>
+      <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:540px">
         <thead>
-          <tr style="background:#1e2d45">
-            <th style="text-align:left;padding:10px 14px;color:#64748b;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;border-bottom:1px solid #1e2d45" id="cap-hdr0">Capability</th>
-            <th style="padding:10px 14px;color:#64748b;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;border-bottom:1px solid #1e2d45;text-align:center" id="cap-hdr1">Essential</th>
-            <th style="padding:10px 14px;color:#64748b;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;border-bottom:1px solid #1e2d45;text-align:center" id="cap-hdr2">MDR</th>
-            <th style="padding:10px 14px;color:#64748b;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;border-bottom:1px solid #1e2d45;text-align:center" id="cap-hdr3">Enterprise</th>
+          <tr style="background:var(--bg3)">
+            <th style="text-align:left;padding:12px 16px;color:var(--muted);font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:400;border-bottom:1px solid var(--border-bright);border-top:1px solid var(--border-bright);width:40%"></th>
+            <th style="padding:12px 16px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--border-bright);border-top:1px solid var(--border-bright);text-align:center;color:#94a3b8" id="cap-hdr1">Essential</th>
+            <th style="padding:12px 16px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--border-bright);border-top:1px solid var(--border-bright);text-align:center;color:var(--cyan)" id="cap-hdr2">MDR</th>
+            <th style="padding:12px 16px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--border-bright);border-top:1px solid var(--border-bright);text-align:center;color:#94a3b8" id="cap-hdr3">Enterprise</th>
           </tr>
         </thead>
         <tbody>
@@ -642,7 +647,8 @@
           <tr class="cap-row"><td class="cap-label" id="cap-r11">Compliance reporting</td><td class="cap-no">—</td><td class="cap-partial" id="cap-r11m">Basic</td><td class="cap-yes" id="cap-r11x">Full</td></tr>
         </tbody>
       </table>
-    </div>
+      </div><!-- /overflow -->
+    </div><!-- /cap-wrap -->
 
     <!-- Note -->
     <p style="font-family:'Outfit',sans-serif;font-size:13px;color:#475569;background:#0d1724;border:1px solid #1e2d45;border-radius:10px;padding:14px 18px;margin-top:24px;line-height:1.6" id="pricing-note">All tiers run on dedicated infrastructure at NAP del Caribe, secured via WireGuard VPN. IR engagements beyond included scope require a signed statement of work. Enterprise clients may use hybrid pricing — security tool licenses billed separately from SOC service fees. Pricing is per managed device per month; minimum device counts may apply per tier.</p>
