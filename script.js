@@ -980,6 +980,26 @@ function goToForm(pkg) {
 
 // ── Event listeners (replaces all inline onclick attributes) ──────────
 document.addEventListener('DOMContentLoaded', function() {
+
+  // ── INTRO ANIMATION (first load) ──────────────────────────────────────────
+  var ov = document.getElementById('lang-overlay');
+  if(ov && ov.classList.contains('active')){
+    // Logo springs in
+    setTimeout(function(){ ov.classList.add('logo-in'); }, 250);
+    // Logo fades out
+    setTimeout(function(){ ov.classList.remove('logo-in'); ov.classList.add('logo-out'); }, 2500);
+    // Overlay fades out
+    setTimeout(function(){
+      ov.style.transition = 'opacity 0.55s ease';
+      ov.style.opacity    = '0';
+      ov.style.pointerEvents = 'none';
+      setTimeout(function(){
+        ov.classList.remove('active','logo-out');
+        ov.style.transition = '';
+      }, 600);
+    }, 2900);
+  }
+  // ─────────────────────────────────────────────────────────────────────────
   function on(id, evt, fn) {
     var el = document.getElementById(id);
     if(el) el.addEventListener(evt, fn);
