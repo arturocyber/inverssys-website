@@ -620,6 +620,43 @@
     <!-- CAPABILITY TABLE -->
     <div style="margin-top:56px">
       <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
+        <div class="label" style="margin:0" id="cap-label">Capability Comparison</div>
+        <div style="flex:1;height:1px;background:var(--border-bright)"></div>
+      </div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:540px">
+          <thead>
+            <tr style="background:var(--bg3)">
+              <th style="text-align:left;padding:12px 16px;border-bottom:1px solid var(--border-bright);border-top:1px solid var(--border-bright);width:42%"></th>
+              <th style="padding:12px 16px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--border-bright);border-top:1px solid var(--border-bright);text-align:center;color:#94a3b8" id="cap-hdr1">Essential Security</th>
+              <th style="padding:12px 16px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--border-bright);border-top:1px solid var(--border-bright);text-align:center;color:var(--cyan)" id="cap-hdr2">MDR</th>
+              <th style="padding:12px 16px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;border-bottom:1px solid var(--border-bright);border-top:1px solid var(--border-bright);text-align:center;color:#94a3b8" id="cap-hdr3">Enterprise SOC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cap-row"><td class="cap-label" id="cap-r1">Endpoint protection (XDR)</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r2">SIEM monitoring</td><td class="cap-partial" id="cap-r2e">Basic</td><td class="cap-yes" id="cap-r2m">Full</td><td class="cap-yes" id="cap-r2x">Full</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r3">Coverage hours</td><td class="cap-partial">8×5</td><td class="cap-yes">24×7</td><td class="cap-yes">24×7</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r4">Email + SMS alerting</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r5">Vulnerability scanning</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r6">Security awareness training</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r7">AI behavioral analytics</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r8">Threat intelligence</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r9">SOAR automated response</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r10">Device isolation + IP blocking</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r11">Incident response</td><td class="cap-partial" id="cap-r11e">Add-on</td><td class="cap-partial" id="cap-r11m">Add-on</td><td class="cap-yes" id="cap-r11x">Priority</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r12">Dedicated SOC analyst</td><td class="cap-no">—</td><td class="cap-partial" id="cap-r12m">Add-on</td><td class="cap-yes" id="cap-r12x">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r13">Digital forensics</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r14">Malware analysis lab</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r15">Compliance-ready reporting</td><td class="cap-no">—</td><td class="cap-partial" id="cap-r15m">Basic</td><td class="cap-yes" id="cap-r15x">Full</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r16">Executive + technical reports</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div style="margin-top:56px">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
         <div class="label" id="cap-hdr0" style="margin:0">Capability Comparison</div>
         <div style="flex:1;height:1px;background:var(--border-bright)"></div>
       </div>

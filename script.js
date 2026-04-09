@@ -154,14 +154,16 @@ const T={
     'pf3-1':'Everything in MDR','pf3-2':'Dedicated SOC analyst','pf3-3':'Priority incident response',
     'pf3-4':'Digital forensics (full stack)','pf3-5':'Malware analysis lab','pf3-6':'Compliance-ready reporting','pf3-7':'Executive + technical reports',
     'pc-cta1':'Request proposal','pc-cta2':'Request proposal','pc-cta3':'Request proposal',
-    'cap-hdr0':'Capability','cap-hdr1':'Essential','cap-hdr2':'MDR','cap-hdr3':'Enterprise',
-    'cap-r1':'Endpoint protection (XDR)','cap-r2':'SIEM monitoring','cap-r3':'Coverage hours',
-    'cap-r4':'AI behavioral analytics','cap-r5':'Threat intelligence','cap-r6':'SOAR automated response',
-    'cap-r7':'Incident response','cap-r8':'Digital forensics','cap-r9':'Malware analysis',
-    'cap-r10':'Dedicated analyst','cap-r11':'Compliance reporting',
-    'cap-r2e':'Basic','cap-r2m':'Full','cap-r2x':'Full',
-    'cap-r7e':'Add-on','cap-r7m':'Add-on','cap-r7x':'Included',
-    'cap-r11m':'Basic','cap-r11x':'Full',
+    'cap-label':'Capability Comparison','cap-hdr1':'Essential Security','cap-hdr2':'MDR','cap-hdr3':'Enterprise SOC',
+    'cap-r1':'Endpoint protection (XDR)','cap-r2':'SIEM monitoring','cap-r2e':'Basic','cap-r2m':'Full','cap-r2x':'Full',
+    'cap-r3':'Coverage hours','cap-r4':'Email + SMS alerting','cap-r5':'Vulnerability scanning',
+    'cap-r6':'Security awareness training','cap-r7':'AI behavioral analytics','cap-r8':'Threat intelligence',
+    'cap-r9':'SOAR automated response','cap-r10':'Device isolation + IP blocking',
+    'cap-r11':'Incident response','cap-r11e':'Add-on','cap-r11m':'Add-on','cap-r11x':'Priority',
+    'cap-r12':'Dedicated SOC analyst','cap-r12m':'Add-on','cap-r12x':'✓',
+    'cap-r13':'Digital forensics','cap-r14':'Malware analysis lab',
+    'cap-r15':'Compliance-ready reporting','cap-r15m':'Basic','cap-r15x':'Full',
+    'cap-r16':'Executive + technical reports',
     'pt-l1':'Best for','pt-l2':'Monitoring','pt-l3':'Protection (XDR)',
     'pt-l4':'SIEM (Visibility)','pt-l5':'Threat Intelligence','pt-l6':'Incident Response',
     'pt-l7':'IR & Forensics','pt-l8':'Compliance Support','pt-l9':'Security Testing',
@@ -388,14 +390,16 @@ const T={
     'pf3-1':'Todo en MDR','pf3-2':'Analista SOC dedicado','pf3-3':'Respuesta prioritaria a incidentes',
     'pf3-4':'Forense digital (stack completo)','pf3-5':'Laboratorio de análisis de malware','pf3-6':'Reportes listos para cumplimiento','pf3-7':'Informes ejecutivos y técnicos',
     'pc-cta1':'Solicitar propuesta','pc-cta2':'Solicitar propuesta','pc-cta3':'Solicitar propuesta',
-    'cap-hdr0':'Capacidad','cap-hdr1':'Essential','cap-hdr2':'MDR','cap-hdr3':'Enterprise',
-    'cap-r1':'Protección de endpoints (XDR)','cap-r2':'Monitoreo SIEM','cap-r3':'Horas de cobertura',
-    'cap-r4':'Analítica conductual con IA','cap-r5':'Inteligencia de amenazas','cap-r6':'Respuesta automatizada SOAR',
-    'cap-r7':'Respuesta a incidentes','cap-r8':'Forense digital','cap-r9':'Análisis de malware',
-    'cap-r10':'Analista dedicado','cap-r11':'Reportes de cumplimiento',
-    'cap-r2e':'Básico','cap-r2m':'Completo','cap-r2x':'Completo',
-    'cap-r7e':'Complemento','cap-r7m':'Complemento','cap-r7x':'Incluido',
-    'cap-r11m':'Básico','cap-r11x':'Completo',
+    'cap-label':'Comparación de Capacidades','cap-hdr1':'Essential Security','cap-hdr2':'MDR','cap-hdr3':'Enterprise SOC',
+    'cap-r1':'Protección de endpoints (XDR)','cap-r2':'Monitoreo SIEM','cap-r2e':'Básico','cap-r2m':'Completo','cap-r2x':'Completo',
+    'cap-r3':'Horas de cobertura','cap-r4':'Alertas Email + SMS','cap-r5':'Escaneo de vulnerabilidades',
+    'cap-r6':'Capacitación en ciberseguridad','cap-r7':'IA de análisis de comportamiento','cap-r8':'Inteligencia de amenazas',
+    'cap-r9':'Respuesta automatizada SOAR','cap-r10':'Aislamiento de dispositivos + bloqueo IP',
+    'cap-r11':'Respuesta a incidentes','cap-r11e':'Adicional','cap-r11m':'Adicional','cap-r11x':'Prioritario',
+    'cap-r12':'Analista SOC dedicado','cap-r12m':'Adicional','cap-r12x':'✓',
+    'cap-r13':'Forense digital','cap-r14':'Laboratorio de análisis de malware',
+    'cap-r15':'Reportes de cumplimiento','cap-r15m':'Básico','cap-r15x':'Completo',
+    'cap-r16':'Reportes ejecutivos y técnicos',
     'pt-l1':'Ideal para','pt-l2':'Monitoreo','pt-l3':'Protección (XDR)',
     'pt-l4':'SIEM (Visibilidad)','pt-l5':'Inteligencia de Amenazas','pt-l6':'Respuesta a Incidentes',
     'pt-l7':'IR y Forense','pt-l8':'Soporte de Cumplimiento','pt-l9':'Pruebas de Seguridad',
@@ -600,14 +604,16 @@ const T={
     'pf3-1':'Tout en MDR','pf3-2':'Analyste SOC dédié','pf3-3':'Réponse prioritaire aux incidents',
     'pf3-4':'Forensique numérique (stack complet)','pf3-5':'Laboratoire analyse malware','pf3-6':'Rapports conformité','pf3-7':'Rapports exécutifs et techniques',
     'pc-cta1':'Demander un devis','pc-cta2':'Demander un devis','pc-cta3':'Demander un devis',
-    'cap-hdr0':'Capacité','cap-hdr1':'Essential','cap-hdr2':'MDR','cap-hdr3':'Enterprise',
-    'cap-r1':'Protection des endpoints (XDR)','cap-r2':'Surveillance SIEM','cap-r3':'Heures de couverture',
-    'cap-r4':'Analytique comportementale IA','cap-r5':'Renseignements sur les menaces','cap-r6':'Réponse automatisée SOAR',
-    'cap-r7':'Réponse aux incidents','cap-r8':'Forensique numérique','cap-r9':'Analyse de malware',
-    'cap-r10':'Analyste dédié','cap-r11':'Rapports de conformité',
-    'cap-r2e':'Basique','cap-r2m':'Complet','cap-r2x':'Complet',
-    'cap-r7e':'En option','cap-r7m':'En option','cap-r7x':'Inclus',
-    'cap-r11m':'Basique','cap-r11x':'Complet',
+    'cap-label':'Comparaison des Capacités','cap-hdr1':'Essential Security','cap-hdr2':'MDR','cap-hdr3':'Enterprise SOC',
+    'cap-r1':'Protection des endpoints (XDR)','cap-r2':'Surveillance SIEM','cap-r2e':'Basique','cap-r2m':'Complète','cap-r2x':'Complète',
+    'cap-r3':'Heures de couverture','cap-r4':'Alertes Email + SMS','cap-r5':'Analyse de vulnérabilités',
+    'cap-r6':'Formation à la cybersécurité','cap-r7':'IA d\'analyse comportementale','cap-r8':'Renseignement sur les menaces',
+    'cap-r9':'Réponse automatisée SOAR','cap-r10':'Isolation d\'appareils + blocage IP',
+    'cap-r11':'Réponse aux incidents','cap-r11e':'Option','cap-r11m':'Option','cap-r11x':'Prioritaire',
+    'cap-r12':'Analyste SOC dédié','cap-r12m':'Option','cap-r12x':'✓',
+    'cap-r13':'Forensique numérique','cap-r14':'Laboratoire d\'analyse de maliciels',
+    'cap-r15':'Rapports de conformité','cap-r15m':'Basique','cap-r15x':'Complet',
+    'cap-r16':'Rapports exécutifs et techniques',
     'pt-l1':'Idéal pour','pt-l2':'Surveillance','pt-l3':'Protection (XDR)',
     'pt-l4':'SIEM (Visibilité)','pt-l5':'Renseignements sur les Menaces','pt-l6':'Réponse aux Incidents',
     'pt-l7':'IR et Forensique','pt-l8':'Support Conformité','pt-l9':'Tests de Sécurité',
@@ -802,11 +808,12 @@ function toggleLang(){
       for(var j=1;j<=7;j++) s('pf'+i+'-'+j,'pf'+i+'-'+j);
     }
     // Capability table headers + row labels
-    s('cap-hdr0','cap-hdr0'); s('cap-hdr1','cap-hdr1'); s('cap-hdr2','cap-hdr2'); s('cap-hdr3','cap-hdr3');
-    for(var i=1;i<=11;i++) s('cap-r'+i,'cap-r'+i);
+    s('cap-label','cap-label'); s('cap-hdr1','cap-hdr1'); s('cap-hdr2','cap-hdr2'); s('cap-hdr3','cap-hdr3');
+    for(var i=1;i<=16;i++) s('cap-r'+i,'cap-r'+i);
     s('cap-r2e','cap-r2e'); s('cap-r2m','cap-r2m'); s('cap-r2x','cap-r2x');
-    s('cap-r7e','cap-r7e'); s('cap-r7m','cap-r7m'); s('cap-r7x','cap-r7x');
-    s('cap-r11m','cap-r11m'); s('cap-r11x','cap-r11x');
+    s('cap-r11e','cap-r11e'); s('cap-r11m','cap-r11m'); s('cap-r11x','cap-r11x');
+    s('cap-r12m','cap-r12m'); s('cap-r12x','cap-r12x');
+    s('cap-r15m','cap-r15m'); s('cap-r15x','cap-r15x');
     // Cells that need text translation (✓ and — cells are skipped)
     [1,2,3,4,5,6,7,8,9,12,15,16,17,18,23,24,25,28,29,30,32,33].forEach(function(n){
       s('pt-c'+n,'pt-c'+n,true);
