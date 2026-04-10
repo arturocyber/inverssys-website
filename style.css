@@ -41,9 +41,9 @@ body.show-more .main-content{display:none!important}
 /* Language transition overlay */
 72%{opacity:1}88%{opacity:0}100%{opacity:0;pointer-events:none}}
 8%{opacity:1;transform:scale(1)}70%{opacity:1;transform:scale(1)}82%{opacity:0;transform:scale(1.06)}100%{opacity:0}}
-.lang-toggle{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:transparent;color:var(--muted);border:none;padding:9px 16px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:8px;margin-right:28px}
+.lang-toggle{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:none;background-color:transparent;-webkit-appearance:none;appearance:none;color:var(--muted);border:none;outline:none;padding:9px 16px;cursor:pointer;transition:color 0.2s;display:flex;align-items:center;gap:8px;margin-right:28px}
 .lang-toggle:hover{color:var(--white)}
-.lang-flag{font-size:16px;line-height:1;background:transparent;display:inline-block}
+.lang-flag{font-size:16px;line-height:1;display:inline-block}
 .nav-cta{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);background:transparent;border:1px solid var(--border-bright);padding:10px 22px;text-decoration:none;transition:all 0.2s;display:inline-block}
 .nav-cta:hover{background:var(--cyan);color:var(--bg);border-color:var(--cyan)}
 .nav-free-assess{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#0a0f1a;background:var(--cyan);border:1px solid var(--cyan);padding:10px 22px;text-decoration:none;transition:all 0.2s;display:inline-block;margin-right:8px}
