@@ -713,11 +713,15 @@ function invShow(cb){
   var ov  = document.getElementById('inv-overlay');
   var wrp = document.getElementById('inv-logo-wrap');
   if(!ov) return cb && cb();
-  // Reset
+  // Reset display and opacity (may have been hidden by invHide)
+  ov.style.display = 'flex';
+  ov.style.transition = 'none';
+  ov.style.opacity = '1';
+  ov.style.pointerEvents = 'auto';
   ov.classList.remove('inv-pulse');
-  wrp.style.opacity='0'; wrp.style.transform='scale(0.85)';
-  // Fade in overlay instantly
   ov.classList.add('inv-show');
+  void ov.offsetHeight;
+  wrp.style.opacity='0'; wrp.style.transform='scale(0.85)';
   // Logo springs in
   setTimeout(function(){ ov.classList.add('inv-logo-in'); }, 80);
   // Callback (swap content)
@@ -727,12 +731,17 @@ function invHide(){
   var ov = document.getElementById('inv-overlay');
   if(!ov) return;
   ov.classList.remove('inv-logo-in','inv-pulse');
-  ov.classList.remove('inv-show');
-  // Cleanup logo transform after fade
+  // Override inline opacity:1 set at page load
+  ov.style.transition = 'opacity 0.5s ease';
+  ov.style.opacity = '0';
+  ov.style.pointerEvents = 'none';
   setTimeout(function(){
+    ov.style.display = 'none';
+    ov.classList.remove('inv-show');
+    ov.style.transition = '';
     var wrp = document.getElementById('inv-logo-wrap');
     if(wrp){ wrp.style.opacity=''; wrp.style.transform=''; }
-  }, 420);
+  }, 520);
 }
 // ────────────────────────────────────────────────────────────────────────────
 
