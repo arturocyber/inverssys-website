@@ -733,12 +733,16 @@ function invShow(cb){
   ov.style.transition = 'none';
   ov.style.opacity = '1';
   ov.style.pointerEvents = 'auto';
-  ov.classList.remove('inv-pulse');
+  ov.classList.remove('inv-pulse','inv-logo-in');
   ov.classList.add('inv-show');
   void ov.offsetHeight;
-  wrp.style.opacity='0'; wrp.style.transform='scale(0.85)';
-  // Logo springs in
-  setTimeout(function(){ ov.classList.add('inv-logo-in'); }, 80);
+  // Reset wrp inline styles so CSS transitions can take over
+  if(wrp){ wrp.style.opacity='0'; wrp.style.transform='scale(0.85)'; }
+  // Logo springs in — use inline style change so it doesn't fight CSS class
+  setTimeout(function(){
+    if(wrp){ wrp.style.opacity=''; wrp.style.transform=''; }
+    ov.classList.add('inv-logo-in');
+  }, 80);
   // Callback (swap content)
   setTimeout(cb || function(){}, 350);
 }
@@ -1019,14 +1023,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ── Page load intro: show overlay with logo, then fade out ──────────────
   (function(){
-    var ov = document.getElementById('inv-overlay');
+    var ov  = document.getElementById('inv-overlay');
+    var wrp = document.getElementById('inv-logo-wrap');
     if(!ov) return;
-    // Show instantly
     ov.classList.add('inv-show');
-    // Logo springs in
-    setTimeout(function(){ ov.classList.add('inv-logo-in'); }, 200);
-    // Fade out after 1.6s (quick)
-    setTimeout(function(){ invHide(); }, 1600);
+    // Clear any inline styles set by critical CSS before class takes over
+    setTimeout(function(){
+      if(wrp){ wrp.style.opacity=''; wrp.style.transform=''; }
+      ov.classList.add('inv-logo-in');
+    }, 200);
+    setTimeout(function(){ invHide(); }, 1800);
   })();
   // ────────────────────────────────────────────────────────────────────────
 
