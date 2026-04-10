@@ -768,21 +768,20 @@ function invHide(){
 // ────────────────────────────────────────────────────────────────────────────
 
 function toggleLang(){
-  invShow(function(){
-    // Swap language while overlay is opaque
-      lang=langCycle[lang];
-    const t=T[lang];
-    document.getElementById('langLabel').textContent=langLabel2[lang];
-    var mob=document.getElementById('langLabelMobile');
-    if(mob) mob.textContent=langLabel2[lang];
-    document.querySelectorAll('.lang-flag').forEach(function(el){ el.textContent=langFlag[lang]; });
-    document.documentElement.lang=lang;
-    const navEl=document.querySelector('.nav');
-    if(navEl){navEl.classList.toggle('fr-nav',lang==='fr');}
-    
-    const s=(id,k,html)=>{const el=document.getElementById(id);if(el&&t[k]){if(html)el.innerHTML=t[k];else el.textContent=t[k];}};
-    const ph=(id,k)=>{const el=document.getElementById(id);if(el&&t[k])el.placeholder=t[k];};
-    
+  lang = langCycle[lang];
+  var t = T[lang];
+  document.querySelectorAll('.lang-flag').forEach(function(el){ el.textContent = langFlag[lang]; });
+  document.documentElement.lang = lang;
+  var navEl = document.querySelector('.nav');
+  if(navEl){ navEl.classList.toggle('fr-nav', lang === 'fr'); }
+  var s = function(id, k, html){
+    var el = document.getElementById(id);
+    if(el && t[k]){ if(html) el.innerHTML = t[k]; else el.textContent = t[k]; }
+  };
+  var ph = function(id, k){
+    var el = document.getElementById(id); if(el && t[k]) el.placeholder = t[k];
+  };
+lang=langCycle[lang];
     // MORE SERVICES PAGE
     s('more-hero-label','more-hero-label'); s('more-hero-h2','more-hero-h2',true); s('more-hero-sub','more-hero-sub',true);
     s('more-cta-h','more-cta-h',true); s('more-cta-sub','more-cta-sub',true); s('more-cta-btn','more-cta-btn');
@@ -907,14 +906,7 @@ function toggleLang(){
     s('footer-copy','footer-copy');
     ['footer-svc','footer-soc','footer-pt','footer-grc','footer-about','footer-pricing','footer-contact'].forEach(id=>s(id,id));
     s('cookie-title','cookie-title'); s('cookie-desc','cookie-desc',true); s('cookie-decline','cookie-decline'); s('cookie-accept','cookie-accept');
-    // Add pulse ring for lang change
-    var ov = document.getElementById('inv-overlay');
-    if(ov) ov.classList.add('inv-pulse');
-    // Fade out after 2s
-    setTimeout(function(){ invHide(); }, 2000);
-  });
 }
-
 function toggleMobileNav(){
   var drawer = document.getElementById('mobile-drawer');
   var overlay = document.getElementById('drawer-overlay');
@@ -933,7 +925,6 @@ function closeMobileNav(){
   if(h) h.classList.remove('open');
   document.body.style.overflow = '';
 }
-
 // Netlify Forms AJAX handler
 const form = document.getElementById('contact-form');
 if(form) {
@@ -944,7 +935,6 @@ if(form) {
     btn.textContent = 'Sending...';
     btn.style.opacity = '0.6';
     btn.disabled = true;
-
     // Encode as URL-encoded for Netlify Forms
     const get = function(id){ var el=document.getElementById(id); return el ? el.value.trim() : ''; };
     const data = new URLSearchParams({
@@ -957,7 +947,6 @@ if(form) {
       'Phone':            get('contact-ph3'),
       'Message':          get('contact-ph4')
     });
-
     try {
       const res = await fetch('/', {
         method: 'POST',
