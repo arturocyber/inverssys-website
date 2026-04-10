@@ -712,11 +712,10 @@ function toggleLang(){
   var ov = document.getElementById('lang-overlay');
   if(!ov) return;
 
-  // STEP 1: Make overlay visible and cover page INSTANTLY
-  ov.classList.add('active');
-  ov.style.transition = 'none';
+  // STEP 1: Cancel intro animation, cover page instantly
+  ov.classList.remove('lang-out');
+  ov.classList.add('lang-active');
   ov.style.opacity = '1';
-  ov.style.pointerEvents = 'auto';
   void ov.offsetHeight;
 
   // STEP 2: Logo springs in
@@ -871,7 +870,7 @@ function toggleLang(){
     ov.style.transition = 'opacity 0.5s ease';
     ov.style.opacity = '0';
     ov.style.pointerEvents = 'none';
-    setTimeout(function(){ ov.classList.remove('active'); ov.style.transition = ''; }, 520);
+    setTimeout(function(){ ov.classList.remove('lang-active','logo-in','logo-out'); ov.style.transition = ''; ov.style.opacity = ''; }, 520);
   }, 2900);
 }
 
@@ -981,29 +980,6 @@ function goToForm(pkg) {
 // ── Event listeners (replaces all inline onclick attributes) ──────────
 document.addEventListener('DOMContentLoaded', function() {
 
-  // ── INTRO ANIMATION (first load) ──────────────────────────────────────────
-  var ov = document.getElementById('lang-overlay');
-  if(ov){
-    // Show overlay covering page
-    ov.classList.add('active');
-    ov.style.opacity = '1';
-    ov.style.pointerEvents = 'auto';
-    // Logo springs in
-    setTimeout(function(){ ov.classList.add('logo-in'); }, 300);
-    // Logo fades out
-    setTimeout(function(){ ov.classList.remove('logo-in'); ov.classList.add('logo-out'); }, 2500);
-    // Overlay fades out — reveal website
-    setTimeout(function(){
-      ov.style.transition = 'opacity 0.6s ease';
-      ov.style.opacity = '0';
-      ov.style.pointerEvents = 'none';
-      setTimeout(function(){
-        ov.classList.remove('active','logo-out');
-        ov.style.transition = '';
-        ov.style.opacity = '';
-      }, 650);
-    }, 2900);
-  }
   // ─────────────────────────────────────────────────────────────────────────
   function on(id, evt, fn) {
     var el = document.getElementById(id);
