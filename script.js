@@ -709,19 +709,9 @@ const langFlag={en:'🇪🇸',es:'🇫🇷',fr:'🇺🇸'};
 const langLabel2={en:'ES',es:'FR',fr:'EN'};
 
 function toggleLang(){
-  var ov = document.getElementById('lang-overlay');
-  if(!ov) return;
-
-  // STEP 1: Cancel intro animation, cover page instantly
-  ov.classList.remove('lang-done','lang-out','logo-in','logo-out');
-  ov.classList.add('lang-open');
-  void ov.offsetHeight;
-
-  // STEP 2: Logo springs in
-  ov.classList.remove('logo-in','logo-out');
-  setTimeout(function(){ ov.classList.add('logo-in'); }, 80);
-
-  // STEP 3: Swap language content while fully hidden (safe, user sees nothing)
+  // Fade body out
+  document.body.classList.add('lang-switching');
+  // Swap language after fade completes
   setTimeout(function(){
       lang=langCycle[lang];
     const t=T[lang];
@@ -856,26 +846,9 @@ function toggleLang(){
     // FOOTER
     s('footer-copy','footer-copy');
     ['footer-svc','footer-soc','footer-pt','footer-grc','footer-about','footer-pricing','footer-contact'].forEach(id=>s(id,id));
-  }, 300);
-
-  // STEP 4: Logo fades out after hold
-  setTimeout(function(){
-    ov.classList.remove('logo-in');
-    ov.classList.add('logo-out');
-  }, 2600);
-
-  // STEP 5: Overlay fades out cleanly
-  setTimeout(function(){
-    ov.style.transition = 'opacity 0.5s ease';
-    ov.style.opacity = '0';
-    ov.style.pointerEvents = 'none';
-    setTimeout(function(){
-      ov.classList.remove('lang-open','logo-in','logo-out');
-      ov.classList.add('lang-done');
-      ov.style.transition = '';
-      ov.style.opacity = '';
-    }, 520);
-  }, 2900);
+    // Fade body back in
+    document.body.classList.remove('lang-switching');
+  }, 370);
 }
 
 function toggleMobileNav(){
@@ -984,15 +957,6 @@ function goToForm(pkg) {
 // ── Event listeners (replaces all inline onclick attributes) ──────────
 document.addEventListener('DOMContentLoaded', function() {
 
-  // ── Mark intro as done when CSS animation ends ─────────────────────────────
-  var introOv = document.getElementById('lang-overlay');
-  if(introOv){
-    introOv.addEventListener('animationend', function(e){
-      if(e.animationName === 'intro-cover'){
-        introOv.classList.add('lang-done');
-      }
-    }, {once: true});
-  }
   // ─────────────────────────────────────────────────────────────────────────
   function on(id, evt, fn) {
     var el = document.getElementById(id);
