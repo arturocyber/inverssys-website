@@ -983,20 +983,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ── INTRO ANIMATION (first load) ──────────────────────────────────────────
   var ov = document.getElementById('lang-overlay');
-  if(ov && ov.classList.contains('active')){
+  if(ov){
+    // Show overlay covering page
+    ov.classList.add('active');
+    ov.style.opacity = '1';
+    ov.style.pointerEvents = 'auto';
     // Logo springs in
-    setTimeout(function(){ ov.classList.add('logo-in'); }, 250);
+    setTimeout(function(){ ov.classList.add('logo-in'); }, 300);
     // Logo fades out
     setTimeout(function(){ ov.classList.remove('logo-in'); ov.classList.add('logo-out'); }, 2500);
-    // Overlay fades out
+    // Overlay fades out — reveal website
     setTimeout(function(){
-      ov.style.transition = 'opacity 0.55s ease';
-      ov.style.opacity    = '0';
+      ov.style.transition = 'opacity 0.6s ease';
+      ov.style.opacity = '0';
       ov.style.pointerEvents = 'none';
       setTimeout(function(){
         ov.classList.remove('active','logo-out');
         ov.style.transition = '';
-      }, 600);
+        ov.style.opacity = '';
+      }, 650);
     }, 2900);
   }
   // ─────────────────────────────────────────────────────────────────────────
