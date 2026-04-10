@@ -216,7 +216,12 @@ const T={
     'cost-t4':'The Poaching Cycle','cost-d4':'The talent shortage is critical. Your best people will be poached within 12 months, leaving massive recruitment and retraining costs on repeat.',
     'alt-label':'The Alternative','alt-h2':'INVERSSYS SOC-CSIRT',
     'alt-body':'One flat monthly fee. A complete team of experts. Enterprise tools included. No recruiting, no burnout, no tooling contracts — just 24/7/365 protection from day one.',
-    'alt-btn':'Calculate Your Savings',
+    'alt-btn':'Calculate Your Savings','alt-mdr-intro':'The primary advantage lies in accessing enterprise-grade security without building an internal <strong style="color:var(--white);font-weight:400">Security Operations Center</strong>. Organizations gain immediate expertise and cutting-edge technology that would otherwise require significant investment.',
+    'alt-th1':'MDR Component','alt-th2':'Technology Integration','alt-th3':'Human Expertise','alt-th4':'Business Value',
+    'alt-mr1':'Continuous Monitoring','alt-mt1':'EDR, SIEM, Network Sensors','alt-mh1':'24/7 SOC Analysts','alt-mv1':'Reduced Risk Exposure',
+    'alt-mr2':'Threat Detection','alt-mt2':'AI, Machine Learning Analytics','alt-mh2':'Threat Intelligence Analysts','alt-mv2':'Early Threat Identification',
+    'alt-mr3':'Incident Response','alt-mt3':'Automated Playbooks','alt-mh3':'Experienced Responders','alt-mv3':'Minimized Business Impact',
+    'alt-mr4':'Proactive Hunting','alt-mt4':'Behavioral Analytics','alt-mh4':'Security Researchers','alt-mv4':'Preventative Protection',
     'alt-l1':'24/7/365 Coverage','alt-s1':' — Immediate protection from day one, no ramp-up',
     'alt-l2':'Integrated Stack','alt-s2':' — SIEM, EDR, SOAR, Threat Intel all included',
     'alt-l3':'Senior Expertise','alt-s3':' — No junior-only teams, no unsupervised analysts',
@@ -457,7 +462,12 @@ const T={
     'cost-t4':'El Ciclo de Fuga de Talento','cost-d4':'La escasez de talento es crítica. Tu mejor gente será reclutada por la competencia en 12 meses, dejándote con enormes costos de reclutamiento y reentrenamiento.',
     'alt-label':'La Alternativa','alt-h2':'INVERSSYS SOC-CSIRT',
     'alt-body':'Tarifa fija mensual. Equipo completo. Herramientas incluidas. Sin reclutamiento ni contratos.',
-    'alt-btn':'Calcula tu Ahorro',
+    'alt-btn':'Calcula tu Ahorro','alt-mdr-intro':'La ventaja principal radica en acceder a seguridad de nivel empresarial sin construir un <strong style="color:var(--white);font-weight:400">Centro de Operaciones de Seguridad</strong> interno. Las organizaciones obtienen experiencia inmediata y tecnología de vanguardia que requeriría una inversión significativa.',
+    'alt-th1':'Componente MDR','alt-th2':'Integración Tecnológica','alt-th3':'Experiencia Humana','alt-th4':'Valor de Negocio',
+    'alt-mr1':'Monitoreo Continuo','alt-mt1':'EDR, SIEM, Sensores de Red','alt-mh1':'Analistas SOC 24/7','alt-mv1':'Reducción de Riesgo',
+    'alt-mr2':'Detección de Amenazas','alt-mt2':'IA, Machine Learning','alt-mh2':'Analistas de Inteligencia','alt-mv2':'Identificación Temprana',
+    'alt-mr3':'Respuesta a Incidentes','alt-mt3':'Playbooks Automatizados','alt-mh3':'Respondedores Expertos','alt-mv3':'Impacto Mínimo al Negocio',
+    'alt-mr4':'Caza Proactiva','alt-mt4':'Análisis de Comportamiento','alt-mh4':'Investigadores de Seguridad','alt-mv4':'Protección Preventiva',
     'alt-l1':'Cobertura 24/7/365','alt-s1':' — Protección inmediata desde el primer día, sin tiempo de adaptación',
     'alt-l2':'Stack Integrado','alt-s2':' — SIEM, EDR, SOAR, Inteligencia de Amenazas incluidos',
     'alt-l3':'Experiencia Senior','alt-s3':' — Sin equipos solo junior, sin analistas sin supervisión',
@@ -516,7 +526,12 @@ const T={
     'cost-t4':'Le Cycle de Départ des Talents','cost-d4':'La pénurie de talents est critique. Vos meilleurs éléments seront débauchés dans les 12 mois.',
     'alt-label':'L\'Alternative','alt-h2':'INVERSSYS SOC-CSIRT',
     'alt-body':'Forfait fixe. Équipe complète. Outils inclus. Sans recrutement ni contrats complexes.',
-    'alt-btn':'Calculer mes Économies',
+    'alt-btn':'Calculer mes Économies','alt-mdr-intro':'L\'avantage principal réside dans l\'accès à une sécurité de niveau entreprise sans construire un <strong style="color:var(--white);font-weight:400">Centre des Opérations de Sécurité</strong> interne. Les organisations obtiennent une expertise immédiate et une technologie de pointe qui nécessiteraient autrement un investissement significatif.',
+    'alt-th1':'Composant MDR','alt-th2':'Intégration Technologique','alt-th3':'Expertise Humaine','alt-th4':'Valeur Commerciale',
+    'alt-mr1':'Surveillance Continue','alt-mt1':'EDR, SIEM, Capteurs Réseau','alt-mh1':'Analystes SOC 24/7','alt-mv1':'Réduction d\'Exposition',
+    'alt-mr2':'Détection des Menaces','alt-mt2':'IA, Machine Learning','alt-mh2':'Analystes en Renseignement','alt-mv2':'Identification Précoce',
+    'alt-mr3':'Réponse aux Incidents','alt-mt3':'Playbooks Automatisés','alt-mh3':'Intervenants Expérimentés','alt-mv3':'Impact Minimal',
+    'alt-mr4':'Chasse Proactive','alt-mt4':'Analyse Comportementale','alt-mh4':'Chercheurs en Sécurité','alt-mv4':'Protection Préventive',
     'alt-l1':'Couverture 24/7/365','alt-s1':' — Protection immédiate dès le premier jour',
     'alt-l2':'Stack Intégré','alt-s2':' — SIEM, EDR, SOAR, Threat Intel inclus',
     'alt-l3':'Expertise Senior','alt-s3':' — Pas d\'équipes junior uniquement, pas d\'analystes non supervisés',
@@ -741,6 +756,9 @@ function invHide(){
     ov.style.transition = '';
     var wrp = document.getElementById('inv-logo-wrap');
     if(wrp){ wrp.style.opacity=''; wrp.style.transform=''; }
+    // Animate hero headline in after overlay clears
+    var h1 = document.getElementById('hero-h1');
+    if(h1) h1.classList.add('h1-visible');
   }, 520);
 }
 // ────────────────────────────────────────────────────────────────────────────
@@ -786,6 +804,9 @@ function toggleLang(){
     s('cost-label','cost-label'); s('cost-h2','cost-h2',true); s('cost-sub','cost-sub',true);
     for(let i=1;i<=4;i++){s('cost-t'+i,'cost-t'+i); s('cost-d'+i,'cost-d'+i,true);}
     s('alt-label','alt-label'); s('alt-h2','alt-h2',true); s('alt-body','alt-body',true); s('alt-btn','alt-btn');
+    s('alt-mdr-intro','alt-mdr-intro',true);
+    s('alt-th1','alt-th1'); s('alt-th2','alt-th2'); s('alt-th3','alt-th3'); s('alt-th4','alt-th4');
+    for(var i=1;i<=4;i++){ s('alt-mr'+i,'alt-mr'+i); s('alt-mt'+i,'alt-mt'+i); s('alt-mh'+i,'alt-mh'+i); s('alt-mv'+i,'alt-mv'+i); }
     for(let i=1;i<=5;i++){s('alt-l'+i,'alt-l'+i); s('alt-s'+i,'alt-s'+i);}
     // NAV
     s('nav-cta','nav-cta'); s('nav-svc','nav-svc'); s('nav-about','nav-about'); s('nav-pricing','nav-pricing'); s('nav-more','nav-more'); s('nav-free-assess','nav-free-assess');

@@ -41,7 +41,7 @@ body.show-more .main-content{display:none!important}
 /* Language transition overlay */
 72%{opacity:1}88%{opacity:0}100%{opacity:0;pointer-events:none}}
 8%{opacity:1;transform:scale(1)}70%{opacity:1;transform:scale(1)}82%{opacity:0;transform:scale(1.06)}100%{opacity:0}}
-.lang-toggle{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:none;background-color:transparent;-webkit-appearance:none;appearance:none;color:var(--muted);border:none;outline:none;padding:9px 16px;cursor:pointer;transition:color 0.2s;display:flex;align-items:center;gap:8px;margin-right:28px}
+.lang-toggle{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;background:none;background-color:transparent;-webkit-appearance:none;appearance:none;color:var(--muted);border:none;outline:none;padding:9px 16px;cursor:pointer;transition:color 0.2s;display:flex;align-items:center;gap:8px;margin-right:40px}
 .lang-toggle:hover{color:var(--white)}
 .lang-flag{font-size:16px;line-height:1;display:inline-block}
 .nav-cta{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);background:transparent;border:1px solid var(--border-bright);padding:10px 22px;text-decoration:none;transition:all 0.2s;display:inline-block}
@@ -62,7 +62,8 @@ body.show-more .main-content{display:none!important}
 .hero-glow{position:absolute;top:15%;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(74,127,255,0.07) 0%,transparent 70%);pointer-events:none}
 .hero-content{position:relative;z-index:2;max-width:1280px;margin:0 auto;width:100%}
 .hero-label{margin-bottom:56px}
-.hero-headline{font-size:clamp(36px,5vw,76px);line-height:0.93;letter-spacing:-0.03em;margin-bottom:64px;max-width:100%;overflow:visible}
+.hero-headline{font-size:clamp(36px,5vw,76px);line-height:0.93;letter-spacing:-0.03em;margin-bottom:64px;max-width:100%;overflow:visible;opacity:0;transform:translateY(32px);transition:opacity 0.8s ease 0.3s, transform 0.8s cubic-bezier(0.22,1,0.36,1) 0.3s}
+.hero-headline.h1-visible{opacity:1;transform:translateY(0)}
 .hero-headline em{font-style:normal;color:transparent;-webkit-text-stroke:1.5px rgba(240,244,255,0.18);display:block}
 .hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:80px}
 .hero-sub{max-width:460px;color:var(--muted);font-size:18px;line-height:1.65;font-weight:300}
