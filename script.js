@@ -713,9 +713,8 @@ function toggleLang(){
   if(!ov) return;
 
   // STEP 1: Cancel intro animation, cover page instantly
-  ov.classList.remove('lang-out');
-  ov.classList.add('lang-active');
-  ov.style.opacity = '1';
+  ov.classList.remove('lang-done','lang-out','logo-in','logo-out');
+  ov.classList.add('lang-open');
   void ov.offsetHeight;
 
   // STEP 2: Logo springs in
@@ -870,7 +869,12 @@ function toggleLang(){
     ov.style.transition = 'opacity 0.5s ease';
     ov.style.opacity = '0';
     ov.style.pointerEvents = 'none';
-    setTimeout(function(){ ov.classList.remove('lang-active','logo-in','logo-out'); ov.style.transition = ''; ov.style.opacity = ''; }, 520);
+    setTimeout(function(){
+      ov.classList.remove('lang-open','logo-in','logo-out');
+      ov.classList.add('lang-done');
+      ov.style.transition = '';
+      ov.style.opacity = '';
+    }, 520);
   }, 2900);
 }
 
@@ -980,6 +984,15 @@ function goToForm(pkg) {
 // ── Event listeners (replaces all inline onclick attributes) ──────────
 document.addEventListener('DOMContentLoaded', function() {
 
+  // ── Mark intro as done when CSS animation ends ─────────────────────────────
+  var introOv = document.getElementById('lang-overlay');
+  if(introOv){
+    introOv.addEventListener('animationend', function(e){
+      if(e.animationName === 'intro-cover'){
+        introOv.classList.add('lang-done');
+      }
+    }, {once: true});
+  }
   // ─────────────────────────────────────────────────────────────────────────
   function on(id, evt, fn) {
     var el = document.getElementById(id);
