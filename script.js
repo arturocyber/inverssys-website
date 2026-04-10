@@ -206,7 +206,7 @@ const T={
     'contact-label1':'Phone','contact-label2':'Email','contact-label3':'Address',
     'contact-ph1':'Your name','contact-ph5':'Company name','contact-ph6':'Position / Title','contact-ph2':'Email address','contact-ph3':'Phone / WhatsApp','contact-ph4':'Tell us about your business and what you need',
     'contact-btn':'Send Message →',
-    'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 DR  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN',
+    'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 DR  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN','cookie-title':'We use cookies','cookie-desc':'We use cookies to enhance your experience, analyze site traffic, and improve our services. By accepting, you consent to our use of cookies in accordance with our <a href="/terms.html">Terms &amp; Conditions</a>.','cookie-decline':'Decline','cookie-accept':'Accept',
     'cost-label':'The Real Cost of In-House Security',
     'cost-h2':'Why pay for one analyst<br>when you can have<br>an entire 24/7 team?',
     'cost-sub':"Building an internal SOC sounds smart — until you see the numbers. Cybersecurity doesn't need to be in-house. Here's what it actually costs to run a bare minimum operation.",
@@ -452,7 +452,7 @@ const T={
     'contact-label1':'Teléfono','contact-label2':'Correo','contact-label3':'Dirección',
     'contact-ph1':'Tu nombre','contact-ph5':'Nombre de la empresa','contact-ph6':'Cargo / Título','contact-ph2':'Correo electrónico','contact-ph3':'Teléfono / WhatsApp','contact-ph4':'Cuéntanos sobre tu empresa y lo que necesitas',
     'contact-btn':'Solicitar Evaluación →',
-    'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 RD  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN',
+    'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 RD  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN','cookie-title':'Usamos cookies','cookie-desc':'Usamos cookies para mejorar tu experiencia, analizar el tráfico y mejorar nuestros servicios. Al aceptar, consientes nuestros <a href="/terms.html">Términos y Condiciones</a>.','cookie-decline':'Rechazar','cookie-accept':'Aceptar',
     'cost-label':'El Costo Real de la Seguridad Interna',
     'cost-h2':'¿Por qué pagar por<br>un analista cuando puedes<br>tener un equipo 24/7?',
     'cost-sub':'Construir un SOC interno parece buena idea — hasta que ves los números.',
@@ -681,7 +681,7 @@ const T={
     'contact-label1':'Téléphone','contact-label2':'E-mail','contact-label3':'Adresse',
     'contact-ph1':'Votre nom','contact-ph5':'Nom de l\'entreprise','contact-ph6':'Poste / Titre','contact-ph2':'Adresse e-mail','contact-ph3':'Téléphone / WhatsApp','contact-ph4':'Parlez-nous de votre entreprise et de vos besoins',
     'contact-btn':'Demander une Évaluation →',
-    'footer-copy':'© 2026 INVERSSYS · 🇺🇸 USA · 🇩🇴 DR · 🇵🇦 PAN · 🇨🇴 COL · 🇨🇦 CAN',
+    'footer-copy':'© 2026 INVERSSYS · 🇺🇸 USA · 🇩🇴 DR · 🇵🇦 PAN · 🇨🇴 COL · 🇨🇦 CAN','cookie-title':'Nous utilisons des cookies','cookie-desc':'Nous utilisons des cookies pour améliorer votre expérience et nos services. En acceptant, vous consentez à nos <a href="/terms.html">Conditions Générales</a>.','cookie-decline':'Refuser','cookie-accept':'Accepter',
     'footer-svc':'Services','footer-soc':'SOC','footer-pt':'Pentesting','footer-grc':'GRC','footer-about':'À Propos','footer-pricing':'Tarifs','footer-contact':'Contact',
     'more-hero-label':'Services Additionnels','more-hero-h2':'Technologie, Connectivité<br>&amp; <span style="color:var(--cyan)">Sécurité Intégrale</span>',
     'more-hero-sub':'De la sécurité physique à l\'infrastructure cloud — nous couvrons chaque couche de votre environnement.',
@@ -902,6 +902,7 @@ function toggleLang(){
     // FOOTER
     s('footer-copy','footer-copy');
     ['footer-svc','footer-soc','footer-pt','footer-grc','footer-about','footer-pricing','footer-contact'].forEach(id=>s(id,id));
+    s('cookie-title','cookie-title'); s('cookie-desc','cookie-desc',true); s('cookie-decline','cookie-decline'); s('cookie-accept','cookie-accept');
     // Add pulse ring for lang change
     var ov = document.getElementById('inv-overlay');
     if(ov) ov.classList.add('inv-pulse');
@@ -1137,5 +1138,29 @@ document.addEventListener('DOMContentLoaded', function() {
   // More section back button
   on('more-back-btn', 'click', function(){ showMain(); });
   on('pricing-notes-btn', 'click', function(){ togglePricingNotes(); });
+
+  // ── Cookie Banner ────────────────────────────────────────────────────────
+  (function(){
+    var banner = document.getElementById('cookie-banner');
+    if(!banner) return;
+    // Show only if no consent recorded
+    try {
+      if(!localStorage.getItem('inv_cookie_consent')){
+        setTimeout(function(){ banner.style.display='block'; }, 1200);
+      }
+    } catch(e){ banner.style.display='block'; }
+
+    function hideBanner(){ banner.style.display='none'; }
+
+    on('cookie-accept', 'click', function(){
+      try{ localStorage.setItem('inv_cookie_consent','accepted'); } catch(e){}
+      hideBanner();
+    });
+    on('cookie-decline', 'click', function(){
+      try{ localStorage.setItem('inv_cookie_consent','declined'); } catch(e){}
+      hideBanner();
+    });
+  })();
+  // ─────────────────────────────────────────────────────────────────────────
   // Hover styles for back button via CSS (no inline onmouseover)
 });
