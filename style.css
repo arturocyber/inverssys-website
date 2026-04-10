@@ -369,7 +369,42 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:38px 56p
 .cap-partial{color:#f59e0b;font-size:12px;text-align:center;font-family:'Space Mono',monospace;letter-spacing:0.04em}
 .cap-no{color:var(--border-bright);font-size:15px;text-align:center}
 
-body.lang-switching{opacity:0 !important}
-body{transition:opacity 0.35s ease}
-@keyframes page-in{from{opacity:0}to{opacity:1}}
-body{animation:page-in 0.8s ease 0.2s both}
+
+/* ── Language / Intro Overlay ───────────────────────────────── */
+#inv-overlay{
+  position:fixed;inset:0;z-index:9999;
+  background:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.4s ease;
+}
+#inv-overlay.inv-show{opacity:1;pointer-events:auto}
+#inv-logo-wrap{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:scale(0.85);
+  transition:opacity 0.4s ease, transform 0.5s cubic-bezier(0.34,1.56,0.64,1);
+}
+#inv-overlay.inv-logo-in #inv-logo-wrap{opacity:1;transform:scale(1)}
+#inv-logo-img{
+  height:56px;display:block;
+  position:relative;z-index:2;
+  mix-blend-mode:screen;background:var(--bg);
+}
+#inv-pulse-ring{
+  position:absolute;
+  width:100px;height:100px;
+  border-radius:50%;
+  border:2px solid #4a7fff;
+  opacity:0;
+  transform:scale(0.3);
+  animation:none;
+}
+#inv-overlay.inv-pulse #inv-pulse-ring{
+  animation:inv-pulse 1.2s ease-out infinite;
+}
+@keyframes inv-pulse{
+  0%{transform:scale(0.4);opacity:0.8}
+  100%{transform:scale(2.2);opacity:0}
+}
+/* ──────────────────────────────────────────────────────────── */

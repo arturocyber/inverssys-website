@@ -708,11 +708,37 @@ const langCycle={en:'es',es:'fr',fr:'en'};
 const langFlag={en:'🇪🇸',es:'🇫🇷',fr:'🇺🇸'};
 const langLabel2={en:'ES',es:'FR',fr:'EN'};
 
-function toggleLang(){
-  // Fade body out
-  document.body.classList.add('lang-switching');
-  // Swap language after fade completes
+// ── Overlay helpers ─────────────────────────────────────────────────────────
+function invShow(cb){
+  var ov  = document.getElementById('inv-overlay');
+  var wrp = document.getElementById('inv-logo-wrap');
+  if(!ov) return cb && cb();
+  // Reset
+  ov.classList.remove('inv-pulse');
+  wrp.style.opacity='0'; wrp.style.transform='scale(0.85)';
+  // Fade in overlay instantly
+  ov.classList.add('inv-show');
+  // Logo springs in
+  setTimeout(function(){ ov.classList.add('inv-logo-in'); }, 80);
+  // Callback (swap content)
+  setTimeout(cb || function(){}, 350);
+}
+function invHide(){
+  var ov = document.getElementById('inv-overlay');
+  if(!ov) return;
+  ov.classList.remove('inv-logo-in','inv-pulse');
+  ov.classList.remove('inv-show');
+  // Cleanup logo transform after fade
   setTimeout(function(){
+    var wrp = document.getElementById('inv-logo-wrap');
+    if(wrp){ wrp.style.opacity=''; wrp.style.transform=''; }
+  }, 420);
+}
+// ────────────────────────────────────────────────────────────────────────────
+
+function toggleLang(){
+  invShow(function(){
+    // Swap language while overlay is opaque
       lang=langCycle[lang];
     const t=T[lang];
     document.getElementById('langLabel').textContent=langLabel2[lang];
@@ -846,9 +872,12 @@ function toggleLang(){
     // FOOTER
     s('footer-copy','footer-copy');
     ['footer-svc','footer-soc','footer-pt','footer-grc','footer-about','footer-pricing','footer-contact'].forEach(id=>s(id,id));
-    // Fade body back in
-    document.body.classList.remove('lang-switching');
-  }, 370);
+    // Add pulse ring for lang change
+    var ov = document.getElementById('inv-overlay');
+    if(ov) ov.classList.add('inv-pulse');
+    // Fade out after 2s
+    setTimeout(function(){ invHide(); }, 2000);
+  });
 }
 
 function toggleMobileNav(){
@@ -956,6 +985,19 @@ function goToForm(pkg) {
 
 // ── Event listeners (replaces all inline onclick attributes) ──────────
 document.addEventListener('DOMContentLoaded', function() {
+
+  // ── Page load intro: show overlay with logo, then fade out ──────────────
+  (function(){
+    var ov = document.getElementById('inv-overlay');
+    if(!ov) return;
+    // Show instantly
+    ov.classList.add('inv-show');
+    // Logo springs in
+    setTimeout(function(){ ov.classList.add('inv-logo-in'); }, 200);
+    // Fade out after 1.6s (quick)
+    setTimeout(function(){ invHide(); }, 1600);
+  })();
+  // ────────────────────────────────────────────────────────────────────────
 
   // ─────────────────────────────────────────────────────────────────────────
   function on(id, evt, fn) {
