@@ -209,41 +209,14 @@
     </div>
 
     <!-- The alternative -->
-    <div id="soc-csirt" style="border-top:1px solid var(--border-bright);padding-top:72px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center">
+    <div id="soc-csirt" style="border-top:1px solid var(--border-bright);padding-top:72px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
       <div>
         <div class="label" style="margin-bottom:24px" id="alt-label">The Alternative</div>
         <h2 style="font-size:clamp(28px,3vw,44px);margin-bottom:24px;line-height:1.05" id="alt-h2">INVERSSYS SOC-CSIRT</h2>
         <p style="color:var(--muted);font-size:16px;font-weight:300;margin-bottom:40px" id="alt-body">One flat monthly fee. A complete team of experts. Enterprise tools already included. No recruiting, no burnout, no tooling contracts — just 24/7/365 protection from day one.</p>
 
-        <!-- MDR Value Section -->
-        <p style="color:var(--muted);font-size:14px;font-weight:300;line-height:1.8;margin-bottom:32px" id="alt-mdr-intro">The primary advantage lies in accessing enterprise-grade security without building an internal <strong style="color:var(--white);font-weight:400">Security Operations Center</strong>. Organizations gain immediate expertise and cutting-edge technology that would otherwise require significant investment.</p>
-        <div style="overflow-x:auto;margin-bottom:40px">
-          <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:560px">
-            <thead>
-              <tr style="background:var(--bg3)">
-                <th style="text-align:left;padding:10px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan);border-bottom:1px solid var(--border-bright);font-weight:500" id="alt-th1">MDR Component</th>
-                <th style="text-align:left;padding:10px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-bright);font-weight:400" id="alt-th2">Technology Integration</th>
-                <th style="text-align:left;padding:10px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-bright);font-weight:400" id="alt-th3">Human Expertise</th>
-                <th style="text-align:left;padding:10px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-bright);font-weight:400" id="alt-th4">Business Value</th>
-              </tr>
-            </thead>
-            <tbody>
-            <tr class="cap-row"><td class="cap-label" id="cap-r1">Endpoint protection (XDR)</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
-            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r2">SIEM monitoring</td><td class="cap-partial" id="cap-r2e">Basic</td><td class="cap-yes" id="cap-r2m">Full</td><td class="cap-yes" id="cap-r2x">Full</td></tr>
-            <tr class="cap-row"><td class="cap-label" id="cap-r3">Coverage hours</td><td class="cap-partial">8×5</td><td class="cap-yes">24×7</td><td class="cap-yes">24×7</td></tr>
-            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r4">AI behavioral analytics</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
-            <tr class="cap-row"><td class="cap-label" id="cap-r5">Threat intelligence</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
-            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r6">SOAR automated response</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
-            <tr class="cap-row"><td class="cap-label" id="cap-r7">Incident response</td><td class="cap-partial" id="cap-r7e">Add-on</td><td class="cap-partial" id="cap-r7m">Add-on</td><td class="cap-yes" id="cap-r7x">Included</td></tr>
-            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r8">Digital forensics</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
-            <tr class="cap-row"><td class="cap-label" id="cap-r9">Malware analysis</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
-            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r10">Dedicated analyst</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
-            <tr class="cap-row"><td class="cap-label" id="cap-r11">Compliance reporting</td><td class="cap-no">—</td><td class="cap-partial" id="cap-r11m">Basic</td><td class="cap-yes" id="cap-r11x">Full</td></tr>
-          </tbody>
-          </table>
-        </div>
-
         <a href="#calculator" class="btn-primary" id="alt-btn">Calculate Your Savings</a>
+
       </div>
       <div>
         <div class="alt-row"><div class="alt-check">✓</div><div><strong id="alt-l1">24/7/365 Coverage</strong><span id="alt-s1"> — Immediate protection from day one, no ramp-up</span></div></div>
@@ -253,6 +226,40 @@
         <div class="alt-row"><div class="alt-check">✓</div><div><strong id="alt-l5">Predictable Cost</strong><span id="alt-s5"> — Per-endpoint pricing, scales with your business</span></div></div>
       </div>
     </div>
+
+    <!-- MDR Value Table — full width -->
+    <div style="margin-top:56px;border-top:1px solid var(--border);padding-top:48px">
+      <!-- MDR Value Section -->
+      <p style="color:var(--muted);font-size:14px;font-weight:300;line-height:1.8;margin-bottom:32px" id="alt-mdr-intro">The primary advantage lies in accessing enterprise-grade security without building an internal <strong style="color:var(--white);font-weight:400">Security Operations Center</strong>. Organizations gain immediate expertise and cutting-edge technology that would otherwise require significant investment.</p>
+      <div style="overflow-x:auto;margin-bottom:40px">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:560px">
+          <thead>
+            <tr style="background:var(--bg3)">
+            <th style="text-align:left;padding:10px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan);border-bottom:1px solid var(--border-bright);font-weight:500" id="alt-th1">MDR Component</th>
+            <th style="text-align:left;padding:10px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-bright);font-weight:400" id="alt-th2">Technology Integration</th>
+            <th style="text-align:left;padding:10px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-bright);font-weight:400" id="alt-th3">Human Expertise</th>
+            <th style="text-align:left;padding:10px 14px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border-bright);font-weight:400" id="alt-th4">Business Value</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr class="cap-row"><td class="cap-label" id="cap-r1">Endpoint protection (XDR)</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+          <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r2">SIEM monitoring</td><td class="cap-partial" id="cap-r2e">Basic</td><td class="cap-yes" id="cap-r2m">Full</td><td class="cap-yes" id="cap-r2x">Full</td></tr>
+          <tr class="cap-row"><td class="cap-label" id="cap-r3">Coverage hours</td><td class="cap-partial">8×5</td><td class="cap-yes">24×7</td><td class="cap-yes">24×7</td></tr>
+          <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r4">AI behavioral analytics</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+          <tr class="cap-row"><td class="cap-label" id="cap-r5">Threat intelligence</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+          <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r6">SOAR automated response</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+          <tr class="cap-row"><td class="cap-label" id="cap-r7">Incident response</td><td class="cap-partial" id="cap-r7e">Add-on</td><td class="cap-partial" id="cap-r7m">Add-on</td><td class="cap-yes" id="cap-r7x">Included</td></tr>
+          <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r8">Digital forensics</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
+          <tr class="cap-row"><td class="cap-label" id="cap-r9">Malware analysis</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
+          <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r10">Dedicated analyst</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
+          <tr class="cap-row"><td class="cap-label" id="cap-r11">Compliance reporting</td><td class="cap-no">—</td><td class="cap-partial" id="cap-r11m">Basic</td><td class="cap-yes" id="cap-r11x">Full</td></tr>
+        </tbody>
+        </table>
+      </div>
+
+
+    </div>
+
 
   </div>
 </section>
@@ -688,7 +695,7 @@
       <p style="color:var(--muted);font-size:16px;font-weight:300;max-width:440px;line-height:1.7" id="calc-sub">Configure your environment below and get an instant estimate — before speaking to anyone.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 400px;gap:32px;align-items:start" class="calc-grid">
+    <div style="display:grid;grid-template-columns:1fr minmax(0,380px);gap:32px;align-items:start" class="calc-grid">
 
       <!-- LEFT: Inputs -->
       <div>
