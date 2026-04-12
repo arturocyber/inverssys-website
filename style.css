@@ -48,7 +48,7 @@ body.show-more .main-content{display:none!important}
 .nav-cta:hover{background:var(--cyan);color:var(--bg);border-color:var(--cyan)}
 .nav-free-assess{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#0a0f1a;background:var(--cyan);border:1px solid var(--cyan);padding:10px 22px;text-decoration:none;transition:all 0.2s;display:inline-block;margin-right:8px}
 .nav-free-assess:hover{opacity:0.85}
-.footer-socials{display:flex;align-items:center;gap:18px}
+.footer-socials{display:flex;align-items:center;gap:28px}
 .footer-social-icon{color:var(--muted);text-decoration:none;transition:color 0.2s;display:flex;align-items:center}
 .footer-social-icon:hover{color:var(--cyan)}
 /* BUTTONS */
