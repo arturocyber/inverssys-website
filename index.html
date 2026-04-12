@@ -228,35 +228,22 @@
               </tr>
             </thead>
             <tbody>
-              <tr style="border-bottom:1px solid var(--border)">
-                <td style="padding:12px 14px;color:var(--white);font-weight:500;font-size:13px" id="alt-mr1">Continuous Monitoring</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mt1">EDR, SIEM, Network Sensors</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mh1">24/7 SOC Analysts</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mv1">Reduced Risk Exposure</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border);background:rgba(255,255,255,0.015)">
-                <td style="padding:12px 14px;color:var(--white);font-weight:500;font-size:13px" id="alt-mr2">Threat Detection</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mt2">AI, Machine Learning Analytics</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mh2">Threat Intelligence Analysts</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mv2">Early Threat Identification</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border)">
-                <td style="padding:12px 14px;color:var(--white);font-weight:500;font-size:13px" id="alt-mr3">Incident Response</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mt3">Automated Playbooks</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mh3">Experienced Responders</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mv3">Minimized Business Impact</td>
-              </tr>
-              <tr style="background:rgba(255,255,255,0.015)">
-                <td style="padding:12px 14px;color:var(--white);font-weight:500;font-size:13px" id="alt-mr4">Proactive Hunting</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mt4">Behavioral Analytics</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mh4">Security Researchers</td>
-                <td style="padding:12px 14px;color:var(--muted);font-size:13px" id="alt-mv4">Preventative Protection</td>
-              </tr>
-            </tbody>
+            <tr class="cap-row"><td class="cap-label" id="cap-r1">Endpoint protection (XDR)</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r2">SIEM monitoring</td><td class="cap-partial" id="cap-r2e">Basic</td><td class="cap-yes" id="cap-r2m">Full</td><td class="cap-yes" id="cap-r2x">Full</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r3">Coverage hours</td><td class="cap-partial">8×5</td><td class="cap-yes">24×7</td><td class="cap-yes">24×7</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r4">AI behavioral analytics</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r5">Threat intelligence</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r6">SOAR automated response</td><td class="cap-no">—</td><td class="cap-yes">✓</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r7">Incident response</td><td class="cap-partial" id="cap-r7e">Add-on</td><td class="cap-partial" id="cap-r7m">Add-on</td><td class="cap-yes" id="cap-r7x">Included</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r8">Digital forensics</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r9">Malware analysis</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row cap-alt"><td class="cap-label" id="cap-r10">Dedicated analyst</td><td class="cap-no">—</td><td class="cap-no">—</td><td class="cap-yes">✓</td></tr>
+            <tr class="cap-row"><td class="cap-label" id="cap-r11">Compliance reporting</td><td class="cap-no">—</td><td class="cap-partial" id="cap-r11m">Basic</td><td class="cap-yes" id="cap-r11x">Full</td></tr>
+          </tbody>
           </table>
         </div>
 
-        <a href="#contact" class="btn-primary" id="alt-btn">Calculate Your Savings</a>
+        <a href="#calculator" class="btn-primary" id="alt-btn">Calculate Your Savings</a>
       </div>
       <div>
         <div class="alt-row"><div class="alt-check">✓</div><div><strong id="alt-l1">24/7/365 Coverage</strong><span id="alt-s1"> — Immediate protection from day one, no ramp-up</span></div></div>
@@ -602,11 +589,8 @@
           <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-2">Basic SIEM monitoring</span></li>
           <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-3">Email + SMS alerting</span></li>
           <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-4">Monthly security report</span></li>
-          <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-5">Vulnerability scanning</span></li>
-          <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-6">Security awareness training</span></li>
-          <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf1-7">Business-hours analyst access</span></li>
         </ul>
-        <a href="#contact" id="pricing-cta1" class="pkg-btn"><span id="pc-cta1">Request proposal</span></a>
+        
       </div>
 
       <!-- MDR (featured) -->
@@ -632,14 +616,14 @@
           <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf2-6">Device isolation + IP blocking</span></li>
           <li class="pkg-feat"><span class="pkg-dot"></span><span id="pf2-7">Dedicated analyst</span></li>
         </ul>
-        <a href="#contact" id="pricing-cta2" class="pkg-btn pkg-btn-featured"><span id="pc-cta2">Request proposal</span></a>
+        
       </div>
 
       <!-- Enterprise -->
       <div style="background:#111827;border:1px solid #1e2d45;border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;position:relative">
         <p style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:#64748b;margin-bottom:6px" id="pc-t3">Tier 3</p>
         <h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#f1f5f9;margin-bottom:8px" id="pc-n3">Enterprise SOC</h3>
-        <p style="font-size:13px;color:#64748b;line-height:1.5;padding-bottom:20px;border-bottom:1px solid #1e2d45;margin-bottom:20px" id="pc-d3">Full SOC operations — dedicated analyst, forensics, compliance reporting, and priority IR.</p>
+        <p style="font-size:13px;color:#64748b;line-height:1.5;padding-bottom:20px;border-bottom:1px solid #1e2d45;margin-bottom:20px" id="pc-d3">Full SOC + CSIRT operations — dedicated analyst, forensics, and compliance-ready reporting under one team.</p>
         <div style="margin-bottom:20px">
           <div style="display:flex;align-items:baseline;gap:4px">
             <span style="font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:#f1f5f9">$60+</span>
@@ -657,7 +641,7 @@
           <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf3-6">Compliance-ready reporting</span></li>
           <li class="pkg-feat on"><span class="pkg-dot on"></span><span id="pf3-7">Executive + technical reports</span></li>
         </ul>
-        <a href="#contact" id="pricing-cta3" class="pkg-btn"><span id="pc-cta3">Request proposal</span></a>
+        
       </div>
 
     </div><!-- /cards -->
@@ -684,6 +668,162 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<!-- SOC PRICING CALCULATOR -->
+<section id="calculator" style="background:var(--bg);padding:100px 0;border-bottom:1px solid var(--border);position:relative;overflow:hidden">
+
+  <!-- Background grid decoration -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(74,127,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(74,127,255,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none"></div>
+  <div style="position:absolute;top:-120px;right:-120px;width:480px;height:480px;background:radial-gradient(circle,rgba(74,127,255,0.07) 0%,transparent 70%);pointer-events:none"></div>
+
+  <div class="container" style="position:relative;z-index:1">
+
+    <!-- Header -->
+    <div style="margin-bottom:64px">
+      <div class="label" style="margin-bottom:18px" id="calc-label">Pricing Calculator</div>
+      <h2 style="font-size:clamp(32px,3.6vw,52px);font-weight:800;line-height:1.04;margin-bottom:16px" id="calc-h2">How much will it<br><span style="color:var(--cyan)">cost you?</span></h2>
+      <p style="color:var(--muted);font-size:16px;font-weight:300;max-width:440px;line-height:1.7" id="calc-sub">Configure your environment below and get an instant estimate — before speaking to anyone.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 400px;gap:32px;align-items:start" class="calc-grid">
+
+      <!-- LEFT: Inputs -->
+      <div>
+
+        <!-- Tier selector -->
+        <div style="margin-bottom:40px">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:16px" id="calc-tier-label">Select Plan</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+
+            <button onclick="setTier('essential')" id="tier-essential" class="calc-tier-btn active">
+              <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Tier 1</div>
+              <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--white)">Essential</div>
+              <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--cyan);margin:8px 0 4px">$25</div>
+              <div style="font-size:11px;color:var(--muted)">/device/mo</div>
+            </button>
+
+            <button onclick="setTier('mdr')" id="tier-mdr" class="calc-tier-btn">
+              <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Tier 2</div>
+              <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#38bdf8">MDR</div>
+              <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#38bdf8;margin:8px 0 4px">$45</div>
+              <div style="font-size:11px;color:var(--muted)">/device/mo</div>
+            </button>
+
+            <button onclick="setTier('enterprise')" id="tier-enterprise" class="calc-tier-btn">
+              <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Tier 3</div>
+              <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--white)" id="calc-ent-label">Enterprise</div>
+              <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--cyan);margin:8px 0 4px">$60+</div>
+              <div style="font-size:11px;color:var(--muted)">/device/mo</div>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Device sliders -->
+        <div style="display:grid;gap:28px">
+
+          <!-- Endpoints -->
+          <div class="calc-input-row">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+              <div>
+                <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--white)" id="calc-endpoints-label">Endpoints</span>
+                <span style="font-size:12px;color:var(--muted);margin-left:10px" id="calc-endpoints-note">workstations · laptops</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted)" id="calc-endpoints-hint">×1.0</span>
+                <input type="number" id="num-endpoints" min="0" max="9999" value="25" oninput="syncRange('endpoints')" style="width:64px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--white);padding:6px 8px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;text-align:center;outline:none">
+              </div>
+            </div>
+            <div style="position:relative;height:6px;background:var(--border);border-radius:3px">
+              <div id="track-endpoints" style="position:absolute;left:0;top:0;height:6px;background:var(--cyan);border-radius:3px;width:5%;transition:width 0.1s"></div>
+              <input type="range" id="inp-endpoints" min="0" max="500" value="25" oninput="calcUpdate()" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0">
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Space Mono',monospace;font-size:10px;color:var(--border-bright)"><span>0</span><span>500</span></div>
+          </div>
+
+          <!-- Servers -->
+          <div class="calc-input-row">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+              <div>
+                <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--white)" id="calc-servers-label">Servers</span>
+                <span style="font-size:12px;color:var(--muted);margin-left:10px" id="calc-servers-note">physical · virtual</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:'Space Mono',monospace;font-size:10px;color:#f97316" id="calc-servers-hint">×1.5</span>
+                <input type="number" id="num-servers" min="0" max="9999" value="5" oninput="syncRange('servers')" style="width:64px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--white);padding:6px 8px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;text-align:center;outline:none">
+              </div>
+            </div>
+            <div style="position:relative;height:6px;background:var(--border);border-radius:3px">
+              <div id="track-servers" style="position:absolute;left:0;top:0;height:6px;background:#f97316;border-radius:3px;width:5%;transition:width 0.1s"></div>
+              <input type="range" id="inp-servers" min="0" max="100" value="5" oninput="calcUpdate()" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0">
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Space Mono',monospace;font-size:10px;color:var(--border-bright)"><span>0</span><span>100</span></div>
+          </div>
+
+          <!-- Network -->
+          <div class="calc-input-row">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+              <div>
+                <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--white)" id="calc-network-label">Network devices</span>
+                <span style="font-size:12px;color:var(--muted);margin-left:10px" id="calc-network-note">firewalls · switches</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px">
+                <span style="font-family:'Space Mono',monospace;font-size:10px;color:#f97316" id="calc-network-hint">×1.5</span>
+                <input type="number" id="num-network" min="0" max="9999" value="3" oninput="syncRange('network')" style="width:64px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--white);padding:6px 8px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;text-align:center;outline:none">
+              </div>
+            </div>
+            <div style="position:relative;height:6px;background:var(--border);border-radius:3px">
+              <div id="track-network" style="position:absolute;left:0;top:0;height:6px;background:#f97316;border-radius:3px;width:6%;transition:width 0.1s"></div>
+              <input type="range" id="inp-network" min="0" max="50" value="3" oninput="calcUpdate()" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0">
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Space Mono',monospace;font-size:10px;color:var(--border-bright)"><span>0</span><span>50</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: Results panel -->
+      <div style="position:sticky;top:100px;display:flex;flex-direction:column;gap:0;border:1px solid var(--border-bright);background:var(--bg2)">
+
+        <!-- Monthly total -->
+        <div style="padding:32px;border-bottom:1px solid var(--border)">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:16px" id="calc-estimate-label">Monthly Estimate</div>
+          <div style="font-family:'Syne',sans-serif;font-size:clamp(48px,6vw,72px);font-weight:800;color:var(--cyan);line-height:0.9" id="calc-monthly">$—</div>
+          <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);margin-top:12px" id="calc-annual-line">— / year</div>
+        </div>
+
+        <!-- Breakdown -->
+        <div style="padding:24px;border-bottom:1px solid var(--border)">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px" id="calc-breakdown-label">Breakdown</div>
+          <div id="calc-breakdown" style="font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);line-height:2.2"></div>
+        </div>
+
+        <!-- Savings vs internal -->
+        <div style="padding:24px;border-bottom:1px solid var(--border);background:rgba(34,197,94,0.04)">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#22c55e;margin-bottom:16px" id="calc-savings-label">vs Internal SOC</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--muted)" id="calc-internal-cost">$420k+</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:3px" id="calc-internal-label">Internal / year</div>
+            </div>
+            <div>
+              <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#22c55e" id="calc-savings">—</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:3px" id="calc-savings-sub">You save</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="padding:24px">
+          <a href="#contact" class="btn-primary" id="calc-cta" style="display:block;text-align:center;width:100%">Get a Custom Quote →</a>
+          <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:12px;font-style:italic" id="calc-note">Estimates are indicative only.</p>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
 
@@ -923,5 +1063,78 @@
     </div>
   </div>
 </div>
+
+<script>
+(function(){
+  var rates = {essential:25, mdr:45, enterprise:60};
+  var serverPremium = 1.5;
+  var currentTier = 'essential';
+  var internalSOC = 420000;
+
+  function updateTrack(key){
+    var inp = document.getElementById('inp-'+key);
+    var trk = document.getElementById('track-'+key);
+    if(!inp||!trk) return;
+    var pct = (parseFloat(inp.value) - parseFloat(inp.min)) / (parseFloat(inp.max) - parseFloat(inp.min)) * 100;
+    trk.style.width = pct + '%';
+  }
+
+  window.setTier = function(t){
+    currentTier = t;
+    document.querySelectorAll('.calc-tier-btn').forEach(function(b){ b.classList.remove('active'); });
+    var btn = document.getElementById('tier-'+t);
+    if(btn) btn.classList.add('active');
+    calcUpdate();
+  };
+
+  window.syncRange = function(key){
+    var num = document.getElementById('num-'+key);
+    var rng = document.getElementById('inp-'+key);
+    if(num&&rng){ rng.value = Math.min(Math.max(num.value,rng.min),rng.max); updateTrack(key); calcUpdate(); }
+  };
+
+  window.calcUpdate = function(){
+    ['endpoints','servers','network'].forEach(function(k){
+      var r = document.getElementById('inp-'+k);
+      var n = document.getElementById('num-'+k);
+      if(r&&n) n.value = r.value;
+      updateTrack(k);
+    });
+
+    var endpoints = parseInt(document.getElementById('inp-endpoints').value)||0;
+    var servers   = parseInt(document.getElementById('inp-servers').value)||0;
+    var network   = parseInt(document.getElementById('inp-network').value)||0;
+    var rate      = rates[currentTier];
+
+    var endCost = endpoints * rate;
+    var srvCost = servers   * rate * serverPremium;
+    var netCost = network   * rate * serverPremium;
+    var monthly = endCost + srvCost + netCost;
+    var annual  = monthly * 12;
+    var savings = Math.max(0, internalSOC - annual);
+
+    var fmt = function(n){ return '$'+Math.round(n).toLocaleString(); };
+
+    var mEl = document.getElementById('calc-monthly');
+    var aEl = document.getElementById('calc-annual-line');
+    var bEl = document.getElementById('calc-breakdown');
+    var sEl = document.getElementById('calc-savings');
+
+    if(mEl) mEl.textContent = monthly > 0 ? fmt(monthly) : '$—';
+    if(aEl) aEl.textContent = monthly > 0 ? fmt(annual) + ' / year' : '— / year';
+    if(bEl){
+      var lines = [];
+      if(endpoints) lines.push('<span style="color:var(--white)">' + endpoints + ' endpoints</span> × ' + fmt(rate) + ' = <span style="color:var(--cyan)">' + fmt(endCost) + '</span>');
+      if(servers)   lines.push('<span style="color:var(--white)">' + servers + ' servers</span> × ' + fmt(rate) + ' × 1.5 = <span style="color:#f97316">' + fmt(srvCost) + '</span>');
+      if(network)   lines.push('<span style="color:var(--white)">' + network + ' net devices</span> × ' + fmt(rate) + ' × 1.5 = <span style="color:#f97316">' + fmt(netCost) + '</span>');
+      bEl.innerHTML = lines.length ? lines.join('<br>') : '<span style="color:var(--border-bright)">Add devices above</span>';
+    }
+    if(sEl) sEl.textContent = monthly > 0 && savings > 0 ? fmt(savings)+'/yr' : monthly > 0 ? 'Similar cost' : '—';
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){ calcUpdate(); });
+})();
+</script>
+
 </body>
 </html>
