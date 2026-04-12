@@ -148,7 +148,7 @@ const T={
     'pc-pn1':'Business hours · Mon–Fri','pc-pn2':'24/7 continuous coverage','pc-pn3':'Hybrid pricing available · custom SLAs',
     'pc-inc1':'Includes','pc-inc2':'Includes','pc-inc3':'Includes',
     'pf1-1':'Endpoint protection (XDR)','pf1-2':'Basic SIEM monitoring','pf1-3':'Email + SMS alerting',
-    'pf1-4':'Monthly security report','pf1-5':'Vulnerability scanning','pf1-6':'Security awareness training','pf1-7':'Business-hours analyst access',
+    'pf1-4':'Monthly security report',
     'pf2-1':'Everything in Essential','pf2-2':'24/7 SOC monitoring','pf2-3':'SIEM + AI behavioral analytics',
     'pf2-4':'Threat intelligence integration','pf2-5':'SOAR automated response','pf2-6':'Device isolation + IP blocking','pf2-7':'Dedicated analyst',
     'pf3-1':'Everything in MDR','pf3-2':'Dedicated SOC analyst','pf3-3':'Priority incident response',
@@ -160,7 +160,7 @@ const T={
     'cap-r6':'Security awareness training','cap-r7':'AI behavioral analytics','cap-r8':'Threat intelligence',
     'cap-r9':'SOAR automated response','cap-r10':'Device isolation + IP blocking',
     'cap-r11':'Incident response','cap-r11e':'Add-on','cap-r11m':'Add-on','cap-r11x':'Priority',
-    'cap-r12':'Dedicated SOC analyst','cap-r12m':'Add-on','cap-r12x':'✓',
+    'cap-r12':'Dedicated analyst',
     'cap-r13':'Digital forensics','cap-r14':'Malware analysis lab',
     'cap-r15':'Compliance-ready reporting','cap-r15m':'Basic','cap-r15x':'Full',
     'cap-r16':'Executive + technical reports',
@@ -206,7 +206,15 @@ const T={
     'contact-label1':'Phone','contact-label2':'Email','contact-label3':'Address',
     'contact-ph1':'Your name','contact-ph5':'Company name','contact-ph6':'Position / Title','contact-ph2':'Email address','contact-ph3':'Phone / WhatsApp','contact-ph4':'Tell us about your business and what you need',
     'contact-btn':'Send Message →',
-    'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 DR  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN','cookie-title':'We use cookies','cookie-desc':'We use cookies to enhance your experience, analyze site traffic, and improve our services. By accepting, you consent to our use of cookies in accordance with our <a href="/terms.html">Terms &amp; Conditions</a>.','cookie-decline':'Decline','cookie-accept':'Accept',
+    'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 DR  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN','cookie-title':'We use cookies','calc-label':'Pricing Calculator','calc-h2':'How much will it cost?','calc-sub':'Enter your environment details and select a plan to get an instant monthly estimate.',
+    'calc-endpoints-label':'Endpoints','calc-endpoints-note':'Workstations, laptops, desktops',
+    'calc-servers-label':'Servers','calc-servers-note':'Physical &amp; virtual servers',
+    'calc-network-label':'Network devices','calc-network-note':'Firewalls, switches, routers',
+    'calc-estimate-label':'Monthly Estimate','calc-breakdown-label':'Breakdown',
+    'calc-savings-label':'vs. Building Internal SOC','calc-internal-label':'Internal team / year',
+    'calc-savings-sub':'Annual savings','calc-cta':'Get a Custom Quote →',
+    'calc-note':'Estimates are indicative. Contact us for a tailored proposal.',
+    'calc-ent-label':'Enterprise','calc-endpoints-hint':'×1.0','calc-servers-hint':'×1.5 premium','calc-network-hint':'×1.5 premium','cookie-desc':'We use cookies to enhance your experience, analyze site traffic, and improve our services. By accepting, you consent to our use of cookies in accordance with our <a href="/terms.html">Terms &amp; Conditions</a>.','cookie-decline':'Decline','cookie-accept':'Accept',
     'cost-label':'The Real Cost of In-House Security',
     'cost-h2':'Why pay for one analyst<br>when you can have<br>an entire 24/7 team?',
     'cost-sub':"Building an internal SOC sounds smart — until you see the numbers. Cybersecurity doesn't need to be in-house. Here's what it actually costs to run a bare minimum operation.",
@@ -394,7 +402,7 @@ const T={
     'pc-pn1':'Horario laboral · Lun–Vie','pc-pn2':'Cobertura continua 24/7','pc-pn3':'Precios híbridos disponibles · SLAs personalizados',
     'pc-inc1':'Incluye','pc-inc2':'Incluye','pc-inc3':'Incluye',
     'pf1-1':'Protección de endpoints (XDR)','pf1-2':'Monitoreo SIEM básico','pf1-3':'Alertas por email + SMS',
-    'pf1-4':'Informe mensual de seguridad','pf1-5':'Escaneo de vulnerabilidades','pf1-6':'Formación en concienciación','pf1-7':'Acceso a analista en horario laboral',
+    'pf1-4':'Informe mensual de seguridad',
     'pf2-1':'Todo en Essential','pf2-2':'Monitoreo SOC 24/7','pf2-3':'SIEM + analítica conductual con IA',
     'pf2-4':'Integración de inteligencia de amenazas','pf2-5':'Respuesta automatizada SOAR','pf2-6':'Aislamiento de dispositivos + bloqueo IP','pf2-7':'Analista dedicado',
     'pf3-1':'Todo en MDR','pf3-2':'Analista SOC dedicado','pf3-3':'Respuesta prioritaria a incidentes',
@@ -406,7 +414,7 @@ const T={
     'cap-r6':'Capacitación en ciberseguridad','cap-r7':'IA de análisis de comportamiento','cap-r8':'Inteligencia de amenazas',
     'cap-r9':'Respuesta automatizada SOAR','cap-r10':'Aislamiento de dispositivos + bloqueo IP',
     'cap-r11':'Respuesta a incidentes','cap-r11e':'Adicional','cap-r11m':'Adicional','cap-r11x':'Prioritario',
-    'cap-r12':'Analista SOC dedicado','cap-r12m':'Adicional','cap-r12x':'✓',
+    'cap-r12':'Analista dedicado',
     'cap-r13':'Forense digital','cap-r14':'Laboratorio de análisis de malware',
     'cap-r15':'Reportes de cumplimiento','cap-r15m':'Básico','cap-r15x':'Completo',
     'cap-r16':'Reportes ejecutivos y técnicos',
@@ -452,7 +460,15 @@ const T={
     'contact-label1':'Teléfono','contact-label2':'Correo','contact-label3':'Dirección',
     'contact-ph1':'Tu nombre','contact-ph5':'Nombre de la empresa','contact-ph6':'Cargo / Título','contact-ph2':'Correo electrónico','contact-ph3':'Teléfono / WhatsApp','contact-ph4':'Cuéntanos sobre tu empresa y lo que necesitas',
     'contact-btn':'Solicitar Evaluación →',
-    'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 RD  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN','cookie-title':'Usamos cookies','cookie-desc':'Usamos cookies para mejorar tu experiencia, analizar el tráfico y mejorar nuestros servicios. Al aceptar, consientes nuestros <a href="/terms.html">Términos y Condiciones</a>.','cookie-decline':'Rechazar','cookie-accept':'Aceptar',
+    'footer-copy':'© 2026 INVERSSYS  ·  🇺🇸 USA  ·  🇩🇴 RD  ·  🇵🇦 PAN  ·  🇨🇴 COL  ·  🇨🇦 CAN','cookie-title':'Usamos cookies','calc-label':'Calculadora de Precios','calc-h2':'¿Cuánto costará?','calc-sub':'Ingresa los detalles de tu entorno y selecciona un plan para obtener una estimación mensual instantánea.',
+    'calc-endpoints-label':'Endpoints','calc-endpoints-note':'Estaciones de trabajo, laptops, escritorios',
+    'calc-servers-label':'Servidores','calc-servers-note':'Servidores físicos y virtuales',
+    'calc-network-label':'Dispositivos de red','calc-network-note':'Firewalls, switches, routers',
+    'calc-estimate-label':'Estimación Mensual','calc-breakdown-label':'Desglose',
+    'calc-savings-label':'vs. Construir SOC Interno','calc-internal-label':'Equipo interno / año',
+    'calc-savings-sub':'Ahorro anual','calc-cta':'Obtener Propuesta Personalizada →',
+    'calc-note':'Las estimaciones son indicativas. Contáctanos para una propuesta a medida.',
+    'calc-ent-label':'Enterprise','calc-endpoints-hint':'×1.0','calc-servers-hint':'×1.5 prima','calc-network-hint':'×1.5 prima','cookie-desc':'Usamos cookies para mejorar tu experiencia, analizar el tráfico y mejorar nuestros servicios. Al aceptar, consientes nuestros <a href="/terms.html">Términos y Condiciones</a>.','cookie-decline':'Rechazar','cookie-accept':'Aceptar',
     'cost-label':'El Costo Real de la Seguridad Interna',
     'cost-h2':'¿Por qué pagar por<br>un analista cuando puedes<br>tener un equipo 24/7?',
     'cost-sub':'Construir un SOC interno parece buena idea — hasta que ves los números.',
@@ -623,7 +639,7 @@ const T={
     'pc-pn1':'Heures ouvrables · Lun–Ven','pc-pn2':'Couverture continue 24/7','pc-pn3':'Tarification hybride · SLAs personnalisés',
     'pc-inc1':'Inclut','pc-inc2':'Inclut','pc-inc3':'Inclut',
     'pf1-1':'Protection des endpoints (XDR)','pf1-2':'Surveillance SIEM basique','pf1-3':'Alertes e-mail + SMS',
-    'pf1-4':'Rapport mensuel de sécurité','pf1-5':'Analyse de vulnérabilités','pf1-6':'Formation en sensibilisation','pf1-7':'Accès analyste en heures ouvrables',
+    'pf1-4':'Rapport mensuel de sécurité',
     'pf2-1':'Tout en Essential','pf2-2':'Surveillance SOC 24/7','pf2-3':'SIEM + analytique comportementale IA',
     'pf2-4':'Intégration renseignements menaces','pf2-5':'Réponse automatisée SOAR','pf2-6':'Isolation appareils + blocage IP','pf2-7':'Analyste dédié',
     'pf3-1':'Tout en MDR','pf3-2':'Analyste SOC dédié','pf3-3':'Réponse prioritaire aux incidents',
@@ -635,7 +651,7 @@ const T={
     'cap-r6':'Formation à la cybersécurité','cap-r7':'IA d\'analyse comportementale','cap-r8':'Renseignement sur les menaces',
     'cap-r9':'Réponse automatisée SOAR','cap-r10':'Isolation d\'appareils + blocage IP',
     'cap-r11':'Réponse aux incidents','cap-r11e':'Option','cap-r11m':'Option','cap-r11x':'Prioritaire',
-    'cap-r12':'Analyste SOC dédié','cap-r12m':'Option','cap-r12x':'✓',
+    'cap-r12':'Analyste dédié',
     'cap-r13':'Forensique numérique','cap-r14':'Laboratoire d\'analyse de maliciels',
     'cap-r15':'Rapports de conformité','cap-r15m':'Basique','cap-r15x':'Complet',
     'cap-r16':'Rapports exécutifs et techniques',
@@ -681,7 +697,15 @@ const T={
     'contact-label1':'Téléphone','contact-label2':'E-mail','contact-label3':'Adresse',
     'contact-ph1':'Votre nom','contact-ph5':'Nom de l\'entreprise','contact-ph6':'Poste / Titre','contact-ph2':'Adresse e-mail','contact-ph3':'Téléphone / WhatsApp','contact-ph4':'Parlez-nous de votre entreprise et de vos besoins',
     'contact-btn':'Demander une Évaluation →',
-    'footer-copy':'© 2026 INVERSSYS · 🇺🇸 USA · 🇩🇴 DR · 🇵🇦 PAN · 🇨🇴 COL · 🇨🇦 CAN','cookie-title':'Nous utilisons des cookies','cookie-desc':'Nous utilisons des cookies pour améliorer votre expérience et nos services. En acceptant, vous consentez à nos <a href="/terms.html">Conditions Générales</a>.','cookie-decline':'Refuser','cookie-accept':'Accepter',
+    'footer-copy':'© 2026 INVERSSYS · 🇺🇸 USA · 🇩🇴 DR · 🇵🇦 PAN · 🇨🇴 COL · 🇨🇦 CAN','cookie-title':'Nous utilisons des cookies','calc-label':'Calculateur de Prix','calc-h2':'Combien cela coûtera-t-il ?','calc-sub':'Entrez les détails de votre environnement et sélectionnez un plan pour obtenir une estimation mensuelle instantanée.',
+    'calc-endpoints-label':'Endpoints','calc-endpoints-note':'Postes de travail, laptops, ordinateurs de bureau',
+    'calc-servers-label':'Serveurs','calc-servers-note':'Serveurs physiques et virtuels',
+    'calc-network-label':'Équipements réseau','calc-network-note':'Pare-feux, commutateurs, routeurs',
+    'calc-estimate-label':'Estimation Mensuelle','calc-breakdown-label':'Détail',
+    'calc-savings-label':'vs. SOC Interne','calc-internal-label':'Équipe interne / an',
+    'calc-savings-sub':'Économies annuelles','calc-cta':'Obtenir un Devis Personnalisé →',
+    'calc-note':'Les estimations sont indicatives. Contactez-nous pour une proposition sur mesure.',
+    'calc-ent-label':'Enterprise','calc-endpoints-hint':'×1.0','calc-servers-hint':'×1.5 supplément','calc-network-hint':'×1.5 supplément','cookie-desc':'Nous utilisons des cookies pour améliorer votre expérience et nos services. En acceptant, vous consentez à nos <a href="/terms.html">Conditions Générales</a>.','cookie-decline':'Refuser','cookie-accept':'Accepter',
     'footer-svc':'Services','footer-soc':'SOC','footer-pt':'Pentesting','footer-grc':'GRC','footer-about':'À Propos','footer-pricing':'Tarifs','footer-contact':'Contact',
     'more-hero-label':'Services Additionnels','more-hero-h2':'Technologie, Connectivité<br>&amp; <span style="color:var(--cyan)">Sécurité Intégrale</span>',
     'more-hero-sub':'De la sécurité physique à l\'infrastructure cloud — nous couvrons chaque couche de votre environnement.',
@@ -906,6 +930,16 @@ lang=langCycle[lang];
     s('footer-copy','footer-copy');
     ['footer-svc','footer-soc','footer-pt','footer-grc','footer-about','footer-pricing','footer-contact'].forEach(id=>s(id,id));
     s('cookie-title','cookie-title'); s('cookie-desc','cookie-desc',true); s('cookie-decline','cookie-decline'); s('cookie-accept','cookie-accept');
+    // CALCULATOR
+    s('calc-label','calc-label'); s('calc-h2','calc-h2',true); s('calc-sub','calc-sub',true);
+    s('calc-endpoints-label','calc-endpoints-label'); s('calc-endpoints-note','calc-endpoints-note');
+    s('calc-servers-label','calc-servers-label'); s('calc-servers-note','calc-servers-note');
+    s('calc-network-label','calc-network-label'); s('calc-network-note','calc-network-note');
+    s('calc-estimate-label','calc-estimate-label'); s('calc-breakdown-label','calc-breakdown-label');
+    s('calc-savings-label','calc-savings-label'); s('calc-internal-label','calc-internal-label');
+    s('calc-savings-sub','calc-savings-sub'); s('calc-cta','calc-cta'); s('calc-note','calc-note',true);
+    s('calc-ent-label','calc-ent-label'); s('calc-endpoints-hint','calc-endpoints-hint');
+    s('calc-servers-hint','calc-servers-hint'); s('calc-network-hint','calc-network-hint');
 }
 function toggleMobileNav(){
   var drawer = document.getElementById('mobile-drawer');
@@ -1133,6 +1167,109 @@ document.addEventListener('DOMContentLoaded', function() {
   // More section back button
   on('more-back-btn', 'click', function(){ showMain(); });
   on('pricing-notes-btn', 'click', function(){ togglePricingNotes(); });
+
+  // ── SOC Pricing Calculator ────────────────────────────────────────────────
+  (function(){
+    var rates = {essential:25, mdr:45, enterprise:60};
+    var minimums = {essential:10, mdr:15, enterprise:20};
+    var serverPremium = 1.5;
+    var currentTier = 'essential';
+
+    function internalSOCCost(total){
+      if(total <= 50)  return 420000;
+      if(total <= 150) return 540000;
+      return 650000;
+    }
+    function fmt(n){ return '$'+Math.round(n).toLocaleString(); }
+
+    function updateTrack(key){
+      var inp = document.getElementById('inp-'+key);
+      var trk = document.getElementById('track-'+key);
+      if(!inp||!trk) return;
+      var pct = (parseFloat(inp.value)-parseFloat(inp.min))/(parseFloat(inp.max)-parseFloat(inp.min))*100;
+      trk.style.width = pct+'%';
+    }
+
+    function setTier(t){
+      currentTier = t;
+      document.querySelectorAll('.calc-tier-btn').forEach(function(b){ b.classList.remove('active'); });
+      var btn = document.getElementById('tier-'+t);
+      if(btn) btn.classList.add('active');
+      calcUpdate();
+    }
+
+    function syncRange(key){
+      var num = document.getElementById('num-'+key);
+      var rng = document.getElementById('inp-'+key);
+      if(num&&rng){ rng.value = Math.min(Math.max(parseInt(num.value)||0, parseInt(rng.min)), parseInt(rng.max)); updateTrack(key); calcUpdate(); }
+    }
+
+    function calcUpdate(){
+      ['endpoints','servers','network'].forEach(function(k){
+        var r = document.getElementById('inp-'+k);
+        var n = document.getElementById('num-'+k);
+        if(r&&n) n.value = r.value;
+        updateTrack(k);
+      });
+
+      var endpoints = parseInt(document.getElementById('inp-endpoints').value)||0;
+      var servers   = parseInt(document.getElementById('inp-servers').value)||0;
+      var network   = parseInt(document.getElementById('inp-network').value)||0;
+      var rate      = rates[currentTier];
+      var endCost   = endpoints * rate;
+      var srvCost   = servers   * rate * serverPremium;
+      var netCost   = network   * rate * serverPremium;
+      var monthly   = endCost + srvCost + netCost;
+      var annual    = monthly * 12;
+      var total     = endpoints + servers + network;
+      var minDev    = minimums[currentTier];
+      var belowMin  = total > 0 && total < minDev;
+      var intCost   = internalSOCCost(total);
+      var savings   = Math.max(0, intCost - annual);
+
+      var mEl = document.getElementById('calc-monthly');
+      var aEl = document.getElementById('calc-annual-line');
+      var bEl = document.getElementById('calc-breakdown');
+      var sEl = document.getElementById('calc-savings');
+      var iEl = document.getElementById('calc-internal-cost');
+
+      if(mEl) mEl.textContent = monthly > 0 ? fmt(monthly) + (belowMin ? '*' : '') : '$—';
+      if(aEl) aEl.textContent = monthly > 0 ? fmt(annual)+' / year' : '— / year';
+      if(iEl) iEl.textContent = '$'+Math.round(intCost/1000)+'k+/yr';
+
+      if(bEl){
+        var lines = [];
+        if(endpoints) lines.push('<span style="color:var(--white)">'+endpoints+' endpoints</span> × '+fmt(rate)+' = <span style="color:var(--cyan)">'+fmt(endCost)+'</span>');
+        if(servers)   lines.push('<span style="color:var(--white)">'+servers+' servers</span> × '+fmt(rate)+' × 1.5 = <span style="color:#f97316">'+fmt(srvCost)+'</span>');
+        if(network)   lines.push('<span style="color:var(--white)">'+network+' net devices</span> × '+fmt(rate)+' × 1.5 = <span style="color:#f97316">'+fmt(netCost)+'</span>');
+        if(belowMin)  lines.push('<span style="color:#f59e0b">* Min '+minDev+' devices for '+currentTier+' plan</span>');
+        bEl.innerHTML = lines.length ? lines.join('<br>') : '<span style="color:var(--border-bright)">Add devices above</span>';
+      }
+      if(sEl){
+        if(monthly === 0) sEl.textContent = '—';
+        else if(savings > 5000) sEl.textContent = fmt(savings)+'/yr';
+        else if(annual > intCost) sEl.textContent = 'Contact us for volume pricing';
+        else sEl.textContent = 'Comparable cost';
+      }
+    }
+
+    // Wire tier buttons
+    ['essential','mdr','enterprise'].forEach(function(t){
+      on('tier-'+t, 'click', function(){ setTier(t); });
+    });
+
+    // Wire sliders
+    ['endpoints','servers','network'].forEach(function(k){
+      var rng = document.getElementById('inp-'+k);
+      var num = document.getElementById('num-'+k);
+      if(rng) rng.addEventListener('input', calcUpdate);
+      if(num) num.addEventListener('input', function(){ syncRange(k); });
+    });
+
+    // Init
+    calcUpdate();
+  })();
+  // ─────────────────────────────────────────────────────────────────────────
 
   // ── Cookie Banner ────────────────────────────────────────────────────────
   (function(){

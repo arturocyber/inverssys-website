@@ -698,21 +698,21 @@
           <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:16px" id="calc-tier-label">Select Plan</div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
 
-            <button onclick="setTier('essential')" id="tier-essential" class="calc-tier-btn active">
+            <button id="tier-essential" class="calc-tier-btn active">
               <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Tier 1</div>
               <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--white)">Essential</div>
               <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--cyan);margin:8px 0 4px">$25</div>
               <div style="font-size:11px;color:var(--muted)">/device/mo</div>
             </button>
 
-            <button onclick="setTier('mdr')" id="tier-mdr" class="calc-tier-btn">
+            <button id="tier-mdr" class="calc-tier-btn">
               <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Tier 2</div>
               <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#38bdf8">MDR</div>
               <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#38bdf8;margin:8px 0 4px">$45</div>
               <div style="font-size:11px;color:var(--muted)">/device/mo</div>
             </button>
 
-            <button onclick="setTier('enterprise')" id="tier-enterprise" class="calc-tier-btn">
+            <button id="tier-enterprise" class="calc-tier-btn">
               <div style="font-family:'Space Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Tier 3</div>
               <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:var(--white)" id="calc-ent-label">Enterprise</div>
               <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--cyan);margin:8px 0 4px">$60+</div>
@@ -734,14 +734,14 @@
               </div>
               <div style="display:flex;align-items:center;gap:8px">
                 <span style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted)" id="calc-endpoints-hint">×1.0</span>
-                <input type="number" id="num-endpoints" min="0" max="9999" value="25" oninput="syncRange('endpoints')" style="width:64px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--white);padding:6px 8px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;text-align:center;outline:none">
+                <input type="number" id="num-endpoints" min="0" max="9999" value="25" style="width:64px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--white);padding:6px 8px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;text-align:center;outline:none">
               </div>
             </div>
             <div style="position:relative;height:6px;background:var(--border);border-radius:3px">
               <div id="track-endpoints" style="position:absolute;left:0;top:0;height:6px;background:var(--cyan);border-radius:3px;width:5%;transition:width 0.1s"></div>
-              <input type="range" id="inp-endpoints" min="0" max="500" value="25" oninput="calcUpdate()" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0">
+              <input type="range" id="inp-endpoints" min="0" max="2000" value="25" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0">
             </div>
-            <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Space Mono',monospace;font-size:10px;color:var(--border-bright)"><span>0</span><span>500</span></div>
+            <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Space Mono',monospace;font-size:10px;color:var(--border-bright)"><span>0</span><span>2,000</span></div>
           </div>
 
           <!-- Servers -->
@@ -753,14 +753,14 @@
               </div>
               <div style="display:flex;align-items:center;gap:8px">
                 <span style="font-family:'Space Mono',monospace;font-size:10px;color:#f97316" id="calc-servers-hint">×1.5</span>
-                <input type="number" id="num-servers" min="0" max="9999" value="5" oninput="syncRange('servers')" style="width:64px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--white);padding:6px 8px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;text-align:center;outline:none">
+                <input type="number" id="num-servers" min="0" max="9999" value="5" style="width:64px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--white);padding:6px 8px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;text-align:center;outline:none">
               </div>
             </div>
             <div style="position:relative;height:6px;background:var(--border);border-radius:3px">
               <div id="track-servers" style="position:absolute;left:0;top:0;height:6px;background:#f97316;border-radius:3px;width:5%;transition:width 0.1s"></div>
-              <input type="range" id="inp-servers" min="0" max="100" value="5" oninput="calcUpdate()" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0">
+              <input type="range" id="inp-servers" min="0" max="300" value="5" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0">
             </div>
-            <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Space Mono',monospace;font-size:10px;color:var(--border-bright)"><span>0</span><span>100</span></div>
+            <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Space Mono',monospace;font-size:10px;color:var(--border-bright)"><span>0</span><span>300</span></div>
           </div>
 
           <!-- Network -->
@@ -772,14 +772,14 @@
               </div>
               <div style="display:flex;align-items:center;gap:8px">
                 <span style="font-family:'Space Mono',monospace;font-size:10px;color:#f97316" id="calc-network-hint">×1.5</span>
-                <input type="number" id="num-network" min="0" max="9999" value="3" oninput="syncRange('network')" style="width:64px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--white);padding:6px 8px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;text-align:center;outline:none">
+                <input type="number" id="num-network" min="0" max="9999" value="3" style="width:64px;background:var(--bg3);border:1px solid var(--border-bright);color:var(--white);padding:6px 8px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;text-align:center;outline:none">
               </div>
             </div>
             <div style="position:relative;height:6px;background:var(--border);border-radius:3px">
               <div id="track-network" style="position:absolute;left:0;top:0;height:6px;background:#f97316;border-radius:3px;width:6%;transition:width 0.1s"></div>
-              <input type="range" id="inp-network" min="0" max="50" value="3" oninput="calcUpdate()" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0">
+              <input type="range" id="inp-network" min="0" max="150" value="3" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;margin:0">
             </div>
-            <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Space Mono',monospace;font-size:10px;color:var(--border-bright)"><span>0</span><span>50</span></div>
+            <div style="display:flex;justify-content:space-between;margin-top:5px;font-family:'Space Mono',monospace;font-size:10px;color:var(--border-bright)"><span>0</span><span>150</span></div>
           </div>
 
         </div>
@@ -1064,77 +1064,6 @@
   </div>
 </div>
 
-<script>
-(function(){
-  var rates = {essential:25, mdr:45, enterprise:60};
-  var serverPremium = 1.5;
-  var currentTier = 'essential';
-  var internalSOC = 420000;
-
-  function updateTrack(key){
-    var inp = document.getElementById('inp-'+key);
-    var trk = document.getElementById('track-'+key);
-    if(!inp||!trk) return;
-    var pct = (parseFloat(inp.value) - parseFloat(inp.min)) / (parseFloat(inp.max) - parseFloat(inp.min)) * 100;
-    trk.style.width = pct + '%';
-  }
-
-  window.setTier = function(t){
-    currentTier = t;
-    document.querySelectorAll('.calc-tier-btn').forEach(function(b){ b.classList.remove('active'); });
-    var btn = document.getElementById('tier-'+t);
-    if(btn) btn.classList.add('active');
-    calcUpdate();
-  };
-
-  window.syncRange = function(key){
-    var num = document.getElementById('num-'+key);
-    var rng = document.getElementById('inp-'+key);
-    if(num&&rng){ rng.value = Math.min(Math.max(num.value,rng.min),rng.max); updateTrack(key); calcUpdate(); }
-  };
-
-  window.calcUpdate = function(){
-    ['endpoints','servers','network'].forEach(function(k){
-      var r = document.getElementById('inp-'+k);
-      var n = document.getElementById('num-'+k);
-      if(r&&n) n.value = r.value;
-      updateTrack(k);
-    });
-
-    var endpoints = parseInt(document.getElementById('inp-endpoints').value)||0;
-    var servers   = parseInt(document.getElementById('inp-servers').value)||0;
-    var network   = parseInt(document.getElementById('inp-network').value)||0;
-    var rate      = rates[currentTier];
-
-    var endCost = endpoints * rate;
-    var srvCost = servers   * rate * serverPremium;
-    var netCost = network   * rate * serverPremium;
-    var monthly = endCost + srvCost + netCost;
-    var annual  = monthly * 12;
-    var savings = Math.max(0, internalSOC - annual);
-
-    var fmt = function(n){ return '$'+Math.round(n).toLocaleString(); };
-
-    var mEl = document.getElementById('calc-monthly');
-    var aEl = document.getElementById('calc-annual-line');
-    var bEl = document.getElementById('calc-breakdown');
-    var sEl = document.getElementById('calc-savings');
-
-    if(mEl) mEl.textContent = monthly > 0 ? fmt(monthly) : '$—';
-    if(aEl) aEl.textContent = monthly > 0 ? fmt(annual) + ' / year' : '— / year';
-    if(bEl){
-      var lines = [];
-      if(endpoints) lines.push('<span style="color:var(--white)">' + endpoints + ' endpoints</span> × ' + fmt(rate) + ' = <span style="color:var(--cyan)">' + fmt(endCost) + '</span>');
-      if(servers)   lines.push('<span style="color:var(--white)">' + servers + ' servers</span> × ' + fmt(rate) + ' × 1.5 = <span style="color:#f97316">' + fmt(srvCost) + '</span>');
-      if(network)   lines.push('<span style="color:var(--white)">' + network + ' net devices</span> × ' + fmt(rate) + ' × 1.5 = <span style="color:#f97316">' + fmt(netCost) + '</span>');
-      bEl.innerHTML = lines.length ? lines.join('<br>') : '<span style="color:var(--border-bright)">Add devices above</span>';
-    }
-    if(sEl) sEl.textContent = monthly > 0 && savings > 0 ? fmt(savings)+'/yr' : monthly > 0 ? 'Similar cost' : '—';
-  };
-
-  document.addEventListener('DOMContentLoaded', function(){ calcUpdate(); });
-})();
-</script>
 
 </body>
 </html>
